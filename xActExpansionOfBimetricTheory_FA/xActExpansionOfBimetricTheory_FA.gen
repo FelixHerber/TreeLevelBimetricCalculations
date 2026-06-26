@@ -73,6 +73,7 @@ AnalyticalPropagator[External][ s1 T[j1, mom, {li1p1, li1p2}] ] == PolarizationT
 
 AnalyticalPropagator[Internal][ s1 T[j1, mom, {li1p1, li1p2} -> {li2p1, li2p2}] ] ==
 FAPropagatorNumerator[li1p1,li1p2,li2p1,li2p2,mom,Mass[T[j1]]]*FAPropagatorDenominator[mom, Mass[T[j1]]],
+
 (*general Fadeev-Popov ghost propagator:*)
 
 AnalyticalPropagator[External][s1 U[j1,mom]]==1,

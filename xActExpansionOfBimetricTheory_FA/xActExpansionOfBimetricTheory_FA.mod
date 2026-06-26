@@ -11,7 +11,7 @@ FR$ModelInformation={
   Authors -> {"Felix Herber"},
   Institutions -> {"Stockholm University"},
   Emails -> {"felix.herber@gmail.com"},
-  Date -> "21-06-2025"};
+  Date -> "2025-10-27"};
 
 FR$ClassesTranslation={};
 
