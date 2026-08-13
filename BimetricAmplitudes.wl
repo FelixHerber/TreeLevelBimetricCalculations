@@ -729,12 +729,11 @@ Module[{validity = ValidProcessQ[process], useCache, processIdentifier, saveFile
     CreateDirectory[saveAmpFolder, CreateIntermediateDirectories -> True]
     ];
 
-  saveFileName = FileNameJoin[{saveAmpFolder, "bimetricAmp_" <> processIdentifier <> ".mx"}];
+  saveFileName = FileNameJoin[{saveAmpFolder, "bimetricAmp_" <> processIdentifier <> ".wl"}];
 
   If[FileExistsQ[saveFileName],
    Print["[Calc2To2BimAmpFromStructures]: Loading saved amplitude for process ", process];
-   Get[saveFileName];
-   Return[amplitudeTrickMandelstam];
+   Return[Get[saveFileName]];
    ];
   ];
 
@@ -754,8 +753,8 @@ Module[{validity = ValidProcessQ[process], useCache, processIdentifier, saveFile
   
  If[useCache,
   Print["[Calc2To2BimAmpFromStructures]: Saving calculation of process ", process];
-  DumpSave[saveFileName, amplitudeTrickMandelstam];
-  ];
+ Put[amplitudeTrickMandelstam, saveFileName];
+];
  
 amplitudeTrickMandelstam
 ]

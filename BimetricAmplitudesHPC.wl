@@ -14,10 +14,79 @@ F. Herber (2025) The Scattering Amplitudes of Bimetric Theory.
 [Master's thesis, Stockholm University]. Diva Portal. Link:
 https://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-248139*)
 
-(*The paths to the bimetric theory modefile, where the amplitudes are stored and the code implementing the calculations.*)
-hpcBimTheoryFAPath  = "/cfs/home/fehe3416/.Mathematica/Applications/FeynCalc/FeynArts/Models/xActExpansionOfBimetricTheory_FA/xActExpansionOfBimetricTheory_FA";
-savePath = "/cfs/home/fehe3416/SavedAmplitudes";
-codeFile = "/cfs/home/fehe3416/BimetricAmplitudes.wl";
+(* ------------------------------------------------------------ *)
+(* Paths                                                        *)
+(* ------------------------------------------------------------ *)
+
+(* Directory containing this HPC script *)
+baseDirectory = DirectoryName[$InputFileName];
+
+(* Project-local paths *)
+savePath =
+ FileNameJoin[
+  {baseDirectory, "SavedAmplitudes"}
+ ];
+
+codeFile =
+ FileNameJoin[
+  {baseDirectory, "BimetricAmplitudes.wl"}
+ ];
+
+hpcBimTheoryFAPath =
+ FileNameJoin[
+  {
+   baseDirectory,
+   "xActExpansionOfBimetricTheory_FA",
+   "xActExpansionOfBimetricTheory_FA"
+   }
+  ];
+
+(* Check that all required files/directories exist *)
+If[!DirectoryQ[savePath],
+ Print[
+  "ERROR: SavedAmplitudes directory not found at: ",
+  savePath
+  ];
+ Abort[];
+ ];
+
+If[!FileExistsQ[codeFile],
+ Print[
+  "ERROR: BimetricAmplitudes.wl not found at: ",
+  codeFile
+  ];
+ Abort[];
+ ];
+
+If[!FileExistsQ[hpcBimTheoryFAPath <> ".mod"] &&
+   !FileExistsQ[hpcBimTheoryFAPath],
+ Print[
+  "ERROR: Bimetric FeynArts model file not found at: ",
+  hpcBimTheoryFAPath
+  ];
+ Abort[];
+ ];
+
+(*Post-processes amplitudes with LeafCount >= 1000. The numerator is
+rewritten to expose a recurring parameter combination, after which
+FullSimplify is attempted with a time limit of 600 seconds per amplitude.
+The simplified result is retained only if its LeafCount is smaller.
+This post-processing is kept separate from BimetricAmplitudes.wl since
+symbolic simplification times can vary considerably between amplitudes.*)
+PostSimplify[amp_]:=Module[{ampTogether,ampNumerator,ampDenominator,intermediate,result,betaPlaceHolder},
+
+If[LeafCount[amp]<1000,Return[amp]];
+
+ampTogether=Together[amp];
+ampNumerator=Numerator[ampTogether];
+ampDenominator=Denominator[ampTogether];
+
+(*Rewrite BetaBim1 in terms of the recurring combination c BetaBim1-c^3 BetaBim3. This combination occurs often enough in many of the amplitudes to yield considerable simplifications.*)
+ampNumerator=ampNumerator/. {BetaBim1->(c^3*BetaBim3+betaPlaceHolder)/c};
+intermediate=TimeConstrained[FullSimplify[ampNumerator, Assumptions->s>0],600,ampNumerator];
+result=intermediate/. {betaPlaceHolder->c*BetaBim1-c^3*BetaBim3};
+result=result/ampDenominator;
+If[LeafCount[result]<LeafCount[amp],result,amp]]
 
 (* ------------------------------------------------------------ *)
 (* Main Code*)
@@ -28,6 +97,9 @@ ParallelEvaluate[
   ScalarProduct[A,B] = 7;
   Print["Scalar Product should be 7 = ", Contract[FV[A,m]FV[B,m]]];
 ]
+
+(*Distribute PostSimplify across the kernels*)
+DistributeDefinitions[PostSimplify];
 
 (*Import the functions in BimetricAmplitudes.wl*)
 Get[codeFile];
@@ -43,15 +115,17 @@ amplitudeStructures = Generate2To2AmpStructures[processes, hpcBimTheoryFAPath];
 
 (*This is the list of distinct bimetric helicity scattering amplitudes we can have since the expansion of 
   bimetric theory has time reversal symmetry and parity symmetry (see Section 7.2 in F. Herber (2025)). 
-  See: DerivationOfDistinctProcesses.nb for where these come.*)
+  See: GetOrbitsBinAmps.nb for where these come.*)
 scatteringProcesses = {{{1,2},{1,2},{1,2},{1,2}},{{1,2},{1,2},{1,2},{1,-2}},{{1,2},{1,2},{1,-2},{1,-2}},{{1,2},{1,2},{2,2},{2,2}},{{1,2},{1,2},{2,2},{2,1}},{{1,2},{1,2},{2,2},{2,0}},{{1,2},{1,2},{2,2},{2,-1}},{{1,2},{1,2},{2,2},{2,-2}},{{1,2},{1,2},{2,1},{2,1}},{{1,2},{1,2},{2,1},{2,0}},{{1,2},{1,2},{2,1},{2,-1}},{{1,2},{1,2},{2,1},{2,-2}},{{1,2},{1,2},{2,0},{2,0}},{{1,2},{1,2},{2,0},{2,-1}},{{1,2},{1,2},{2,0},{2,-2}},{{1,2},{1,2},{2,-1},{2,-1}},{{1,2},{1,2},{2,-1},{2,-2}},{{1,2},{1,2},{2,-2},{2,-2}},{{1,2},{1,-2},{2,2},{2,2}},{{1,2},{1,-2},{2,2},{2,1}},{{1,2},{1,-2},{2,2},{2,0}},{{1,2},{1,-2},{2,2},{2,-1}},{{1,2},{1,-2},{2,2},{2,-2}},{{1,2},{1,-2},{2,1},{2,1}},{{1,2},{1,-2},{2,1},{2,0}},{{1,2},{1,-2},{2,1},{2,-1}},{{1,2},{1,-2},{2,0},{2,0}},{{1,2},{2,2},{2,2},{2,2}},{{1,2},{2,2},{2,2},{2,1}},{{1,2},{2,2},{2,2},{2,0}},{{1,2},{2,2},{2,2},{2,-1}},{{1,2},{2,2},{2,2},{2,-2}},{{1,2},{2,2},{2,1},{2,1}},{{1,2},{2,2},{2,1},{2,0}},{{1,2},{2,2},{2,1},{2,-1}},{{1,2},{2,2},{2,1},{2,-2}},{{1,2},{2,2},{2,0},{2,0}},{{1,2},{2,2},{2,0},{2,-1}},{{1,2},{2,2},{2,0},{2,-2}},{{1,2},{2,2},{2,-1},{2,-1}},{{1,2},{2,2},{2,-1},{2,-2}},{{1,2},{2,2},{2,-2},{2,-2}},{{1,2},{2,1},{2,2},{2,2}},{{1,2},{2,1},{2,2},{2,1}},{{1,2},{2,1},{2,2},{2,0}},{{1,2},{2,1},{2,2},{2,-1}},{{1,2},{2,1},{2,1},{2,1}},{{1,2},{2,1},{2,1},{2,0}},{{1,2},{2,1},{2,1},{2,-1}},{{1,2},{2,1},{2,0},{2,0}},{{1,2},{2,1},{2,0},{2,-1}},{{1,2},{2,1},{2,-1},{2,-1}},{{1,2},{2,0},{2,2},{2,2}},{{1,2},{2,0},{2,2},{2,1}},{{1,2},{2,0},{2,2},{2,0}},{{1,2},{2,0},{2,1},{2,1}},{{1,2},{2,0},{2,1},{2,0}},{{1,2},{2,0},{2,0},{2,0}},{{1,2},{2,-1},{2,2},{2,2}},{{1,2},{2,-1},{2,2},{2,1}},{{1,2},{2,-1},{2,1},{2,1}},{{1,2},{2,-2},{2,2},{2,2}},{{2,2},{2,2},{2,2},{2,2}},{{2,2},{2,2},{2,2},{2,1}},{{2,2},{2,2},{2,2},{2,0}},{{2,2},{2,2},{2,2},{2,-1}},{{2,2},{2,2},{2,2},{2,-2}},{{2,2},{2,2},{2,1},{2,1}},{{2,2},{2,2},{2,1},{2,0}},{{2,2},{2,2},{2,1},{2,-1}},{{2,2},{2,2},{2,1},{2,-2}},{{2,2},{2,2},{2,0},{2,0}},{{2,2},{2,2},{2,0},{2,-1}},{{2,2},{2,2},{2,0},{2,-2}},{{2,2},{2,2},{2,-1},{2,-1}},{{2,2},{2,2},{2,-1},{2,-2}},{{2,2},{2,2},{2,-2},{2,-2}},{{2,2},{2,1},{2,2},{2,1}},{{2,2},{2,1},{2,2},{2,0}},{{2,2},{2,1},{2,2},{2,-1}},{{2,2},{2,1},{2,1},{2,1}},{{2,2},{2,1},{2,1},{2,0}},{{2,2},{2,1},{2,1},{2,-1}},{{2,2},{2,1},{2,0},{2,0}},{{2,2},{2,1},{2,0},{2,-1}},{{2,2},{2,1},{2,-1},{2,-1}},{{2,2},{2,0},{2,2},{2,0}},{{2,2},{2,0},{2,1},{2,1}},{{2,2},{2,0},{2,1},{2,0}},{{2,2},{2,0},{2,0},{2,0}},{{2,2},{2,-1},{2,1},{2,1}},{{2,1},{2,1},{2,1},{2,1}},{{2,1},{2,1},{2,1},{2,0}},{{2,1},{2,1},{2,1},{2,-1}},{{2,1},{2,1},{2,0},{2,0}},{{2,1},{2,1},{2,0},{2,-1}},{{2,1},{2,1},{2,-1},{2,-1}},{{2,1},{2,0},{2,1},{2,0}},{{2,1},{2,0},{2,0},{2,0}},{{2,0},{2,0},{2,0},{2,0}}};
 scatteringProcessesFlatten = Map[Function[x, Flatten[x,1]], scatteringProcesses];
 
 Print["Starting computations of all amplitudes."]
 bimetricAmpsList = ParallelMap[Function[x, Calc2To2BimAmpFromStructuresSerial[x, amplitudeStructures, savePath]], scatteringProcessesFlatten];
-Print["Computation finished."]
-bimetricAmps = {scatteringProcessesFlatten, bimetricAmpsList} // Transpose;
-DumpSave[
- FileNameJoin[{savePath, "allBimetricAmplitudes.mx"}],
-  bimetricAmps
- ];
+Print["Computation finished. Polishing the results"];
+bimetricAmpsSimplifiedList = ParallelMap[PostSimplify, bimetricAmpsList];
+Print["Polishing finished"];
+bimetricAmps = {scatteringProcessesFlatten, bimetricAmpsSimplifiedList} // Transpose;
+Put[
+ bimetricAmps,
+ FileNameJoin[{savePath, "allBimetricAmplitudes.wl"}]
+];
