@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software in academic work, please cite the paper below."
+title: "TreeLevelBimetricCalculations"
+authors:
+  - family-names: "Herber"
+    given-names: "Felix"
+  - family-names: "Flinckman"
+    given-names: "Joakim"
+license: MIT
+url: "https://github.com/FelixHerber/TreeLevelBimetricCalculations"
+
+preferred-citation:
+  type: unpublished
+  authors:
+    - family-names: "Herber"
+      given-names: "Felix"
+    - family-names: "Flinckman"
+      given-names: "Joakim"
+    - family-names: "Hassan"
+      given-names: "S. F."
+  title: "Complete set of tree-level 2 -> 2 scattering amplitudes of ghost-free bimetric theory"
+  year: 2026
+  url: "https://arxiv.org/abs/2609.10760"

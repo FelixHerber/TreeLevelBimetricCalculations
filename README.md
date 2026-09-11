@@ -176,3 +176,11 @@ Link: https://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-248139
 
 ### arXiv
 F. Herber, J. Flinckman, and S.F. Hassan (2026). Complete set of tree - level 2 -> 2 scattering amplitudes of ghost - free bimetric theory. arXiv. Link: https://arxiv.org/pdf/2609.10760
+
+# Citation
+
+This repository accompanies the paper below. If you use the code, results, or scattering amplitudes from this repository in academic work, please cite the corresponding paper:
+
+F. Herber, J. Flinckman, and S. F. Hassan, Complete set of tree-level 2 -> 2 scattering amplitudes of ghost-free bimetric theory, arXiv:2609.10760 (2026).
+
+https://arxiv.org/abs/2609.10760
