@@ -19,6 +19,7 @@
  {{1, 2, 1, 2, 2, -2, 2, -2}, 
   (s*(2*mFP^4 - 4*mFP^2*s + s^2 + 2*mFP^2*Sqrt[s]*Sqrt[-4*mFP^2 + s] - 
      s^(3/2)*Sqrt[-4*mFP^2 + s]))/(4*mPl^2*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 1, -2, 1, 2, 1, -2}, u^3/(2*mPl^2*s*t)}, 
  {{1, 2, 1, -2, 2, 2, 2, 2}, (8*mFP^4*(mFP^4 - t*u)^2)/
    (mPl^2*(4*mFP^2 - s)^2*s*(mFP^2 - t)*(mFP^2 - u))}, 
  {{1, 2, 1, -2, 2, 2, 2, 1}, (-4*mFP^3*(Sqrt[s]*Sqrt[-4*mFP^2 + s] + t - u))/
@@ -48,6 +49,23 @@
     (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 1, -2, 2, 0, 2, 0}, 
   ((16*mFP^4 + 16*mFP^2*s + s^2)*(mFP^4 - t*u)^2)/
    (2*mPl^2*(4*mFP^2 - s)^2*s*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, 2, 1, 2, 2, 2}, (3*mFP^4 - 3*mFP^2*s + s^2 - mFP^2*u)^4/
+   (2*mPl^2*(mFP^2 - s)^5*t*(mFP^2 - u))}, {{1, 2, 2, 2, 1, 2, 2, 1}, 
+  (mFP*(3*mFP^4 - 3*mFP^2*s + s^2 - mFP^2*u)^3*Sqrt[-(t*(mFP^4 - s*u))])/
+   (mPl^2*(mFP^2 - s)^5*t*(mFP^2 - u))}, {{1, 2, 2, 2, 1, 2, 2, 0}, 
+  (Sqrt[3/2]*mFP^2*(3*mFP^4 - 3*mFP^2*s + s^2 - mFP^2*u)^2*(mFP^4 - s*u))/
+   (mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, {{1, 2, 2, 2, 1, 2, 2, -1}, 
+  (mFP^3*(3*mFP^4 - 3*mFP^2*s + s^2 - mFP^2*u)*(mFP^4 - s*u)*
+    Sqrt[-(t*(mFP^4 - s*u))])/(mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, 
+ {{1, 2, 2, 2, 1, 2, 2, -2}, (mFP^4*t*(mFP^4 - s*u)^2)/
+   (2*mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, {{1, 2, 2, 2, 1, -2, 2, 2}, 
+  (mFP^4*t*(mFP^4 - s*u)^2)/(2*mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, 
+ {{1, 2, 2, 2, 1, -2, 2, 1}, -((mFP^5*(-(t*(mFP^4 - s*u)))^(3/2))/
+    (mPl^2*(mFP^2 - s)^5*(mFP^2 - u)))}, {{1, 2, 2, 2, 1, -2, 2, 0}, 
+  (Sqrt[3/2]*mFP^6*t^2*(mFP^4 - s*u))/(mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, 
+ {{1, 2, 2, 2, 1, -2, 2, -1}, (mFP^7*t^2*Sqrt[-(t*(mFP^4 - s*u))])/
+   (mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, {{1, 2, 2, 2, 1, -2, 2, -2}, 
+  (mFP^8*t^3)/(2*mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, 
  {{1, 2, 2, 2, 2, 2, 2, 2}, 
   (mPl^2*q^2*(-1 + q^2)*s^10*(Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
     2*mFP^20*mPl^2*q^2*(-1 + q^2)*(16*Sqrt[s] + Sqrt[-4*mFP^2 + s]) - 
@@ -352,8 +370,8 @@
      (2*s^4 + 22*s^3*u - 21*s^2*u^2 - 32*s*u^3 - u^4) + 
     (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^6*(1 + q^2)^3*s^4*
      (30*s^4 + 179*s^3*u + 85*s^2*u^2 + 22*s*u^3 + 14*u^4) + 
-    mFP^18*s*((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(329*s + 72*u) - 
-      72*mPl^2*q^2*(-1 + q^2)*(15*s^2 + 17*s*u - u^2)) + 
+    mFP^18*s*((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(329*s + 72*u) + 
+      72*mPl^2*q^2*(-1 + q^2)*(-15*s^2 - 17*s*u + u^2)) + 
     3*mFP^16*s*(-2*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
        (154*s^2 + 101*s*u + 4*u^2) + 3*mPl^2*q^2*(-1 + q^2)*s*
        (131*s^2 + 192*s*u + 132*u^2)) + 
@@ -608,7 +626,25 @@
         22*s^(3/2)*Sqrt[-4*mFP^2 + s]*u + s*u*(51*t + 2*u) + 
         u*(-45*Sqrt[s*(-4*mFP^2 + s)]*t + 4*Sqrt[s*(-4*mFP^2 + s)]*u - 
           12*t*(t + 7*u)))))/(4*mPl^4*q^3*s^2*(-4*mFP^2 + s)^2*(-mFP^2 + s)^3*
-    (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, 1, 2, 2, 2, 2}, 
+    (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, 1, 1, 2, 2, 1}, 
+  ((9*mFP^4 - 6*mFP^2*s + s^2 - 4*mFP^2*u)*
+    (3*mFP^4 - 3*mFP^2*s + s^2 - mFP^2*u)^2*(mFP^4 - s*u))/
+   (2*mPl^2*(mFP^2 - s)^5*t*(mFP^2 - u))}, {{1, 2, 2, 1, 1, 2, 2, 0}, 
+  -((Sqrt[3/2]*mFP*(5*mFP^4 - 4*mFP^2*s + s^2 - 2*mFP^2*u)*
+     (3*mFP^4 - 3*mFP^2*s + s^2 - mFP^2*u)*(mFP^4 - s*u)*
+     Sqrt[-(t*(mFP^4 - s*u))])/(mPl^2*(mFP^2 - s)^5*t*(mFP^2 - u)))}, 
+ {{1, 2, 2, 1, 1, 2, 2, -1}, 
+  (mFP^2*(11*mFP^4 - 10*mFP^2*s + 3*s^2 - 4*mFP^2*u)*(mFP^4 - s*u)^2)/
+   (2*mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, {{1, 2, 2, 1, 1, 2, 2, -2}, 
+  -((mFP^3*Sqrt[-t]*(mFP^4 - s*u)^(5/2))/(mPl^2*(mFP^2 - s)^5*(mFP^2 - u)))}, 
+ {{1, 2, 2, 1, 1, -2, 2, 2}, -((mFP^3*s*Sqrt[-t]*t*(mFP^4 - s*u)^(3/2))/
+    (mPl^2*(mFP^2 - s)^5*(mFP^2 - u)))}, {{1, 2, 2, 1, 1, -2, 2, 1}, 
+  (mFP^4*t*(mFP^4 + 6*mFP^2*s - 3*s^2 - 4*s*u)*(mFP^4 - s*u))/
+   (2*mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, {{1, 2, 2, 1, 1, -2, 2, 0}, 
+  -((Sqrt[3/2]*mFP^5*t*(mFP^4 + 2*mFP^2*s - s^2 - 2*s*u)*
+     Sqrt[-(t*(mFP^4 - s*u))])/(mPl^2*(mFP^2 - s)^5*(mFP^2 - u)))}, 
+ {{1, 2, 2, 1, 1, -2, 2, -1}, (mFP^6*t^2*(3*mFP^4 + 2*mFP^2*s - s^2 - 4*s*u))/
+   (2*mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, {{1, 2, 2, 1, 2, 2, 2, 2}, 
   -1/8*((t - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t*u*(t + u)]*
      (-6*mFP^4*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*(2*mFP^10 - 
         s^(9/2)*(Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
@@ -750,8 +786,12 @@
          (s^2 - s^(3/2)*Sqrt[-4*mFP^2 + s] + 14*s*u + 
           2*u*(Sqrt[s*(-4*mFP^2 + s)] + 4*u)))))/
     (mFP^2*mPl^4*q^3*(mFP^2 - s)^2*(4*mFP^2 - s)^2*s^(3/2)*(mFP^2 - t)*
-     (mFP^2 - u))}, {{1, 2, 2, 1, 2, 1, 2, 1}, 
-  ((t - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t*u*(t + u)]*
+     (mFP^2 - u))}, {{1, 2, 2, 1, 2, 2, 2, -2}, 
+  -1/2*(mFP^3*(1 - q^2)*(2*mFP^2*Sqrt[-4*mFP^2 + s] + Sqrt[s]*t - 
+      Sqrt[-4*mFP^2 + s]*t - Sqrt[s]*u - Sqrt[-4*mFP^2 + s]*u)*
+     (-((mFP^6 - 3*mFP^2*t*u + t^2*u + t*u^2)/s))^(3/2))/
+    (mPl^2*q*(mFP^2 - s)*(4*mFP^2 - s)^2*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, 1, 2, 1, 2, 1}, ((t - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t*u*(t + u)]*
     (6*mFP^6*mPl^2*q^2*(-1 + q^2)*s*(s^4*(Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
        mFP^8*(34*Sqrt[s] + 4*Sqrt[-4*mFP^2 + s]) - 
        mFP^6*Sqrt[s]*(43*s + 13*Sqrt[s*(-4*mFP^2 + s)] + 24*u) + 
@@ -852,6 +892,26 @@
         (-3*s^2 + 15*s^(3/2)*Sqrt[-4*mFP^2 + s] + s*(13*t + 7*u) + 
          (t + u)*(15*Sqrt[s*(-4*mFP^2 + s)] + 32*u)))))/
    (8*mFP^3*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*(mFP^2 - t)*
+    (mFP^2 - u))}, {{1, 2, 2, 1, 2, 1, 2, -2}, 
+  ((6*mFP^4*mPl^2*q^2*(-1 + q^2)*(2*mFP^8*(-2*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+       s^3*(Sqrt[s] - Sqrt[-4*mFP^2 + s])*t - mFP^6*Sqrt[s]*
+        (9*s + 5*Sqrt[s*(-4*mFP^2 + s)] + 4*t) + 
+       mFP^4*s*(6*s^(3/2) + 4*s*Sqrt[-4*mFP^2 + s] + 33*Sqrt[s]*t - 
+         Sqrt[-4*mFP^2 + s]*t) - mFP^2*s^(3/2)*
+        (s^2 + s^(3/2)*Sqrt[-4*mFP^2 + s] + 14*s*t - 2*Sqrt[s*(-4*mFP^2 + s)]*
+          t + 8*t^2)) - (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+      (mFP^10*(20*Sqrt[s] + 6*Sqrt[-4*mFP^2 + s]) + 
+       2*s^3*(Sqrt[s] - Sqrt[-4*mFP^2 + s])*t^2 + 
+       mFP^8*(11*s^(3/2) + 3*s*Sqrt[-4*mFP^2 + s] - 20*Sqrt[s]*t - 
+         4*Sqrt[-4*mFP^2 + s]*t) - mFP^6*Sqrt[s]*
+        (32*s^2 + 14*s^(3/2)*Sqrt[-4*mFP^2 + s] + 35*s*t + 
+         5*Sqrt[s*(-4*mFP^2 + s)]*t - 8*t^2) - 
+       mFP^2*s^2*(2*s^(5/2) + 2*s^2*Sqrt[-4*mFP^2 + s] + 7*s^(3/2)*t + 
+         s*Sqrt[-4*mFP^2 + s]*t + 12*Sqrt[s]*t^2 - 4*Sqrt[-4*mFP^2 + s]*
+          t^2) + mFP^4*s*(15*s^(5/2) + 11*s^2*Sqrt[-4*mFP^2 + s] + 
+         38*s^(3/2)*t + 2*s*Sqrt[-4*mFP^2 + s]*t + 14*Sqrt[s]*t^2 + 
+         2*Sqrt[-4*mFP^2 + s]*t^2)))*(mFP^6 - 3*mFP^2*t*u + t*u*(t + u)))/
+   (16*mFP^2*mPl^4*q^3*(mFP^2 - s)^2*(4*mFP^2 - s)^2*s^(3/2)*(mFP^2 - t)*
     (mFP^2 - u))}, {{1, 2, 2, 1, 2, 0, 2, 0}, 
   -1/24*((t - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t*u*(t + u)]*
      (72*mFP^18*mPl^2*q^2*(-1 + q^2) + 432*mFP^16*mPl^2*q^2*(-1 + q^2)*s + 
@@ -918,6 +978,50 @@
         s*Sqrt[-4*mFP^2 + s]*u + 20*Sqrt[-4*mFP^2 + s]*u^2)))/
    (8*Sqrt[6]*mFP^4*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*
     Sqrt[-4*mFP^2 + s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, 1, 2, 0, 2, -2}, 
+  -1/8*((-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+        (-72*mFP^18 + s^(11/2)*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*t^2*
+          (s + 2*t) - 4*mFP^14*(89*s^2 + 43*s^(3/2)*Sqrt[-4*mFP^2 + s] + 
+           17*s*t + 6*Sqrt[s*(-4*mFP^2 + s)]*t) - mFP^2*s^(9/2)*t*
+          (5*s^(5/2) + 3*s^2*Sqrt[-4*mFP^2 + s] - 3*s^(3/2)*t + 
+           17*s*Sqrt[-4*mFP^2 + s]*t - 10*Sqrt[s]*t^2 + 14*Sqrt[-4*mFP^2 + s]*
+            t^2) + 2*mFP^12*(280*s^3 + 145*s^(5/2)*Sqrt[-4*mFP^2 + s] + 
+           275*s^2*t + 123*s^(3/2)*Sqrt[-4*mFP^2 + s]*t - 36*s*t^2 + 
+           8*Sqrt[s*(-4*mFP^2 + s)]*t^2) - 2*mFP^10*s*
+          (222*s^3 + 129*s^(5/2)*Sqrt[-4*mFP^2 + s] + 565*s^2*t + 
+           144*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 73*s*t^2 + 
+           76*Sqrt[s*(-4*mFP^2 + s)]*t^2 - 8*t^3) - mFP^6*s^(5/2)*
+          (38*s^(7/2) + 32*s^3*Sqrt[-4*mFP^2 + s] + 337*s^(5/2)*t + 
+           129*s^2*Sqrt[-4*mFP^2 + s]*t + 227*s^(3/2)*t^2 + 
+           137*s*Sqrt[-4*mFP^2 + s]*t^2 + 46*Sqrt[s]*t^3 + 
+           14*Sqrt[-4*mFP^2 + s]*t^3) + mFP^4*s^(7/2)*(3*s^(7/2) + 
+           3*s^3*Sqrt[-4*mFP^2 + s] + 65*s^(5/2)*t + 
+           33*s^2*Sqrt[-4*mFP^2 + s]*t + 38*s^(3/2)*t^2 + 
+           80*s*Sqrt[-4*mFP^2 + s]*t^2 + 2*Sqrt[s]*t^3 + 
+           26*Sqrt[-4*mFP^2 + s]*t^3) + mFP^8*(185*s^5 + 
+           129*s^(9/2)*Sqrt[-4*mFP^2 + s] + 877*s^4*t + 
+           237*s^(7/2)*Sqrt[-4*mFP^2 + s]*t + 405*s^3*t^2 + 
+           137*s^(5/2)*Sqrt[-4*mFP^2 + s]*t^2 + 20*s^2*t^3 + 
+           24*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^3) + 
+         2*mFP^16*(81*s + 8*(Sqrt[s*(-4*mFP^2 + s)] + 3*t)))) - 
+      6*mFP^4*mPl^2*q^2*(-1 + q^2)*(8*mFP^16 + 10*mFP^14*
+         (-9*s + 2*Sqrt[s*(-4*mFP^2 + s)]) - s^7*t + 
+        s^(13/2)*Sqrt[-4*mFP^2 + s]*t + 2*mFP^12*s*
+         (87*s - 22*Sqrt[s*(-4*mFP^2 + s)] + 4*t) + mFP^2*s^(9/2)*t*
+         (15*s^(3/2) - 13*s*Sqrt[-4*mFP^2 + s] + 3*Sqrt[s]*t - 
+          3*Sqrt[-4*mFP^2 + s]*t) + mFP^8*(57*s^4 + 19*s^(7/2)*
+           Sqrt[-4*mFP^2 + s] - 282*s^3*t + 280*s^(5/2)*Sqrt[-4*mFP^2 + s]*
+           t - 18*s^2*t^2 + 48*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2) - 
+        mFP^6*s^(3/2)*(12*s^(7/2) + 8*s^3*Sqrt[-4*mFP^2 + s] - 
+          227*s^(5/2)*t + 217*s^2*Sqrt[-4*mFP^2 + s]*t - 45*s^(3/2)*t^2 + 
+          129*s*Sqrt[-4*mFP^2 + s]*t^2 + 8*Sqrt[-4*mFP^2 + s]*t^3) + 
+        mFP^4*s^(5/2)*(s^(7/2) + s^3*Sqrt[-4*mFP^2 + s] - 85*s^(5/2)*t + 
+          75*s^2*Sqrt[-4*mFP^2 + s]*t - 22*s^(3/2)*t^2 + 
+          48*s*Sqrt[-4*mFP^2 + s]*t^2 + 20*Sqrt[-4*mFP^2 + s]*t^3) - 
+        2*mFP^10*s*(69*s^2 - 59*s*t + t*(45*Sqrt[s*(-4*mFP^2 + s)] + 4*t))))*
+     (mFP^6 - 3*mFP^2*t*u + t*u*(t + u)))/(Sqrt[6]*mFP^3*mPl^4*q^3*
+     (mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*Sqrt[-4*mFP^2 + s]*(mFP^2 - t)*
+     (mFP^2 - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - t*u^2])}, 
  {{1, 2, 2, 1, 2, -1, 2, -1}, 
   ((t - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t*u*(t + u)]*
     (6*mFP^6*mPl^2*q^2*(-1 + q^2)*s*(s^(9/2) - s^4*Sqrt[-4*mFP^2 + s] + 
@@ -940,7 +1044,98 @@
          44*s^(3/2)*u - 2*s*Sqrt[-4*mFP^2 + s]*u + 5*Sqrt[s]*u^2 + 
          Sqrt[-4*mFP^2 + s]*u^2))))/(8*mFP^3*mPl^4*q^3*(mFP^2 - s)^3*
     (4*mFP^2 - s)^2*s^(3/2)*(mFP^2 - t)*(mFP^2 - u))}, 
- {{1, 2, 2, 0, 2, 2, 2, 2}, 
+ {{1, 2, 2, 1, 2, -1, 2, -2}, 
+  (-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+      (2*mFP^18*(-14*Sqrt[s] + 9*Sqrt[-4*mFP^2 + s]) - 
+       mFP^16*(45*s^(3/2) + 41*s*Sqrt[-4*mFP^2 + s] - 12*Sqrt[s]*t + 
+         12*Sqrt[-4*mFP^2 + s]*t) + mFP^14*Sqrt[s]*
+        (225*s^2 + 101*s^(3/2)*Sqrt[-4*mFP^2 + s] + 213*s*t - 
+         17*Sqrt[s*(-4*mFP^2 + s)]*t + 8*t^2) - 
+       mFP^12*s*(369*s^(5/2) + 185*s^2*Sqrt[-4*mFP^2 + s] + 450*s^(3/2)*t + 
+         72*s*Sqrt[-4*mFP^2 + s]*t + 170*Sqrt[s]*t^2 - 52*Sqrt[-4*mFP^2 + s]*
+          t^2) + mFP^10*s*(287*s^(7/2) + 177*s^3*Sqrt[-4*mFP^2 + s] + 
+         639*s^(5/2)*t + 223*s^2*Sqrt[-4*mFP^2 + s]*t + 258*s^(3/2)*t^2 - 
+         24*s*Sqrt[-4*mFP^2 + s]*t^2 + 4*Sqrt[s]*t^3 - 12*Sqrt[-4*mFP^2 + s]*
+          t^3) + 2*mFP^2*s^4*t*(5*s^(7/2) - 4*s^3*Sqrt[-4*mFP^2 + s] + 
+         13*s^(5/2)*t - 25*s^2*Sqrt[-4*mFP^2 + s]*t + 15*s^(3/2)*t^2 - 
+         31*s*Sqrt[-4*mFP^2 + s]*t^2 + 7*Sqrt[s]*t^3 - 9*Sqrt[-4*mFP^2 + s]*
+          t^3) + s^5*t*(-s^(7/2) + s^3*Sqrt[-4*mFP^2 + s] - 2*s^(5/2)*t + 
+         6*s^2*Sqrt[-4*mFP^2 + s]*t - 2*s^(3/2)*t^2 + 10*s*Sqrt[-4*mFP^2 + s]*
+          t^2 - 2*Sqrt[s]*t^3 + 6*Sqrt[-4*mFP^2 + s]*t^3) - 
+       mFP^8*s^(3/2)*(116*s^4 + 90*s^(7/2)*Sqrt[-4*mFP^2 + s] + 455*s^3*t + 
+         167*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 550*s^2*t^2 - 
+         50*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2 - 47*s*t^3 + 
+         9*Sqrt[s*(-4*mFP^2 + s)]*t^3 - 8*t^4) - 
+       mFP^4*s^3*(2*s^(9/2) + 2*s^4*Sqrt[-4*mFP^2 + s] + 48*s^(7/2)*t - 
+         14*s^3*Sqrt[-4*mFP^2 + s]*t + 150*s^(5/2)*t^2 - 
+         150*s^2*Sqrt[-4*mFP^2 + s]*t^2 + 127*s^(3/2)*t^3 - 
+         115*s*Sqrt[-4*mFP^2 + s]*t^3 + 18*Sqrt[s]*t^4 - 
+         6*Sqrt[-4*mFP^2 + s]*t^4) + 2*mFP^6*s^2*(12*s^(9/2) + 
+         11*s^4*Sqrt[-4*mFP^2 + s] + 88*s^(7/2)*t + 19*s^3*Sqrt[-4*mFP^2 + s]*
+          t + 218*s^(5/2)*t^2 - 92*s^2*Sqrt[-4*mFP^2 + s]*t^2 + 
+         72*s^(3/2)*t^3 - 21*s*Sqrt[-4*mFP^2 + s]*t^3 - 13*Sqrt[s]*t^4 + 
+         3*Sqrt[-4*mFP^2 + s]*t^4))) + 2*mFP^2*mPl^2*q^2*(-1 + q^2)*
+     (2*mFP^18*(-30*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+      s^8*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*t + mFP^16*Sqrt[s]*
+       (381*s - 87*Sqrt[s*(-4*mFP^2 + s)] + 20*t) + 
+      2*mFP^2*s^6*t*(10*s^(3/2) - 9*s*Sqrt[-4*mFP^2 + s] + 3*Sqrt[s]*t - 
+        3*Sqrt[-4*mFP^2 + s]*t) + mFP^14*s*(-411*s^(3/2) + 
+        213*s*Sqrt[-4*mFP^2 + s] - 13*Sqrt[s]*t + 33*Sqrt[-4*mFP^2 + s]*t) + 
+      mFP^12*s*(213*s^(5/2) - 211*s^2*Sqrt[-4*mFP^2 + s] - 1366*s^(3/2)*t + 
+        160*s*Sqrt[-4*mFP^2 + s]*t - 96*Sqrt[s]*t^2 - 6*Sqrt[-4*mFP^2 + s]*
+         t^2) + mFP^4*s^4*t*(-154*s^(5/2) + 120*s^2*Sqrt[-4*mFP^2 + s] - 
+        66*s^(3/2)*t + 54*s*Sqrt[-4*mFP^2 + s]*t - 9*Sqrt[s]*t^2 + 
+        9*Sqrt[-4*mFP^2 + s]*t^2) + mFP^8*s^2*(6*s^(7/2) - 
+        24*s^3*Sqrt[-4*mFP^2 + s] - 1465*s^(5/2)*t + 
+        651*s^2*Sqrt[-4*mFP^2 + s]*t - 1086*s^(3/2)*t^2 + 
+        258*s*Sqrt[-4*mFP^2 + s]*t^2 - 513*Sqrt[s]*t^3 + 
+        27*Sqrt[-4*mFP^2 + s]*t^3) + mFP^10*s^(3/2)*
+       (-57*s^3 + 105*s^(5/2)*Sqrt[-4*mFP^2 + s] + 2051*s^2*t - 
+        561*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 1308*s*t^2 + 
+        18*t^2*(-7*Sqrt[s*(-4*mFP^2 + s)] + 2*t)) + 
+      2*mFP^6*s^(5/2)*(s^(7/2)*Sqrt[-4*mFP^2 + s] + 310*s^3*t - 
+        193*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 183*s^2*t^2 - 
+        87*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2 + 99*s*t^3 + 
+        18*t^3*(-Sqrt[s*(-4*mFP^2 + s)] + 2*t))))/
+   (16*mFP^2*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*(mFP^2 - t)*
+    (mFP^2 - u))}, {{1, 2, 2, 1, 2, -2, 2, -2}, 
+  -1/8*((t - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t*u*(t + u)]*
+     (6*mFP^4*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*(-2*mFP^10 + s^5 - 
+        s^(9/2)*Sqrt[-4*mFP^2 + s] + mFP^2*(-9*s^4 + 
+          7*s^(7/2)*Sqrt[-4*mFP^2 + s]) + 
+        mFP^8*(30*s - 4*Sqrt[s*(-4*mFP^2 + s)]) + 
+        mFP^6*s*(-43*s + 13*Sqrt[s*(-4*mFP^2 + s)] - 18*u) + 
+        mFP^4*s*(29*s^2 - 15*s^(3/2)*Sqrt[-4*mFP^2 + s] + 6*s*u + 6*u^2)) - 
+      (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (2*mFP^12*(-4*Sqrt[s] + Sqrt[-4*mFP^2 + s]) - 
+        2*mFP^10*s*(5*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+        mFP^8*s*(-17*s^(3/2) + 15*s*Sqrt[-4*mFP^2 + s] + 48*Sqrt[s]*u - 
+          6*Sqrt[-4*mFP^2 + s]*u) + mFP^2*s^3*(17*s^(5/2) - 
+          15*s^2*Sqrt[-4*mFP^2 + s] - 12*s*Sqrt[-4*mFP^2 + s]*u - 
+          6*Sqrt[-4*mFP^2 + s]*u^2) + 2*s^4*(-s^(5/2) + 
+          s^2*Sqrt[-4*mFP^2 + s] + s*Sqrt[-4*mFP^2 + s]*u + 
+          Sqrt[-4*mFP^2 + s]*u^2) + mFP^6*s*(57*s^(5/2) - 
+          39*s^2*Sqrt[-4*mFP^2 + s] - 28*s^(3/2)*u - 4*s*Sqrt[-4*mFP^2 + s]*
+           u - 16*Sqrt[s]*u^2 + 2*Sqrt[-4*mFP^2 + s]*u^2) + 
+        mFP^4*s^2*(-49*s^(5/2) + 37*s^2*Sqrt[-4*mFP^2 + s] + 4*s^(3/2)*u + 
+          20*s*Sqrt[-4*mFP^2 + s]*u + 4*Sqrt[s]*u^2 + 2*Sqrt[-4*mFP^2 + s]*
+           u^2))))/(mFP*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*
+     (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, 0, 1, 2, 2, 0}, 
+  ((mFP^4 - s*u)^2*(37*mFP^8 - 58*mFP^6*s + 36*mFP^4*s^2 - 10*mFP^2*s^3 + 
+     s^4 - 30*mFP^6*u + 24*mFP^4*s*u - 6*mFP^2*s^2*u + 6*mFP^4*u^2))/
+   (2*mPl^2*(mFP^2 - s)^5*t*(mFP^2 - u))}, {{1, 2, 2, 0, 1, 2, 2, -1}, 
+  (Sqrt[3/2]*mFP*t*(5*mFP^4 - 4*mFP^2*s + s^2 - 2*mFP^2*u)*
+    (mFP^4 - s*u)^(5/2))/(mPl^2*(mFP^2 - s)^5*(-t)^(3/2)*(mFP^2 - u))}, 
+ {{1, 2, 2, 0, 1, 2, 2, -2}, (Sqrt[3/2]*mFP^2*(mFP^4 - s*u)^3)/
+   (mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, {{1, 2, 2, 0, 1, -2, 2, 2}, 
+  (Sqrt[3/2]*mFP^2*s^2*t^2*(mFP^4 - s*u))/(mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, 
+ {{1, 2, 2, 0, 1, -2, 2, 1}, 
+  (Sqrt[3/2]*mFP^3*s*t*(mFP^4 + 2*mFP^2*s - s^2 - 2*s*u)*
+    Sqrt[-(t*(mFP^4 - s*u))])/(mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, 
+ {{1, 2, 2, 0, 1, -2, 2, 0}, 
+  (mFP^4*t*(mFP^8 + 8*mFP^6*s - 4*mFP^2*s^3 + s^4 - 6*mFP^4*s*u - 
+     12*mFP^2*s^2*u + 6*s^3*u + 6*s^2*u^2))/(2*mPl^2*(mFP^2 - s)^5*
+    (mFP^2 - u))}, {{1, 2, 2, 0, 2, 2, 2, 2}, 
   -1/4*((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*
      (6*mFP^4*mPl^2*q^2*(-1 + q^2)*
        (-(s^(11/2)*(Sqrt[s] + Sqrt[-4*mFP^2 + s])) - 
@@ -1063,7 +1258,45 @@
         156*s*Sqrt[-4*mFP^2 + s]*u^3 + 60*Sqrt[-4*mFP^2 + s]*u^4)))/
    (24*mFP^4*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*
     Sqrt[-4*mFP^2 + s]*(mFP^2 - t)*(mFP^2 - u))}, 
- {{1, 2, 2, 0, 2, 1, 2, 1}, 
+ {{1, 2, 2, 0, 2, 2, 2, -1}, ((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*
+    (6*mFP^4*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*(4*mFP^12 - 
+       mFP^10*(3*s + Sqrt[s*(-4*mFP^2 + s)]) + 
+       s^(7/2)*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u^2 - 
+       mFP^8*(-31*s^2 + 9*s^(3/2)*Sqrt[-4*mFP^2 + s] + 4*s*u + 
+         4*Sqrt[s*(-4*mFP^2 + s)]*u) - 4*mFP^6*s*
+        (7*s^2 - 4*s^(3/2)*Sqrt[-4*mFP^2 + s] + 18*s*u - 
+         7*Sqrt[s*(-4*mFP^2 + s)]*u + u^2) + 
+       mFP^4*(9*s^4 - 7*s^(7/2)*Sqrt[-4*mFP^2 + s] + 48*s^3*u - 
+         32*s^(5/2)*Sqrt[-4*mFP^2 + s]*u + 63*s^2*u^2 - 
+         5*s^(3/2)*Sqrt[-4*mFP^2 + s]*u^2) - 
+       mFP^2*s^2*(s^3 - s^(5/2)*Sqrt[-4*mFP^2 + s] + 8*s^2*u - 
+         8*s^(3/2)*Sqrt[-4*mFP^2 + s]*u + 24*s*u^2 - 4*Sqrt[s*(-4*mFP^2 + s)]*
+          u^2 + 12*u^3)) - (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+      (2*mFP^14*(10*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+       mFP^12*Sqrt[s]*(-113*s + 37*Sqrt[s*(-4*mFP^2 + s)] - 12*u) + 
+       s^4*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u^3 + 
+       3*mFP^10*s*(33*s^(3/2) - 19*s*Sqrt[-4*mFP^2 + s] + 45*Sqrt[s]*u - 
+         17*Sqrt[-4*mFP^2 + s]*u) + mFP^8*s*(-10*s^(5/2) + 
+         20*s^2*Sqrt[-4*mFP^2 + s] - 57*s^(3/2)*u + 39*s*Sqrt[-4*mFP^2 + s]*
+          u - 72*Sqrt[s]*u^2 + 18*Sqrt[-4*mFP^2 + s]*u^2) + 
+       2*mFP^6*s^(3/2)*(-11*s^3 + 5*s^(5/2)*Sqrt[-4*mFP^2 + s] - 15*s^2*u + 
+         3*s^(3/2)*Sqrt[-4*mFP^2 + s]*u - 3*s*u^2 + 10*u^3) + 
+       mFP^4*s^2*(9*s^(7/2) - 7*s^3*Sqrt[-4*mFP^2 + s] + 21*s^(5/2)*u - 
+         15*s^2*Sqrt[-4*mFP^2 + s]*u + 30*s^(3/2)*u^2 + 3*Sqrt[s]*u^3 - 
+         5*Sqrt[-4*mFP^2 + s]*u^3) - mFP^2*s^3*(s^(7/2) - 
+         s^3*Sqrt[-4*mFP^2 + s] + 3*s^(5/2)*u - 3*s^2*Sqrt[-4*mFP^2 + s]*u + 
+         6*s^(3/2)*u^2 + 6*Sqrt[s]*u^3 + 2*Sqrt[-4*mFP^2 + s]*u^3))))/
+   (8*Sqrt[6]*mFP^3*mPl^4*q^3*(mFP^2 - s)^2*(4*mFP^2 - s)^2*s^(3/2)*
+    (mFP^2 - t)*(mFP^2 - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - t*u^2])}, 
+ {{1, 2, 2, 0, 2, 2, 2, -2}, 
+  -1/2*(Sqrt[3/2]*mFP^2*(1 - q^2)*(12*mFP^6*Sqrt[s] - 19*mFP^4*s^(3/2) + 
+      8*mFP^2*s^(5/2) - s^(7/2) - 2*mFP^6*Sqrt[-4*mFP^2 + s] + 
+      9*mFP^4*s*Sqrt[-4*mFP^2 + s] - 6*mFP^2*s^2*Sqrt[-4*mFP^2 + s] + 
+      s^3*Sqrt[-4*mFP^2 + s] - 8*mFP^4*Sqrt[s]*u + 10*mFP^2*s^(3/2)*u - 
+      2*s^(5/2)*u - 6*mFP^2*s*Sqrt[-4*mFP^2 + s]*u + 2*s^2*Sqrt[-4*mFP^2 + s]*
+       u + 2*s*Sqrt[-4*mFP^2 + s]*u^2)*(mFP^6 - 3*mFP^2*t*u + t^2*u + t*u^2))/
+    (mPl^2*q*(mFP^2 - s)*(4*mFP^2 - s)^2*s*Sqrt[-4*mFP^2 + s]*(mFP^2 - t)*
+     (mFP^2 - u))}, {{1, 2, 2, 0, 2, 1, 2, 1}, 
   -1/4*((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*
      (-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(-16*mFP^16 - 
          2*mFP^12*(45*s^2 + 23*s^(3/2)*Sqrt[-4*mFP^2 + s]) + 
@@ -1131,15 +1364,116 @@
          12*u^2*(3*Sqrt[s*(-4*mFP^2 + s)] + 10*u)))))/
    (48*mFP^5*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*(mFP^2 - t)*
     (mFP^2 - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - t*u^2])}, 
- {{1, 2, 2, 0, 2, 0, 2, 0}, ((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*
-    (72*mFP^18*mPl^2*q^2*(-1 + q^2) + 1188*mFP^16*mPl^2*q^2*(-1 + q^2)*s + 
-     (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*s^6*u*(s + u) - 
-     (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^6*(1 + q^2)^3*s^3*
-      (14*s^2 + 4*s*u + u^2) + (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*
-      (1 + q^2)^3*s^4*(7*s^2 + 16*s*u + u^2) - (BetaBim1*c - BetaBim3*c^3)*
-      m^4*mFP^2*(1 + q^2)^3*s^5*(s^2 + 8*s*u + 5*u^2) + 
-     8*mFP^14*s*(5*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3 - 
-       63*mPl^2*q^2*(-1 + q^2)*(s + 3*u)) + 
+ {{1, 2, 2, 0, 2, 1, 2, -1}, (288*mFP^22*mPl^2*q^2*(-1 + q^2) + 
+    24*mFP^20*mPl^2*q^2*(-1 + q^2)*(-25*s + 3*Sqrt[s*(-4*mFP^2 + s)] - 8*u) + 
+    (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*s^(11/2)*u*(s + u)*
+     (s^(5/2) - s^2*Sqrt[-4*mFP^2 + s] + 2*s^(3/2)*u - 
+      2*s*Sqrt[-4*mFP^2 + s]*u - 2*Sqrt[-4*mFP^2 + s]*u^2) + 
+    (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*(1 + q^2)^3*s^(7/2)*
+     (17*s^(9/2) - 15*s^4*Sqrt[-4*mFP^2 + s] + 163*s^(7/2)*u - 
+      129*s^3*Sqrt[-4*mFP^2 + s]*u + 270*s^(5/2)*u^2 - 
+      210*s^2*Sqrt[-4*mFP^2 + s]*u^2 + 108*s^(3/2)*u^3 - 
+      132*s*Sqrt[-4*mFP^2 + s]*u^3 - 24*Sqrt[-4*mFP^2 + s]*u^4) + 
+    (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*(1 + q^2)^3*s^(9/2)*
+     (-s^(9/2) + s^4*Sqrt[-4*mFP^2 + s] - 20*s^(7/2)*u + 
+      18*s^3*Sqrt[-4*mFP^2 + s]*u - 45*s^(5/2)*u^2 + 
+      41*s^2*Sqrt[-4*mFP^2 + s]*u^2 - 24*s^(3/2)*u^3 + 
+      40*s*Sqrt[-4*mFP^2 + s]*u^3 + 14*Sqrt[-4*mFP^2 + s]*u^4) - 
+    4*mFP^18*(2*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (12*s + Sqrt[s*(-4*mFP^2 + s)]) + 3*mPl^2*q^2*(-1 + q^2)*
+       (-23*s^2 + 18*s^(3/2)*Sqrt[-4*mFP^2 + s] - 28*s*u + 
+        24*(Sqrt[s*(-4*mFP^2 + s)] + 3*t)*u)) + 
+    2*mFP^6*s^(5/2)*(-6*mPl^2*q^2*(-1 + q^2)*t*u*(t + u)*
+       (-s^(5/2) + s^2*Sqrt[-4*mFP^2 + s] - 2*s^(3/2)*u + 
+        s*Sqrt[-4*mFP^2 + s]*u + Sqrt[-4*mFP^2 + s]*u^2) + 
+      (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(-60*s^(9/2) + 
+        46*s^4*Sqrt[-4*mFP^2 + s] - 352*s^(7/2)*u + 
+        239*s^3*Sqrt[-4*mFP^2 + s]*u - 417*s^(5/2)*u^2 + 
+        249*s^2*Sqrt[-4*mFP^2 + s]*u^2 - 116*s^(3/2)*u^3 + 
+        74*s*Sqrt[-4*mFP^2 + s]*u^3 + Sqrt[-4*mFP^2 + s]*u^4)) - 
+    mFP^8*s^(3/2)*((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (-458*s^(9/2) + 300*s^4*Sqrt[-4*mFP^2 + s] - 1759*s^(7/2)*u + 
+        995*s^3*Sqrt[-4*mFP^2 + s]*u - 1431*s^(5/2)*u^2 + 
+        553*s^2*Sqrt[-4*mFP^2 + s]*u^2 - 258*s^(3/2)*u^3 + 
+        28*s*Sqrt[-4*mFP^2 + s]*u^3 + 8*Sqrt[-4*mFP^2 + s]*u^4) + 
+      12*mPl^2*q^2*(-1 + q^2)*t*u*(3*s^(7/2) - 3*s^3*Sqrt[-4*mFP^2 + s] + 
+        8*s^(3/2)*u*(t + u) + 16*Sqrt[-4*mFP^2 + s]*u^2*(t + u) - 
+        s^2*Sqrt[-4*mFP^2 + s]*(5*t + 8*u) + s*Sqrt[-4*mFP^2 + s]*u*
+         (13*t + 10*u) + s^(5/2)*(7*t + 13*u))) + 
+    mFP^10*((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*s^(3/2)*
+       (-1033*s^(7/2) + 567*s^3*Sqrt[-4*mFP^2 + s] - 2612*s^(5/2)*u + 
+        1194*s^2*Sqrt[-4*mFP^2 + s]*u - 1377*s^(3/2)*u^2 + 
+        309*s*Sqrt[-4*mFP^2 + s]*u^2 - 144*Sqrt[s]*u^3 + 
+        48*Sqrt[-4*mFP^2 + s]*u^3) + 12*mPl^2*q^2*(-1 + q^2)*t*u*
+       (21*s^4 - 15*s^(7/2)*Sqrt[-4*mFP^2 + s] - s^(5/2)*Sqrt[-4*mFP^2 + s]*
+         (t - 38*u) - 6*s^2*u*(t + u) + 8*Sqrt[s*(-4*mFP^2 + s)]*u^2*
+         (t + u) + 8*s^(3/2)*Sqrt[-4*mFP^2 + s]*u*(7*t + 13*u) + 
+        s^3*(9*t + 33*u))) + mFP^12*((BetaBim1*c - BetaBim3*c^3)*m^4*
+       (1 + q^2)^3*s*(1413*s^3 - 633*s^(5/2)*Sqrt[-4*mFP^2 + s] + 
+        2269*s^2*u - 855*s^(3/2)*Sqrt[-4*mFP^2 + s]*u + 696*s*u^2 + 
+        2*u^2*(-99*Sqrt[s*(-4*mFP^2 + s)] + 16*u)) - 
+      12*mPl^2*q^2*(-1 + q^2)*(-s^5 + s^(9/2)*Sqrt[-4*mFP^2 + s] - 2*s^4*u + 
+        s^(7/2)*Sqrt[-4*mFP^2 + s]*u + 27*s^3*t*u + 
+        s^(5/2)*Sqrt[-4*mFP^2 + s]*u*(-3*t + u) - 28*s*t*u^2*(t + u) + 
+        24*Sqrt[s*(-4*mFP^2 + s)]*t*u^2*(t + 2*u) + 
+        6*s^(3/2)*Sqrt[-4*mFP^2 + s]*t*u*(3*t + 31*u) - 
+        s^2*t*u*(23*t + 41*u))) + 
+    2*mFP^14*((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (-575*s^3 + 202*s^(5/2)*Sqrt[-4*mFP^2 + s] - 532*s^2*u + 
+        193*s^(3/2)*Sqrt[-4*mFP^2 + s]*u - 72*s*u^2 + 
+        4*Sqrt[s*(-4*mFP^2 + s)]*u^2) + 6*mPl^2*q^2*(-1 + q^2)*
+       (-7*s^4 + 5*s^(7/2)*Sqrt[-4*mFP^2 + s] - 8*s^3*u - 
+        13*s^(5/2)*Sqrt[-4*mFP^2 + s]*u - 69*s^2*t*u + 
+        2*s^(3/2)*Sqrt[-4*mFP^2 + s]*(27*t - 8*u)*u - 2*s*t*u*(25*t + 67*u) + 
+        2*t*u*(3*Sqrt[s*(-4*mFP^2 + s)]*t + 39*Sqrt[s*(-4*mFP^2 + s)]*u - 
+          8*u*(t + u)))) - 2*mFP^16*((BetaBim1*c - BetaBim3*c^3)*m^4*
+       (1 + q^2)^3*(-256*s^2 + 63*s^(3/2)*Sqrt[-4*mFP^2 + s] - 104*s*u + 
+        12*Sqrt[s*(-4*mFP^2 + s)]*u) + 6*mPl^2*q^2*(-1 + q^2)*
+       (-9*s^3 + s^(5/2)*Sqrt[-4*mFP^2 + s] + 6*s^2*u - 
+        56*s^(3/2)*Sqrt[-4*mFP^2 + s]*u - 150*s*t*u - 
+        2*u*(-9*Sqrt[s*(-4*mFP^2 + s)]*t + 4*Sqrt[s*(-4*mFP^2 + s)]*u + 
+          12*t*(t + 3*u)))))/(8*Sqrt[6]*mFP^4*mPl^4*q^3*(mFP^2 - s)^3*
+    (4*mFP^2 - s)^2*Sqrt[s]*Sqrt[-4*mFP^2 + s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, 0, 2, 1, 2, -2}, 
+  -1/8*(((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (2*mFP^14*(-10*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+        s^4*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*t^3 + mFP^12*Sqrt[s]*
+         (113*s + 37*Sqrt[s*(-4*mFP^2 + s)] + 12*t) - 
+        3*mFP^10*s*(33*s^(3/2) + 19*s*Sqrt[-4*mFP^2 + s] + 45*Sqrt[s]*t + 
+          17*Sqrt[-4*mFP^2 + s]*t) + mFP^8*s*(10*s^(5/2) + 
+          20*s^2*Sqrt[-4*mFP^2 + s] + 57*s^(3/2)*t + 39*s*Sqrt[-4*mFP^2 + s]*
+           t + 72*Sqrt[s]*t^2 + 18*Sqrt[-4*mFP^2 + s]*t^2) + 
+        2*mFP^6*s^(3/2)*(11*s^3 + 5*s^(5/2)*Sqrt[-4*mFP^2 + s] + 15*s^2*t + 
+          3*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 3*s*t^2 - 10*t^3) + 
+        mFP^2*s^3*(s^(7/2) + s^3*Sqrt[-4*mFP^2 + s] + 3*s^(5/2)*t + 
+          3*s^2*Sqrt[-4*mFP^2 + s]*t + 6*s^(3/2)*t^2 + 6*Sqrt[s]*t^3 - 
+          2*Sqrt[-4*mFP^2 + s]*t^3) - mFP^4*s^2*(9*s^(7/2) + 
+          7*s^3*Sqrt[-4*mFP^2 + s] + 21*s^(5/2)*t + 15*s^2*Sqrt[-4*mFP^2 + s]*
+           t + 30*s^(3/2)*t^2 + 3*Sqrt[s]*t^3 + 5*Sqrt[-4*mFP^2 + s]*t^3)) + 
+      6*mFP^4*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*(4*mFP^12 + 
+        mFP^10*(-3*s + Sqrt[s*(-4*mFP^2 + s)]) + 
+        s^(7/2)*(Sqrt[s] - Sqrt[-4*mFP^2 + s])*t^2 + 
+        mFP^8*(31*s^2 + 9*s^(3/2)*Sqrt[-4*mFP^2 + s] - 4*s*t + 
+          4*Sqrt[s*(-4*mFP^2 + s)]*t) + 
+        mFP^4*(9*s^4 + 7*s^(7/2)*Sqrt[-4*mFP^2 + s] + 48*s^3*t + 
+          32*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 63*s^2*t^2 + 
+          5*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2) - 4*mFP^6*s*
+         (7*s^2 + 4*s^(3/2)*Sqrt[-4*mFP^2 + s] + 18*s*t + 
+          t*(7*Sqrt[s*(-4*mFP^2 + s)] + t)) - mFP^2*s^2*
+         (s^3 + s^(5/2)*Sqrt[-4*mFP^2 + s] + 8*s^2*t + 
+          8*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 24*s*t^2 + 
+          4*t^2*(Sqrt[s*(-4*mFP^2 + s)] + 3*t))))*(mFP^6 - 3*mFP^2*t*u + 
+      t*u*(t + u)))/(Sqrt[6]*mFP^3*mPl^4*q^3*(mFP^2 - s)^2*(4*mFP^2 - s)^2*
+     s^(3/2)*(mFP^2 - t)*(mFP^2 - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - 
+       t*u^2])}, {{1, 2, 2, 0, 2, 0, 2, 0}, 
+  ((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*(72*mFP^18*mPl^2*q^2*(-1 + q^2) + 
+     1188*mFP^16*mPl^2*q^2*(-1 + q^2)*s + (BetaBim1*c - BetaBim3*c^3)*m^4*
+      (1 + q^2)^3*s^6*u*(s + u) - (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^6*
+      (1 + q^2)^3*s^3*(14*s^2 + 4*s*u + u^2) + (BetaBim1*c - BetaBim3*c^3)*
+      m^4*mFP^4*(1 + q^2)^3*s^4*(7*s^2 + 16*s*u + u^2) - 
+     (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*(1 + q^2)^3*s^5*
+      (s^2 + 8*s*u + 5*u^2) + 8*mFP^14*s*(5*(BetaBim1*c - BetaBim3*c^3)*m^4*
+        (1 + q^2)^3 - 63*mPl^2*q^2*(-1 + q^2)*(s + 3*u)) + 
      mFP^10*s*(-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
          (43*s^2 + 142*s*u - 8*u^2)) + 18*mPl^2*q^2*(-1 + q^2)*s*
         (-2*s^2 + 13*s*u + 16*u^2)) + mFP^8*s^2*
@@ -1148,7 +1482,198 @@
          50*u^2)) + mFP^12*s*(2*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
         (25*s - 12*u) + 9*mPl^2*q^2*(-1 + q^2)*(9*s^2 - 40*s*u + 56*u^2))))/
    (12*Sqrt[6]*mFP^6*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s*(mFP^2 - t)*
-    (mFP^2 - u))}, {{1, 2, 2, -1, 2, 2, 2, 2}, 
+    (mFP^2 - u))}, {{1, 2, 2, 0, 2, 0, 2, -1}, 
+  ((-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (12*mFP^18*(-4*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 4*mFP^16*Sqrt[s]*
+         (25*s - 16*Sqrt[s*(-4*mFP^2 + s)] + 6*t) + 
+        2*mFP^14*s*(97*s^(3/2) + 59*s*Sqrt[-4*mFP^2 + s] + 85*Sqrt[s]*t - 
+          3*Sqrt[-4*mFP^2 + s]*t) - s^6*t*(s + t)*(s^(3/2) + 
+          s*Sqrt[-4*mFP^2 + s] + 3*Sqrt[s]*t - Sqrt[-4*mFP^2 + s]*t) - 
+        2*mFP^12*s*(183*s^(5/2) + 80*s^2*Sqrt[-4*mFP^2 + s] + 446*s^(3/2)*t - 
+          33*s*Sqrt[-4*mFP^2 + s]*t + 92*Sqrt[s]*t^2 - 2*Sqrt[-4*mFP^2 + s]*
+           t^2) + 2*mFP^10*s^(3/2)*(165*s^3 + 87*s^(5/2)*Sqrt[-4*mFP^2 + s] + 
+          366*s^2*t - 7*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 297*s*t^2 - 
+          22*Sqrt[s*(-4*mFP^2 + s)]*t^2 + 20*t^3) - 
+        mFP^8*s^2*(195*s^(7/2) + 119*s^3*Sqrt[-4*mFP^2 + s] + 430*s^(5/2)*t + 
+          122*s^2*Sqrt[-4*mFP^2 + s]*t + 237*s^(3/2)*t^2 + 
+          5*s*Sqrt[-4*mFP^2 + s]*t^2 + 118*Sqrt[s]*t^3 - 
+          10*Sqrt[-4*mFP^2 + s]*t^3) + mFP^6*s^3*(69*s^(7/2) + 
+          49*s^3*Sqrt[-4*mFP^2 + s] + 263*s^(5/2)*t + 
+          115*s^2*Sqrt[-4*mFP^2 + s]*t + 125*s^(3/2)*t^2 + 
+          77*s*Sqrt[-4*mFP^2 + s]*t^2 + 15*Sqrt[s]*t^3 - Sqrt[-4*mFP^2 + s]*
+           t^3) + mFP^2*s^5*(s^(7/2) + s^3*Sqrt[-4*mFP^2 + s] + 
+          17*s^(5/2)*t + 11*s^2*Sqrt[-4*mFP^2 + s]*t + 39*s^(3/2)*t^2 + 
+          5*s*Sqrt[-4*mFP^2 + s]*t^2 + 19*Sqrt[s]*t^3 - Sqrt[-4*mFP^2 + s]*
+           t^3) - mFP^4*s^4*(13*s^(7/2) + 11*s^3*Sqrt[-4*mFP^2 + s] + 
+          99*s^(5/2)*t + 49*s^2*Sqrt[-4*mFP^2 + s]*t + 117*s^(3/2)*t^2 + 
+          37*s*Sqrt[-4*mFP^2 + s]*t^2 + 25*Sqrt[s]*t^3 + 9*Sqrt[-4*mFP^2 + s]*
+           t^3))) + 6*mFP^6*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*
+      (8*mFP^14 + 26*mFP^12*(-7*s + Sqrt[s*(-4*mFP^2 + s)]) + s^6*t - 
+       s^(11/2)*Sqrt[-4*mFP^2 + s]*t + 
+       mFP^10*(4*s^2 - 58*s^(3/2)*Sqrt[-4*mFP^2 + s] + 56*s*t - 
+         8*Sqrt[s*(-4*mFP^2 + s)]*t) + 
+       mFP^6*(11*s^4 + s^(7/2)*Sqrt[-4*mFP^2 + s] - 397*s^3*t + 
+         109*s^(5/2)*Sqrt[-4*mFP^2 + s]*t - 594*s^2*t^2 + 
+         18*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2) + 
+       mFP^8*s*(21*s^2 + 35*s^(3/2)*Sqrt[-4*mFP^2 + s] + 728*s*t + 
+         8*t*(-4*Sqrt[s*(-4*mFP^2 + s)] + 3*t)) + 
+       mFP^2*s^3*(s^3 + s^(5/2)*Sqrt[-4*mFP^2 + s] + s^2*t + 
+         23*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 30*s*t^2 + 
+         6*t^2*(3*Sqrt[s*(-4*mFP^2 + s)] + 4*t)) + 
+       mFP^4*s^2*(-7*s^3 - 5*s^(5/2)*Sqrt[-4*mFP^2 + s] + 43*s^2*t - 
+         91*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 108*s*t^2 + 
+         12*t^2*(-3*Sqrt[s*(-4*mFP^2 + s)] + 10*t))))*
+    Sqrt[-mFP^6 + 3*mFP^2*t*u - t*u*(t + u)])/(48*mFP^5*mPl^4*q^3*
+    (mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, 0, 2, 0, 2, -2}, 
+  (-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+      (6*mFP^20*(-8*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+       s^6*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*t^3*(s + t) + 
+       4*mFP^18*Sqrt[s]*(35*s + 7*Sqrt[s*(-4*mFP^2 + s)] + 6*t) - 
+       2*mFP^16*s*(238*s^(3/2) + 72*s*Sqrt[-4*mFP^2 + s] + 11*Sqrt[s]*t + 
+         42*Sqrt[-4*mFP^2 + s]*t) + mFP^14*s*(815*s^(5/2) + 
+         315*s^2*Sqrt[-4*mFP^2 + s] + 648*s^(3/2)*t + 
+         220*s*Sqrt[-4*mFP^2 + s]*t - 20*Sqrt[s]*t^2 + 32*Sqrt[-4*mFP^2 + s]*
+          t^2) - mFP^12*s^(3/2)*(804*s^3 + 394*s^(5/2)*Sqrt[-4*mFP^2 + s] + 
+         1165*s^2*t + 431*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 495*s*t^2 + 
+         3*Sqrt[s*(-4*mFP^2 + s)]*t^2 + 8*t^3) + 
+       mFP^10*s^2*(469*s^(7/2) + 281*s^3*Sqrt[-4*mFP^2 + s] + 
+         1115*s^(5/2)*t + 561*s^2*Sqrt[-4*mFP^2 + s]*t + 585*s^(3/2)*t^2 + 
+         111*s*Sqrt[-4*mFP^2 + s]*t^2 + 222*Sqrt[s]*t^3 - 
+         56*Sqrt[-4*mFP^2 + s]*t^3) + mFP^2*s^5*t*(2*s^(7/2) + 
+         2*s^3*Sqrt[-4*mFP^2 + s] + 7*s^(5/2)*t + 5*s^2*Sqrt[-4*mFP^2 + s]*
+          t + 17*s^(3/2)*t^2 - 3*s*Sqrt[-4*mFP^2 + s]*t^2 + 7*Sqrt[s]*t^3 - 
+         Sqrt[-4*mFP^2 + s]*t^3) - mFP^8*s^2*(158*s^(9/2) + 
+         114*s^4*Sqrt[-4*mFP^2 + s] + 620*s^(7/2)*t + 
+         384*s^3*Sqrt[-4*mFP^2 + s]*t + 491*s^(5/2)*t^2 + 
+         271*s^2*Sqrt[-4*mFP^2 + s]*t^2 + 131*s^(3/2)*t^3 - 
+         21*s*Sqrt[-4*mFP^2 + s]*t^3 + 28*Sqrt[s]*t^4 - 10*Sqrt[-4*mFP^2 + s]*
+          t^4) + mFP^6*s^3*(28*s^(9/2) + 24*s^4*Sqrt[-4*mFP^2 + s] + 
+         193*s^(7/2)*t + 143*s^3*Sqrt[-4*mFP^2 + s]*t + 270*s^(5/2)*t^2 + 
+         174*s^2*Sqrt[-4*mFP^2 + s]*t^2 + 123*s^(3/2)*t^3 + 
+         53*s*Sqrt[-4*mFP^2 + s]*t^3 - 5*Sqrt[s]*t^4 - Sqrt[-4*mFP^2 + s]*
+          t^4) - mFP^4*s^4*(2*s^(9/2) + 2*s^4*Sqrt[-4*mFP^2 + s] + 
+         31*s^(7/2)*t + 27*s^3*Sqrt[-4*mFP^2 + s]*t + 72*s^(5/2)*t^2 + 
+         48*s^2*Sqrt[-4*mFP^2 + s]*t^2 + 78*s^(3/2)*t^3 + 
+         16*s*Sqrt[-4*mFP^2 + s]*t^3 + 9*Sqrt[s]*t^4 + 9*Sqrt[-4*mFP^2 + s]*
+          t^4))) + 3*mFP^4*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*
+     (-8*mFP^18 + mFP^16*(8*s - 22*Sqrt[s*(-4*mFP^2 + s)]) + 
+      s^(13/2)*(Sqrt[s] - Sqrt[-4*mFP^2 + s])*t^2 + 2*mFP^2*s^(9/2)*t^2*
+       (-8*s^(3/2) + 7*s*Sqrt[-4*mFP^2 + s] - 3*Sqrt[s]*t + 
+        3*Sqrt[-4*mFP^2 + s]*t) + 2*mFP^14*
+       (8*s^2 + 17*s^(3/2)*Sqrt[-4*mFP^2 + s] + 44*s*t + 
+        2*Sqrt[s*(-4*mFP^2 + s)]*t) + mFP^12*s*
+       (95*s^2 + 19*s^(3/2)*Sqrt[-4*mFP^2 + s] - 98*s*t + 
+        2*(53*Sqrt[s*(-4*mFP^2 + s)] - 8*t)*t) - 
+      2*mFP^10*(60*s^4 + 30*s^(7/2)*Sqrt[-4*mFP^2 + s] + 217*s^3*t + 
+        151*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 154*s^2*t^2 + 
+        31*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2) + 
+      mFP^8*(56*s^5 + 38*s^(9/2)*Sqrt[-4*mFP^2 + s] + 416*s^4*t + 
+        284*s^(7/2)*Sqrt[-4*mFP^2 + s]*t + 1087*s^3*t^2 + 
+        121*s^(5/2)*Sqrt[-4*mFP^2 + s]*t^2 + 168*s^2*t^3 + 
+        12*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^3) + 
+      mFP^4*s^3*(s^4 + s^(7/2)*Sqrt[-4*mFP^2 + s] + 14*s^3*t + 
+        14*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 164*s^2*t^2 - 
+        28*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2 + 156*s*t^3 + 60*t^4) - 
+      2*mFP^6*s^2*(6*s^4 + 5*s^(7/2)*Sqrt[-4*mFP^2 + s] + 65*s^3*t + 
+        53*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 348*s^2*t^2 + 
+        22*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2 + 231*s*t^3 + 
+        3*t^3*(3*Sqrt[s*(-4*mFP^2 + s)] + 4*t))))/
+   (24*mFP^4*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*(mFP^2 - t)*
+    (mFP^2 - u))}, {{1, 2, 2, 0, 2, -1, 2, -1}, 
+  ((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*((BetaBim1*c - BetaBim3*c^3)*m^4*
+      (1 + q^2)^3*(16*mFP^16 + mFP^12*(90*s^2 - 46*s^(3/2)*
+          Sqrt[-4*mFP^2 + s]) + mFP^14*(-76*s + 8*Sqrt[s*(-4*mFP^2 + s)]) - 
+       s^(11/2)*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*u*(s + u) + 
+       mFP^2*s^(9/2)*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*u*(10*s + 7*u) + 
+       mFP^10*(-34*s^3 + 35*s^(5/2)*Sqrt[-4*mFP^2 + s] + 60*s^2*u + 
+         12*s^(3/2)*Sqrt[-4*mFP^2 + s]*u) + mFP^6*s^(5/2)*
+        (13*s^2*Sqrt[-4*mFP^2 + s] - 10*s^(3/2)*u + 16*s*Sqrt[-4*mFP^2 + s]*
+          u + 17*Sqrt[s]*u^2 - 11*Sqrt[-4*mFP^2 + s]*u^2) + 
+       mFP^4*s^(7/2)*(-2*s^2*Sqrt[-4*mFP^2 + s] + 30*s^(3/2)*u - 
+         30*s*Sqrt[-4*mFP^2 + s]*u + 9*Sqrt[s]*u^2 - 9*Sqrt[-4*mFP^2 + s]*
+          u^2) - mFP^8*(-4*s^4 + 26*s^(7/2)*Sqrt[-4*mFP^2 + s] + 71*s^3*u - 
+         29*s^(5/2)*Sqrt[-4*mFP^2 + s]*u + 20*s^2*u^2 + 
+         4*s^(3/2)*Sqrt[-4*mFP^2 + s]*u^2)) - 6*mFP^6*mPl^2*q^2*(-1 + q^2)*s*
+      (16*mFP^10 - s^5 + s^(9/2)*Sqrt[-4*mFP^2 + s] + 
+       mFP^8*(-56*s + 70*Sqrt[s*(-4*mFP^2 + s)]) + 
+       mFP^6*(73*s^2 - 49*s^(3/2)*Sqrt[-4*mFP^2 + s] - 
+         72*Sqrt[s*(-4*mFP^2 + s)]*u) + mFP^2*s^(3/2)*
+        (11*s^(5/2) - 7*s^2*Sqrt[-4*mFP^2 + s] + 12*s*Sqrt[-4*mFP^2 + s]*u + 
+         12*Sqrt[-4*mFP^2 + s]*u^2) + 
+       mFP^4*(-43*s^3 + 21*s^(5/2)*Sqrt[-4*mFP^2 + s] - 
+         12*s^(3/2)*Sqrt[-4*mFP^2 + s]*u + 24*Sqrt[s*(-4*mFP^2 + s)]*u^2))))/
+   (4*Sqrt[6]*mFP^4*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*
+    Sqrt[-4*mFP^2 + s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, 0, 2, -1, 2, -2}, 
+  -1/8*((6*mFP^4*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*(4*mFP^14 + 
+        mFP^12*(-47*s + 11*Sqrt[s*(-4*mFP^2 + s)]) + s^6*t - 
+        s^(11/2)*Sqrt[-4*mFP^2 + s]*t + mFP^2*s^(7/2)*t*
+         (-11*s^(3/2) + 9*s*Sqrt[-4*mFP^2 + s] - 3*Sqrt[s]*t + 
+          3*Sqrt[-4*mFP^2 + s]*t) - 4*mFP^10*(5*s^2 + 
+          8*s^(3/2)*Sqrt[-4*mFP^2 + s] + s*t + Sqrt[s*(-4*mFP^2 + s)]*t) + 
+        mFP^8*s*(41*s^2 + 33*s^(3/2)*Sqrt[-4*mFP^2 + s] + 272*s*t + 12*t^2) - 
+        mFP^6*(16*s^4 + 14*s^(7/2)*Sqrt[-4*mFP^2 + s] + 217*s^3*t - 
+          19*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 189*s^2*t^2 - 
+          3*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2) + mFP^4*s^2*
+         (2*s^3 + 2*s^(5/2)*Sqrt[-4*mFP^2 + s] + 67*s^2*t - 
+          23*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 72*s*t^2 - 
+          6*Sqrt[s*(-4*mFP^2 + s)]*t^2 + 36*t^3)) + 
+      (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (6*mFP^16*(-6*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 3*mFP^14*Sqrt[s]*
+         (19*s + 3*Sqrt[s*(-4*mFP^2 + s)] + 4*t) - 
+        mFP^12*s*(104*s^(3/2) + 18*s*Sqrt[-4*mFP^2 + s] - 21*Sqrt[s]*t + 
+          57*Sqrt[-4*mFP^2 + s]*t) + s^5*t*(-2*s^2*Sqrt[-4*mFP^2 + s] - 
+          4*s*Sqrt[-4*mFP^2 + s]*t + Sqrt[s]*t^2 - 3*Sqrt[-4*mFP^2 + s]*
+           t^2) + mFP^10*s*(75*s^(5/2) + 7*s^2*Sqrt[-4*mFP^2 + s] + 
+          90*s^(3/2)*t + 82*s*Sqrt[-4*mFP^2 + s]*t + 24*Sqrt[s]*t^2 + 
+          22*Sqrt[-4*mFP^2 + s]*t^2) + mFP^6*s^2*(29*s^(7/2) + 
+          15*s^3*Sqrt[-4*mFP^2 + s] - 48*s^(5/2)*t + 
+          98*s^2*Sqrt[-4*mFP^2 + s]*t - 9*s^(3/2)*t^2 + 
+          13*s*Sqrt[-4*mFP^2 + s]*t^2 + 65*Sqrt[s]*t^3 - 
+          15*Sqrt[-4*mFP^2 + s]*t^3) - mFP^4*s^3*(9*s^(7/2) + 
+          7*s^3*Sqrt[-4*mFP^2 + s] - 9*s^(5/2)*t + 61*s^2*Sqrt[-4*mFP^2 + s]*
+           t - 48*s^(3/2)*t^2 + 58*s*Sqrt[-4*mFP^2 + s]*t^2 + 3*Sqrt[s]*t^3 - 
+          9*Sqrt[-4*mFP^2 + s]*t^3) + mFP^2*s^4*(s^(7/2) + 
+          s^3*Sqrt[-4*mFP^2 + s] + 18*s^2*Sqrt[-4*mFP^2 + s]*t - 
+          9*s^(3/2)*t^2 + 29*s*Sqrt[-4*mFP^2 + s]*t^2 - 7*Sqrt[s]*t^3 + 
+          9*Sqrt[-4*mFP^2 + s]*t^3) - mFP^8*s^(3/2)*
+         (49*s^3 + 13*s^(5/2)*Sqrt[-4*mFP^2 + s] - 24*s^2*t + 
+          78*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 162*s*t^2 + 
+          2*t^2*(Sqrt[s*(-4*mFP^2 + s)] + 10*t))))*(mFP^6 - 3*mFP^2*t*u + 
+      t*u*(t + u)))/(Sqrt[6]*mFP^3*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*
+     s^(3/2)*(mFP^2 - t)*(mFP^2 - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - 
+       t*u^2])}, {{1, 2, 2, 0, 2, -2, 2, -2}, 
+  ((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*(-6*mFP^4*mPl^2*q^2*(-1 + q^2)*
+      (s^6 - s^(11/2)*Sqrt[-4*mFP^2 + s] + 
+       mFP^8*(56*s^2 - 57*s^(3/2)*Sqrt[-4*mFP^2 + s]) + 
+       mFP^2*(-11*s^5 + 9*s^(9/2)*Sqrt[-4*mFP^2 + s]) + 
+       2*mFP^10*(-8*s + Sqrt[s*(-4*mFP^2 + s)]) + mFP^6*s^(3/2)*
+        (-73*s^(3/2) + 61*s*Sqrt[-4*mFP^2 + s] + 54*Sqrt[-4*mFP^2 + s]*u) + 
+       mFP^4*s^(3/2)*(43*s^(5/2) - 32*s^2*Sqrt[-4*mFP^2 + s] - 
+         18*s*Sqrt[-4*mFP^2 + s]*u - 18*Sqrt[-4*mFP^2 + s]*u^2)) + 
+     (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+      (8*mFP^14 + mFP^12*(62*s + 8*Sqrt[s*(-4*mFP^2 + s)]) - 
+       2*mFP^10*s*(38*s - 41*Sqrt[s*(-4*mFP^2 + s)] + 60*u) - 
+       2*s^5*(s^2 - s^(3/2)*Sqrt[-4*mFP^2 + s] + s*u + u^2) + 
+       mFP^2*s^4*(23*s^2 - 17*s^(3/2)*Sqrt[-4*mFP^2 + s] + 20*s*u + 14*u^2) - 
+       mFP^4*s^(5/2)*(95*s^(5/2) - 47*s^2*Sqrt[-4*mFP^2 + s] + 60*s^(3/2)*u + 
+         12*s*Sqrt[-4*mFP^2 + s]*u + 18*Sqrt[s]*u^2 + 12*Sqrt[-4*mFP^2 + s]*
+          u^2) + mFP^6*(165*s^4 - 37*s^(7/2)*Sqrt[-4*mFP^2 + s] + 20*s^3*u + 
+         84*s^(5/2)*Sqrt[-4*mFP^2 + s]*u - 34*s^2*u^2 + 
+         48*s^(3/2)*Sqrt[-4*mFP^2 + s]*u^2) + 
+       mFP^8*s*(-85*s^2 - 49*s^(3/2)*Sqrt[-4*mFP^2 + s] + 142*s*u + 
+         8*u*(-18*Sqrt[s*(-4*mFP^2 + s)] + 5*u)))))/
+   (4*Sqrt[6]*mFP^2*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s^(3/2)*
+    Sqrt[-4*mFP^2 + s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -1, 1, 2, 2, -1}, ((9*mFP^4 - 6*mFP^2*s + s^2 - 4*mFP^2*u)*
+    (mFP^4 - s*u)^3)/(2*mPl^2*(mFP^2 - s)^5*t*(mFP^2 - u))}, 
+ {{1, 2, 2, -1, 1, 2, 2, -2}, (mFP*(mFP^4 - s*u)^(7/2))/
+   (mPl^2*(mFP^2 - s)^5*Sqrt[-t]*(mFP^2 - u))}, 
+ {{1, 2, 2, -1, 1, -2, 2, 2}, -((mFP*s^3*t^2*Sqrt[-(t*(mFP^4 - s*u))])/
+    (mPl^2*(mFP^2 - s)^5*(mFP^2 - u)))}, {{1, 2, 2, -1, 1, -2, 2, 1}, 
+  (mFP^2*s^2*t^2*(3*mFP^4 + 2*mFP^2*s - s^2 - 4*s*u))/
+   (2*mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, {{1, 2, 2, -1, 2, 2, 2, 2}, 
   -1/2*(mFP*(4*BetaBim1*c*m^4*mFP^2*Sqrt[s] - 4*BetaBim3*c^3*m^4*mFP^2*
        Sqrt[s] + 12*BetaBim1*c*m^4*mFP^2*q^2*Sqrt[s] - 
       12*BetaBim3*c^3*m^4*mFP^2*q^2*Sqrt[s] - 9*mFP^4*mPl^2*q^2*Sqrt[s] + 
@@ -1193,7 +1718,95 @@
         (2*s^2 - 2*s^(3/2)*Sqrt[-4*mFP^2 + s] + 15*s*u + 
          2*u*(-Sqrt[s*(-4*mFP^2 + s)] + 6*u)))))/
    (16*mFP^2*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s*(mFP^2 - t)*
-    (mFP^2 - u))}, {{1, 2, 2, -1, 2, 1, 2, 1}, 
+    (mFP^2 - u))}, {{1, 2, 2, -1, 2, 2, 2, 0}, 
+  -1/8*((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*
+     (6*mFP^4*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*(8*mFP^14 + 
+        mFP^12*(14*s - 4*Sqrt[s*(-4*mFP^2 + s)]) - 
+        s^(9/2)*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u^2 - 
+        2*mFP^10*s*(64*s - 15*Sqrt[s*(-4*mFP^2 + s)] + 44*u) + 
+        mFP^8*s*(183*s^2 - 85*s^(3/2)*Sqrt[-4*mFP^2 + s] + 302*s*u - 
+          50*Sqrt[s*(-4*mFP^2 + s)]*u + 24*u^2) + 
+        2*mFP^6*(-49*s^4 + 32*s^(7/2)*Sqrt[-4*mFP^2 + s] - 159*s^3*u + 
+          81*s^(5/2)*Sqrt[-4*mFP^2 + s]*u - 37*s^2*u^2 + 
+          20*s^(3/2)*Sqrt[-4*mFP^2 + s]*u^2) + mFP^4*s^(3/2)*
+         (23*s^(7/2) - 19*s^3*Sqrt[-4*mFP^2 + s] + 118*s^(5/2)*u - 
+          90*s^2*Sqrt[-4*mFP^2 + s]*u + 57*s^(3/2)*u^2 - 
+          111*s*Sqrt[-4*mFP^2 + s]*u^2 - 8*Sqrt[-4*mFP^2 + s]*u^3) + 
+        2*mFP^2*s^(5/2)*(-s^(7/2) + s^3*Sqrt[-4*mFP^2 + s] - 7*s^(5/2)*u + 
+          7*s^2*Sqrt[-4*mFP^2 + s]*u - 3*s^(3/2)*u^2 + 
+          18*s*Sqrt[-4*mFP^2 + s]*u^2 + 10*Sqrt[-4*mFP^2 + s]*u^3)) + 
+      (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(4*mFP^2 - s)*
+       (4*mFP^14*(Sqrt[s] - Sqrt[-4*mFP^2 + s]) + 2*mFP^12*Sqrt[s]*
+         (-8*s + Sqrt[s*(-4*mFP^2 + s)] - 4*u) + 
+        s^5*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u^2 - 2*mFP^2*s^3*u^2*
+         (s^(3/2) - 2*Sqrt[s]*u - 2*Sqrt[-4*mFP^2 + s]*u) + 
+        2*mFP^10*s*(13*s^(3/2) - 6*s*Sqrt[-4*mFP^2 + s] + 
+          8*Sqrt[-4*mFP^2 + s]*u) + mFP^8*s*(-21*s^(5/2) + 
+          11*s^2*Sqrt[-4*mFP^2 + s] + 14*s^(3/2)*u + 2*s*Sqrt[-4*mFP^2 + s]*
+           u + 28*Sqrt[s]*u^2 - 4*Sqrt[-4*mFP^2 + s]*u^2) + 
+        mFP^4*s^2*(-s^(7/2) + s^3*Sqrt[-4*mFP^2 + s] + 2*s^(5/2)*u - 
+          2*s^2*Sqrt[-4*mFP^2 + s]*u + 5*s^(3/2)*u^2 - 7*s*Sqrt[-4*mFP^2 + s]*
+           u^2 + 4*Sqrt[s]*u^3 + 4*Sqrt[-4*mFP^2 + s]*u^3) - 
+        2*mFP^6*s^(3/2)*(-4*s^3 + 3*s^(5/2)*Sqrt[-4*mFP^2 + s] + 4*s^2*u - 
+          4*s^(3/2)*Sqrt[-4*mFP^2 + s]*u + 16*s*u^2 + 
+          u^2*(7*Sqrt[s*(-4*mFP^2 + s)] + 4*u)))))/
+    (Sqrt[6]*mFP^3*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s*
+     Sqrt[-4*mFP^2 + s]*(mFP^2 - t)*(mFP^2 - u)*
+     Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - t*u^2])}, 
+ {{1, 2, 2, -1, 2, 2, 2, -1}, 
+  (-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(4*mFP^2 - s)*
+      (-2*mFP^14*(-2*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+       s^4*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u^3 - 4*mFP^12*Sqrt[s]*
+        (-14*s + 2*Sqrt[s*(-4*mFP^2 + s)] + u) + 
+       mFP^10*s*(-134*s^(3/2) + 50*s*Sqrt[-4*mFP^2 + s] - 115*Sqrt[s]*u + 
+         19*Sqrt[-4*mFP^2 + s]*u) + mFP^8*s*(122*s^(5/2) - 
+         64*s^2*Sqrt[-4*mFP^2 + s] + 191*s^(3/2)*u - 85*s*Sqrt[-4*mFP^2 + s]*
+          u + 84*Sqrt[s]*u^2 - 6*Sqrt[-4*mFP^2 + s]*u^2) + 
+       mFP^6*s^(3/2)*(-55*s^3 + 37*s^(5/2)*Sqrt[-4*mFP^2 + s] - 116*s^2*u + 
+         72*s^(3/2)*Sqrt[-4*mFP^2 + s]*u - 87*s*u^2 + 
+         (51*Sqrt[s*(-4*mFP^2 + s)] - 20*u)*u^2) + 
+       mFP^4*s^2*(12*s^(7/2) - 10*s^3*Sqrt[-4*mFP^2 + s] + 31*s^(5/2)*u - 
+         25*s^2*Sqrt[-4*mFP^2 + s]*u + 30*s^(3/2)*u^2 - 
+         24*s*Sqrt[-4*mFP^2 + s]*u^2 + 5*Sqrt[s]*u^3 - 19*Sqrt[-4*mFP^2 + s]*
+          u^3) + mFP^2*s^2*(-s^(9/2) + s^4*Sqrt[-4*mFP^2 + s] - 3*s^(7/2)*u + 
+         3*s^3*Sqrt[-4*mFP^2 + s]*u - 3*s^(5/2)*u^2 + 
+         3*s^2*Sqrt[-4*mFP^2 + s]*u^2 - 2*s^(3/2)*u^3 + 
+         2*s*Sqrt[-4*mFP^2 + s]*u^3 + 4*Sqrt[s]*u^4 + 4*Sqrt[-4*mFP^2 + s]*
+          u^4))) - 2*mFP^2*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*
+     (8*mFP^16 + mFP^14*(62*s - 8*Sqrt[s*(-4*mFP^2 + s)]) - 
+      s^(9/2)*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u^3 + 
+      4*mFP^12*(2*s^2 + 8*s^(3/2)*Sqrt[-4*mFP^2 + s] - 9*s*u - 
+        3*Sqrt[s*(-4*mFP^2 + s)]*u) + mFP^10*s*(-214*s^2 + 
+        66*s^(3/2)*Sqrt[-4*mFP^2 + s] - 507*s*u + 
+        3*(21*Sqrt[s*(-4*mFP^2 + s)] - 8*u)*u) + 
+      mFP^8*(200*s^4 - 110*s^(7/2)*Sqrt[-4*mFP^2 + s] + 1041*s^3*u - 
+        435*s^(5/2)*Sqrt[-4*mFP^2 + s]*u + 498*s^2*u^2 - 
+        12*s^(3/2)*Sqrt[-4*mFP^2 + s]*u^2) + mFP^4*s^(5/2)*
+       (14*s^(7/2) - 12*s^3*Sqrt[-4*mFP^2 + s] + 165*s^(5/2)*u - 
+        135*s^2*Sqrt[-4*mFP^2 + s]*u + 312*s^(3/2)*u^2 - 
+        234*s*Sqrt[-4*mFP^2 + s]*u^2 + 111*Sqrt[s]*u^3 - 
+        153*Sqrt[-4*mFP^2 + s]*u^3) + 
+      mFP^6*(-77*s^5 + 55*s^(9/2)*Sqrt[-4*mFP^2 + s] - 648*s^4*u + 
+        408*s^(7/2)*Sqrt[-4*mFP^2 + s]*u - 747*s^3*u^2 + 
+        351*s^(5/2)*Sqrt[-4*mFP^2 + s]*u^2 - 92*s^2*u^3 + 
+        4*s^(3/2)*Sqrt[-4*mFP^2 + s]*u^3) + mFP^2*s^(5/2)*
+       (-s^(9/2) + s^4*Sqrt[-4*mFP^2 + s] - 15*s^(7/2)*u + 
+        15*s^3*Sqrt[-4*mFP^2 + s]*u - 39*s^(5/2)*u^2 + 
+        39*s^2*Sqrt[-4*mFP^2 + s]*u^2 - 18*s^(3/2)*u^3 + 
+        54*s*Sqrt[-4*mFP^2 + s]*u^3 + 24*Sqrt[-4*mFP^2 + s]*u^4)))/
+   (16*mFP^2*mPl^4*q^3*(mFP^2 - s)^2*(4*mFP^2 - s)^2*s*Sqrt[-4*mFP^2 + s]*
+    (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, -1, 2, 2, 2, -2}, 
+  -1/2*(mFP*(1 - q^2)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - t*u^2]*
+     (2*mFP^8*Sqrt[-4*mFP^2 + s] + 3*mFP^6*Sqrt[s]*t - 
+      mFP^6*Sqrt[-4*mFP^2 + s]*t - 6*mFP^4*Sqrt[-4*mFP^2 + s]*t^2 - 
+      3*mFP^2*Sqrt[s]*t^3 + 5*mFP^2*Sqrt[-4*mFP^2 + s]*t^3 + Sqrt[s]*t^4 - 
+      Sqrt[-4*mFP^2 + s]*t^4 - 3*mFP^6*Sqrt[s]*u - mFP^6*Sqrt[-4*mFP^2 + s]*
+       u + 6*mFP^4*Sqrt[-4*mFP^2 + s]*t*u + Sqrt[s]*t^3*u - 
+      Sqrt[-4*mFP^2 + s]*t^3*u - 6*mFP^4*Sqrt[-4*mFP^2 + s]*u^2 + 
+      3*mFP^2*Sqrt[s]*u^3 + 5*mFP^2*Sqrt[-4*mFP^2 + s]*u^3 - Sqrt[s]*t*u^3 - 
+      Sqrt[-4*mFP^2 + s]*t*u^3 - Sqrt[s]*u^4 - Sqrt[-4*mFP^2 + s]*u^4))/
+    (mPl^2*q*(mFP^2 - s)*(4*mFP^2 - s)^2*Sqrt[s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -1, 2, 1, 2, 1}, 
   -1/4*((24*mFP^6*mPl^2*q^2 - 24*mFP^6*mPl^2*q^4 - 4*BetaBim1*c*m^4*mFP^2*s + 
       4*BetaBim3*c^3*m^4*mFP^2*s - 12*BetaBim1*c*m^4*mFP^2*q^2*s + 
       12*BetaBim3*c^3*m^4*mFP^2*q^2*s + 12*mFP^4*mPl^2*q^2*s - 
@@ -1220,7 +1833,249 @@
       BetaBim3*c^3*m^4*q^6*s^(3/2)*Sqrt[-4*mFP^2 + s])*(t - u)*
      Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - t*u^2]*(mFP^6 - 3*mFP^2*t*u + 
       t^2*u + t*u^2))/(mFP*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*
-     (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, -2, 2, 2, 2, 2}, 
+     (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, -1, 2, 1, 2, 0}, 
+  -1/8*((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*
+     (-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+        (-8*mFP^12 + mFP^10*(6*s + 8*Sqrt[s*(-4*mFP^2 + s)]) - 
+         2*s^(7/2)*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u*(s + u) + 
+         mFP^8*(59*s^2 - 23*s^(3/2)*Sqrt[-4*mFP^2 + s] + 44*s*u - 
+           4*Sqrt[s*(-4*mFP^2 + s)]*u) + mFP^6*s*(-43*s^2 + 
+           23*s^(3/2)*Sqrt[-4*mFP^2 + s] - 139*s*u + 
+           (5*Sqrt[s*(-4*mFP^2 + s)] - 16*u)*u) + 
+         mFP^2*(-s^5 + s^(9/2)*Sqrt[-4*mFP^2 + s] + 5*s^4*u + 
+           7*s^(7/2)*Sqrt[-4*mFP^2 + s]*u - 2*s^3*u^2 - 
+           2*s^(5/2)*Sqrt[-4*mFP^2 + s]*u^2) + mFP^4*s^(3/2)*
+          (-9*s^2*Sqrt[-4*mFP^2 + s] - 6*s*Sqrt[-4*mFP^2 + s]*u + 
+           4*Sqrt[-4*mFP^2 + s]*u^2 + 11*Sqrt[s]*(s + 2*u)^2))) - 
+      6*mFP^4*mPl^2*q^2*(-1 + q^2)*(2*mFP^8*(10*s + Sqrt[s*(-4*mFP^2 + s)]) + 
+        mFP^6*s*(45*s - 17*Sqrt[s*(-4*mFP^2 + s)] + 4*u) + 
+        mFP^4*(-12*s^3 + 14*s^(5/2)*Sqrt[-4*mFP^2 + s] - 129*s^2*u + 
+          7*s^(3/2)*Sqrt[-4*mFP^2 + s]*u) + mFP^2*s^2*
+         (-7*s^2 + 3*s^(3/2)*Sqrt[-4*mFP^2 + s] + 22*s*u - 
+          2*(Sqrt[s*(-4*mFP^2 + s)] - 20*u)*u) + 
+        s^3*(2*s^2 - 2*s^(3/2)*Sqrt[-4*mFP^2 + s] + 7*s*u + 
+          u*(-5*Sqrt[s*(-4*mFP^2 + s)] + 8*u)))))/(Sqrt[6]*mFP^2*mPl^4*q^3*
+     (mFP^2 - s)^3*(4*mFP^2 - s)^2*s*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -1, 2, 1, 2, -1}, (Sqrt[-mFP^6 + 3*mFP^2*t*u - t*u*(t + u)]*
+    (-36*mFP^12*mPl^2*q^2*(-1 + q^2)*s^(3/2) + 8*mFP^14*mPl^2*q^2*(-1 + q^2)*
+      Sqrt[-4*mFP^2 + s] + (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*s^2*t*
+      u*(t + u)*(Sqrt[s]*(-t + u) + Sqrt[-4*mFP^2 + s]*(t + u)) + 
+     8*mFP^10*s*((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+        Sqrt[-4*mFP^2 + s] - 3*mPl^2*q^2*(-1 + q^2)*(-5*s^(3/2) + 
+         2*s*Sqrt[-4*mFP^2 + s] - 7*Sqrt[s]*u + 3*Sqrt[-4*mFP^2 + s]*u)) - 
+     2*mFP^8*s*(-(mPl^2*q^2*(-1 + q^2)*(-15*s^(5/2) + 
+          19*s^2*Sqrt[-4*mFP^2 + s] - 228*s^(3/2)*u + 
+          102*s*Sqrt[-4*mFP^2 + s]*u - 72*Sqrt[s]*u^2 + 12*Sqrt[-4*mFP^2 + s]*
+           u^2)) + (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+        (s*Sqrt[-4*mFP^2 + s] + 2*Sqrt[s]*(-t + u) + 2*Sqrt[-4*mFP^2 + s]*
+          (t + u))) + 2*mFP^4*s*(mPl^2*q^2*(-1 + q^2)*s^(3/2)*
+        (8*s^3 - 6*s^(5/2)*Sqrt[-4*mFP^2 + s] + 6*s^(3/2)*Sqrt[-4*mFP^2 + s]*
+          u - 39*s*u^2 + (15*Sqrt[s*(-4*mFP^2 + s)] - 32*u)*u^2) + 
+       (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*t*u*
+        (3*s*Sqrt[-4*mFP^2 + s] + 6*Sqrt[s]*(-t + u) + 10*Sqrt[-4*mFP^2 + s]*
+          (t + u))) + mFP^6*s*((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+        (-24*Sqrt[-4*mFP^2 + s]*t*u + s^(3/2)*(-t + u) + 
+         s*Sqrt[-4*mFP^2 + s]*(t + u)) + 2*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*
+        (-16*s^3 + 6*s^(5/2)*Sqrt[-4*mFP^2 + s] + 93*s^2*u - 
+         75*s^(3/2)*Sqrt[-4*mFP^2 + s]*u + 168*s*u^2 + 
+         2*u^2*(-15*Sqrt[s*(-4*mFP^2 + s)] + 8*u))) - 
+     mFP^2*s*(2*mPl^2*q^2*(-1 + q^2)*s^(5/2)*
+        (s^3 - s^(5/2)*Sqrt[-4*mFP^2 + s] + 3*s^2*u - 
+         3*s^(3/2)*Sqrt[-4*mFP^2 + s]*u + 3*s*u^2 + 
+         u^2*(-3*Sqrt[s*(-4*mFP^2 + s)] + 2*u)) + (BetaBim1*c - BetaBim3*c^3)*
+        m^4*(1 + q^2)^3*t*u*(3*s^(3/2)*(-t + u) + 5*s*Sqrt[-4*mFP^2 + s]*
+          (t + u) + 4*Sqrt[-4*mFP^2 + s]*(t + u)^2 + 
+         4*Sqrt[s]*(-t^2 + u^2)))))/(8*mFP*mPl^4*q^3*(mFP^2 - s)^3*
+    (4*mFP^2 - s)^2*Sqrt[s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -1, 2, 1, 2, -2}, 
+  (-2*mFP^2*mPl^2*q^2*(-1 + q^2)*(2*mFP^14*(-4*s + Sqrt[s*(-4*mFP^2 + s)]) + 
+      4*mFP^12*s*(8*s + 4*Sqrt[s*(-4*mFP^2 + s)] - 3*t) + 
+      s^(9/2)*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*t^3 + 
+      mFP^10*(66*s^3 + 6*s^(5/2)*Sqrt[-4*mFP^2 + s] + 63*s^2*t - 
+        9*s^(3/2)*Sqrt[-4*mFP^2 + s]*t) - 
+      mFP^8*(110*s^4 + 52*s^(7/2)*Sqrt[-4*mFP^2 + s] + 435*s^3*t + 
+        129*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 12*s^2*t^2 + 
+        6*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2) + 
+      mFP^6*s^2*(55*s^3 + 37*s^(5/2)*Sqrt[-4*mFP^2 + s] + 408*s^2*t + 
+        228*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 351*s*t^2 + 
+        123*Sqrt[s*(-4*mFP^2 + s)]*t^2 + 4*t^3) - 
+      mFP^4*s^(5/2)*(12*s^(7/2) + 10*s^3*Sqrt[-4*mFP^2 + s] + 135*s^(5/2)*t + 
+        105*s^2*Sqrt[-4*mFP^2 + s]*t + 234*s^(3/2)*t^2 + 
+        156*s*Sqrt[-4*mFP^2 + s]*t^2 + 153*Sqrt[s]*t^3 + 
+        23*Sqrt[-4*mFP^2 + s]*t^3) + mFP^2*s^3*
+       (s^4 + s^(7/2)*Sqrt[-4*mFP^2 + s] + 15*s^3*t + 
+        15*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 39*s^2*t^2 + 
+        39*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2 + 54*s*t^3 + 
+        22*Sqrt[s*(-4*mFP^2 + s)]*t^3 + 24*t^4)) + 
+    (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+     (8*mFP^16 + mFP^14*(30*s - 4*Sqrt[s*(-4*mFP^2 + s)]) + 
+      s^(9/2)*(Sqrt[s] - Sqrt[-4*mFP^2 + s])*t^3 - 
+      4*mFP^12*(52*s^2 + 14*s^(3/2)*Sqrt[-4*mFP^2 + s] + 19*s*t - 
+        Sqrt[s*(-4*mFP^2 + s)]*t) + mFP^10*s*(306*s^2 + 
+        134*s^(3/2)*Sqrt[-4*mFP^2 + s] + 359*s*t + 115*Sqrt[s*(-4*mFP^2 + s)]*
+         t + 24*t^2) - mFP^8*(212*s^4 + 122*s^(7/2)*Sqrt[-4*mFP^2 + s] + 
+        373*s^3*t + 191*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 210*s^2*t^2 + 
+        84*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2) + 
+      mFP^6*(77*s^5 + 55*s^(9/2)*Sqrt[-4*mFP^2 + s] + 172*s^4*t + 
+        116*s^(7/2)*Sqrt[-4*mFP^2 + s]*t + 147*s^3*t^2 + 
+        87*s^(5/2)*Sqrt[-4*mFP^2 + s]*t^2 + 76*s^2*t^3 + 
+        20*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^3) - 
+      mFP^4*s^2*(14*s^4 + 12*s^(7/2)*Sqrt[-4*mFP^2 + s] + 37*s^3*t + 
+        31*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 36*s^2*t^2 + 
+        30*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2 + 27*s*t^3 + 
+        5*Sqrt[s*(-4*mFP^2 + s)]*t^3 + 16*t^4) + 
+      mFP^2*s^(5/2)*(s^(9/2) + s^4*Sqrt[-4*mFP^2 + s] + 3*s^(7/2)*t + 
+        3*s^3*Sqrt[-4*mFP^2 + s]*t + 3*s^(5/2)*t^2 + 3*s^2*Sqrt[-4*mFP^2 + s]*
+         t^2 - 2*s^(3/2)*t^3 + 2*s*Sqrt[-4*mFP^2 + s]*t^3 + 4*Sqrt[s]*t^4 - 
+        4*Sqrt[-4*mFP^2 + s]*t^4)))/(16*mFP^2*mPl^4*q^3*(mFP^2 - s)^2*
+    (4*mFP^2 - s)^2*s*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -1, 2, 0, 2, 0}, 
+  ((28*mFP^6*mPl^2*q^2 - 28*mFP^6*mPl^2*q^4 - 4*BetaBim1*c*m^4*mFP^2*s + 
+     4*BetaBim3*c^3*m^4*mFP^2*s - 12*BetaBim1*c*m^4*mFP^2*q^2*s + 
+     12*BetaBim3*c^3*m^4*mFP^2*q^2*s + 16*mFP^4*mPl^2*q^2*s - 
+     12*BetaBim1*c*m^4*mFP^2*q^4*s + 12*BetaBim3*c^3*m^4*mFP^2*q^4*s - 
+     16*mFP^4*mPl^2*q^4*s - 4*BetaBim1*c*m^4*mFP^2*q^6*s + 
+     4*BetaBim3*c^3*m^4*mFP^2*q^6*s + BetaBim1*c*m^4*s^2 - 
+     BetaBim3*c^3*m^4*s^2 + 3*BetaBim1*c*m^4*q^2*s^2 - 
+     3*BetaBim3*c^3*m^4*q^2*s^2 + mFP^2*mPl^2*q^2*s^2 + 
+     3*BetaBim1*c*m^4*q^4*s^2 - 3*BetaBim3*c^3*m^4*q^4*s^2 - 
+     mFP^2*mPl^2*q^4*s^2 + BetaBim1*c*m^4*q^6*s^2 - BetaBim3*c^3*m^4*q^6*s^2)*
+    (t - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - t*u^2]*
+    (mFP^6 - 3*mFP^2*t*u + t^2*u + t*u^2))/(4*mFP*mPl^4*q^3*(mFP^2 - s)^3*
+    (4*mFP^2 - s)^2*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -1, 2, 0, 2, -1}, 
+  -1/8*((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*
+     (-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+        (-8*mFP^12 + mFP^10*(-6*s + 4*Sqrt[s*(-4*mFP^2 + s)]) + 
+         2*s^(7/2)*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*u*(s + u) + 
+         mFP^8*(90*s^2 - 32*s^(3/2)*Sqrt[-4*mFP^2 + s] + 52*s*u - 
+           4*Sqrt[s*(-4*mFP^2 + s)]*u) + mFP^6*s*(-70*s^2 + 
+           42*s^(3/2)*Sqrt[-4*mFP^2 + s] - 157*s*u + 
+           29*Sqrt[s*(-4*mFP^2 + s)]*u - 16*u^2) + 
+         mFP^4*(20*s^4 - 16*s^(7/2)*Sqrt[-4*mFP^2 + s] + 56*s^3*u - 
+           26*s^(5/2)*Sqrt[-4*mFP^2 + s]*u + 44*s^2*u^2 - 
+           4*s^(3/2)*Sqrt[-4*mFP^2 + s]*u^2) + 
+         mFP^2*(-2*s^5 + 2*s^(9/2)*Sqrt[-4*mFP^2 + s] + 3*s^4*u - 
+           s^(7/2)*Sqrt[-4*mFP^2 + s]*u - 2*s^3*u^2 + 
+           2*s^(5/2)*Sqrt[-4*mFP^2 + s]*u^2))) + 6*mFP^4*mPl^2*q^2*(-1 + q^2)*
+       (2*mFP^8*(-16*s + Sqrt[s*(-4*mFP^2 + s)]) + 
+        mFP^4*(-15*s^3 + s^(5/2)*Sqrt[-4*mFP^2 + s] + 111*s^2*u - 
+          7*s^(3/2)*Sqrt[-4*mFP^2 + s]*u) + 2*mFP^2*s^2*
+         (8*s^2 - 5*s^(3/2)*Sqrt[-4*mFP^2 + s] - 5*s*u + 
+          (Sqrt[s*(-4*mFP^2 + s)] - 20*u)*u) + 
+        s^3*(-3*s^2 + 3*s^(3/2)*Sqrt[-4*mFP^2 + s] - 9*s*u + 
+          (5*Sqrt[s*(-4*mFP^2 + s)] - 8*u)*u) + 
+        2*mFP^6*s*(-7*s + 2*(Sqrt[s*(-4*mFP^2 + s)] + u)))))/
+    (Sqrt[6]*mFP^2*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s*(mFP^2 - t)*
+     (mFP^2 - u))}, {{1, 2, 2, -1, 2, 0, 2, -2}, 
+  -1/8*(((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(4*mFP^2 - s)*
+       (4*mFP^14*(Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+        s^5*(Sqrt[s] - Sqrt[-4*mFP^2 + s])*t^2 - 2*mFP^12*Sqrt[s]*
+         (8*s + Sqrt[s*(-4*mFP^2 + s)] + 4*t) + 2*mFP^10*s*
+         (13*s^(3/2) + 6*s*Sqrt[-4*mFP^2 + s] - 8*Sqrt[-4*mFP^2 + s]*t) - 
+        2*mFP^2*s^3*t^2*(s^(3/2) - 2*Sqrt[s]*t + 2*Sqrt[-4*mFP^2 + s]*t) + 
+        mFP^8*s*(-21*s^(5/2) - 11*s^2*Sqrt[-4*mFP^2 + s] + 14*s^(3/2)*t - 
+          2*s*Sqrt[-4*mFP^2 + s]*t + 28*Sqrt[s]*t^2 + 4*Sqrt[-4*mFP^2 + s]*
+           t^2) + 2*mFP^6*s^(3/2)*(4*s^3 + 3*s^(5/2)*Sqrt[-4*mFP^2 + s] - 
+          4*s^2*t - 4*s^(3/2)*Sqrt[-4*mFP^2 + s]*t - 16*s*t^2 + 
+          (7*Sqrt[s*(-4*mFP^2 + s)] - 4*t)*t^2) + 
+        mFP^4*s^2*(-s^(7/2) - s^3*Sqrt[-4*mFP^2 + s] + 2*s^(5/2)*t + 
+          2*s^2*Sqrt[-4*mFP^2 + s]*t + 5*s^(3/2)*t^2 + 7*s*Sqrt[-4*mFP^2 + s]*
+           t^2 + 4*Sqrt[s]*t^3 - 4*Sqrt[-4*mFP^2 + s]*t^3)) + 
+      6*mFP^4*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*(8*mFP^14 + 
+        2*mFP^12*(7*s + 2*Sqrt[s*(-4*mFP^2 + s)]) + 
+        s^(9/2)*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*t^2 - 
+        2*mFP^10*s*(64*s + 15*Sqrt[s*(-4*mFP^2 + s)] + 44*t) + 
+        mFP^8*s*(183*s^2 + 85*s^(3/2)*Sqrt[-4*mFP^2 + s] + 302*s*t + 
+          50*Sqrt[s*(-4*mFP^2 + s)]*t + 24*t^2) - 
+        2*mFP^6*(49*s^4 + 32*s^(7/2)*Sqrt[-4*mFP^2 + s] + 159*s^3*t + 
+          81*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 37*s^2*t^2 + 
+          20*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2) + mFP^4*s^(3/2)*
+         (23*s^(7/2) + 19*s^3*Sqrt[-4*mFP^2 + s] + 118*s^(5/2)*t + 
+          90*s^2*Sqrt[-4*mFP^2 + s]*t + 57*s^(3/2)*t^2 + 
+          111*s*Sqrt[-4*mFP^2 + s]*t^2 + 8*Sqrt[-4*mFP^2 + s]*t^3) - 
+        2*mFP^2*s^(5/2)*(s^(7/2) + s^3*Sqrt[-4*mFP^2 + s] + 7*s^(5/2)*t + 
+          7*s^2*Sqrt[-4*mFP^2 + s]*t + 3*s^(3/2)*t^2 + 
+          18*s*Sqrt[-4*mFP^2 + s]*t^2 + 10*Sqrt[-4*mFP^2 + s]*t^3)))*
+     (mFP^6 - 3*mFP^2*t*u + t*u*(t + u)))/(Sqrt[6]*mFP^3*mPl^4*q^3*
+     (mFP^2 - s)^3*(4*mFP^2 - s)^2*s*Sqrt[-4*mFP^2 + s]*(mFP^2 - t)*
+     (mFP^2 - u)*Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - t*u^2])}, 
+ {{1, 2, 2, -1, 2, -1, 2, -1}, 
+  -1/4*((24*mFP^6*mPl^2*q^2 - 24*mFP^6*mPl^2*q^4 - 4*BetaBim1*c*m^4*mFP^2*s + 
+      4*BetaBim3*c^3*m^4*mFP^2*s - 12*BetaBim1*c*m^4*mFP^2*q^2*s + 
+      12*BetaBim3*c^3*m^4*mFP^2*q^2*s + 12*mFP^4*mPl^2*q^2*s - 
+      12*BetaBim1*c*m^4*mFP^2*q^4*s + 12*BetaBim3*c^3*m^4*mFP^2*q^4*s - 
+      12*mFP^4*mPl^2*q^4*s - 4*BetaBim1*c*m^4*mFP^2*q^6*s + 
+      4*BetaBim3*c^3*m^4*mFP^2*q^6*s + BetaBim1*c*m^4*s^2 - 
+      BetaBim3*c^3*m^4*s^2 + 3*BetaBim1*c*m^4*q^2*s^2 - 
+      3*BetaBim3*c^3*m^4*q^2*s^2 + 3*BetaBim1*c*m^4*q^4*s^2 - 
+      3*BetaBim3*c^3*m^4*q^4*s^2 + BetaBim1*c*m^4*q^6*s^2 - 
+      BetaBim3*c^3*m^4*q^6*s^2 + BetaBim1*c*m^4*mFP^2*Sqrt[s]*
+       Sqrt[-4*mFP^2 + s] - BetaBim3*c^3*m^4*mFP^2*Sqrt[s]*
+       Sqrt[-4*mFP^2 + s] + 3*BetaBim1*c*m^4*mFP^2*q^2*Sqrt[s]*
+       Sqrt[-4*mFP^2 + s] - 3*BetaBim3*c^3*m^4*mFP^2*q^2*Sqrt[s]*
+       Sqrt[-4*mFP^2 + s] + 3*BetaBim1*c*m^4*mFP^2*q^4*Sqrt[s]*
+       Sqrt[-4*mFP^2 + s] - 3*BetaBim3*c^3*m^4*mFP^2*q^4*Sqrt[s]*
+       Sqrt[-4*mFP^2 + s] + BetaBim1*c*m^4*mFP^2*q^6*Sqrt[s]*
+       Sqrt[-4*mFP^2 + s] - BetaBim3*c^3*m^4*mFP^2*q^6*Sqrt[s]*
+       Sqrt[-4*mFP^2 + s] - BetaBim1*c*m^4*s^(3/2)*Sqrt[-4*mFP^2 + s] + 
+      BetaBim3*c^3*m^4*s^(3/2)*Sqrt[-4*mFP^2 + s] - 3*BetaBim1*c*m^4*q^2*
+       s^(3/2)*Sqrt[-4*mFP^2 + s] + 3*BetaBim3*c^3*m^4*q^2*s^(3/2)*
+       Sqrt[-4*mFP^2 + s] - 3*BetaBim1*c*m^4*q^4*s^(3/2)*Sqrt[-4*mFP^2 + s] + 
+      3*BetaBim3*c^3*m^4*q^4*s^(3/2)*Sqrt[-4*mFP^2 + s] - 
+      BetaBim1*c*m^4*q^6*s^(3/2)*Sqrt[-4*mFP^2 + s] + 
+      BetaBim3*c^3*m^4*q^6*s^(3/2)*Sqrt[-4*mFP^2 + s])*(t - u)*
+     Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - t*u^2]*(mFP^6 - 3*mFP^2*t*u + 
+      t^2*u + t*u^2))/(mFP*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*
+     (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, -1, 2, -1, 2, -2}, 
+  ((-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (-8*mFP^12 + 2*mFP^10*(5*s + 6*Sqrt[s*(-4*mFP^2 + s)]) + 2*s^5*t - 
+        2*s^(9/2)*Sqrt[-4*mFP^2 + s]*t + mFP^2*s^(5/2)*t*
+         (-9*s^(3/2) + 5*s*Sqrt[-4*mFP^2 + s] + 12*Sqrt[s]*t - 
+          12*Sqrt[-4*mFP^2 + s]*t) - 2*mFP^8*(21*s^2 + 
+          10*s^(3/2)*Sqrt[-4*mFP^2 + s] + 6*s*t + 6*Sqrt[s*(-4*mFP^2 + s)]*
+           t) + mFP^6*s*(18*s^2 + 10*s^(3/2)*Sqrt[-4*mFP^2 + s] + 83*s*t + 
+          7*Sqrt[s*(-4*mFP^2 + s)]*t + 16*t^2) - 
+        2*mFP^4*(s^4 + s^(7/2)*Sqrt[-4*mFP^2 + s] + 8*s^3*t - 
+          s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 26*s^2*t^2 - 
+          6*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2))) + 6*mFP^4*mPl^2*q^2*(-1 + q^2)*
+      (mFP^8*(8*s - 2*Sqrt[s*(-4*mFP^2 + s)]) - s^4*t + 
+       s^(7/2)*Sqrt[-4*mFP^2 + s]*t + 2*mFP^6*s*
+        (18*s + 7*Sqrt[s*(-4*mFP^2 + s)] + 2*t) - 
+       mFP^4*(24*s^3 + 16*s^(5/2)*Sqrt[-4*mFP^2 + s] + 81*s^2*t + 
+         5*s^(3/2)*Sqrt[-4*mFP^2 + s]*t) + 2*mFP^2*s^2*
+        (2*s^2 + 2*s^(3/2)*Sqrt[-4*mFP^2 + s] + 15*s*t + 
+         2*t*(Sqrt[s*(-4*mFP^2 + s)] + 6*t))))*(mFP^6 - 3*mFP^2*t*u + 
+     t*u*(t + u)))/(16*mFP^2*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*s*
+    (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, -1, 2, -2, 2, -2}, 
+  -1/2*(mFP*(4*BetaBim1*c*m^4*mFP^2*Sqrt[s] - 4*BetaBim3*c^3*m^4*mFP^2*
+       Sqrt[s] + 12*BetaBim1*c*m^4*mFP^2*q^2*Sqrt[s] - 
+      12*BetaBim3*c^3*m^4*mFP^2*q^2*Sqrt[s] - 9*mFP^4*mPl^2*q^2*Sqrt[s] + 
+      12*BetaBim1*c*m^4*mFP^2*q^4*Sqrt[s] - 12*BetaBim3*c^3*m^4*mFP^2*q^4*
+       Sqrt[s] + 9*mFP^4*mPl^2*q^4*Sqrt[s] + 4*BetaBim1*c*m^4*mFP^2*q^6*
+       Sqrt[s] - 4*BetaBim3*c^3*m^4*mFP^2*q^6*Sqrt[s] - 
+      BetaBim1*c*m^4*s^(3/2) + BetaBim3*c^3*m^4*s^(3/2) - 
+      3*BetaBim1*c*m^4*q^2*s^(3/2) + 3*BetaBim3*c^3*m^4*q^2*s^(3/2) - 
+      3*BetaBim1*c*m^4*q^4*s^(3/2) + 3*BetaBim3*c^3*m^4*q^4*s^(3/2) - 
+      BetaBim1*c*m^4*q^6*s^(3/2) + BetaBim3*c^3*m^4*q^6*s^(3/2) - 
+      BetaBim1*c*m^4*mFP^2*Sqrt[-4*mFP^2 + s] + BetaBim3*c^3*m^4*mFP^2*
+       Sqrt[-4*mFP^2 + s] - 3*BetaBim1*c*m^4*mFP^2*q^2*Sqrt[-4*mFP^2 + s] + 
+      3*BetaBim3*c^3*m^4*mFP^2*q^2*Sqrt[-4*mFP^2 + s] - 
+      3*BetaBim1*c*m^4*mFP^2*q^4*Sqrt[-4*mFP^2 + s] + 
+      3*BetaBim3*c^3*m^4*mFP^2*q^4*Sqrt[-4*mFP^2 + s] - 
+      BetaBim1*c*m^4*mFP^2*q^6*Sqrt[-4*mFP^2 + s] + BetaBim3*c^3*m^4*mFP^2*
+       q^6*Sqrt[-4*mFP^2 + s] + BetaBim1*c*m^4*s*Sqrt[-4*mFP^2 + s] - 
+      BetaBim3*c^3*m^4*s*Sqrt[-4*mFP^2 + s] + 3*BetaBim1*c*m^4*q^2*s*
+       Sqrt[-4*mFP^2 + s] - 3*BetaBim3*c^3*m^4*q^2*s*Sqrt[-4*mFP^2 + s] + 
+      3*BetaBim1*c*m^4*q^4*s*Sqrt[-4*mFP^2 + s] - 3*BetaBim3*c^3*m^4*q^4*s*
+       Sqrt[-4*mFP^2 + s] + BetaBim1*c*m^4*q^6*s*Sqrt[-4*mFP^2 + s] - 
+      BetaBim3*c^3*m^4*q^6*s*Sqrt[-4*mFP^2 + s])*(t - u)*
+     Sqrt[-mFP^6 + 3*mFP^2*t*u - t^2*u - t*u^2]*(mFP^6 - 3*mFP^2*t*u + 
+      t^2*u + t*u^2))/(mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*Sqrt[s]*
+     (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, -2, 1, 2, 2, -2}, 
+  (mFP^4 - s*u)^4/(2*mPl^2*(mFP^2 - s)^5*t*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 1, -2, 2, 2}, (s^4*t^3)/(2*mPl^2*(mFP^2 - s)^5*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 2, 2, 2, 2}, 
   (3*mFP^4*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*(24*mFP^14 - 24*mFP^12*s - 
       24*s^3*u^2*(s + u)^2 + 24*mFP^2*s^2*u^2*(s + u)*(7*s + u) - 
       72*mFP^4*s^2*u^2*(5*s + 2*u) - 4*mFP^10*s*(7*Sqrt[s*(-4*mFP^2 + s)] + 
@@ -1245,6 +2100,282 @@
         Sqrt[-4*mFP^2 + s]*u^2) + mFP^10*s*(7*s^2*Sqrt[-4*mFP^2 + s] - 
         7*s*Sqrt[(-4*mFP^2 + s)^3] + 304*s^(3/2)*u + 140*s*Sqrt[-4*mFP^2 + s]*
          u + 64*Sqrt[s]*u^2 + 16*Sqrt[-4*mFP^2 + s]*u^2)))/
+   (16*mPl^4*q^3*Sqrt[s]*(-4*mFP^2 + s)^2*(-mFP^2 + s)^4*(mFP^2 - t)*
+    (mFP^2 - u))}, {{1, 2, 2, -2, 2, 2, 2, 1}, 
+  -1/8*((-mFP^6 + 3*mFP^2*t*u - t*u*(t + u))^(3/2)*
+     (18*mFP^4*mPl^2*q^2*(-1 + q^2)*s*(Sqrt[-4*mFP^2 + s]*(2*mFP^2 - t - u) + 
+        Sqrt[s]*(t - u)) + (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (2*mFP^6*Sqrt[-4*mFP^2 + s] + 3*s^2*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u + 
+        4*mFP^4*Sqrt[s]*(2*s - Sqrt[s*(-4*mFP^2 + s)] + u) - 
+        mFP^2*s*(2*s^(3/2) - 2*s*Sqrt[-4*mFP^2 + s] + 13*Sqrt[s]*u + 
+          3*Sqrt[-4*mFP^2 + s]*u))))/(mFP*mPl^4*q^3*(mFP^2 - s)^3*
+     (4*mFP^2 - s)^2*Sqrt[s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 2, 2, 2, 0}, ((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*
+    (mFP^2*mPl^2*q^2*(-1 + q^2)*
+      (4*mFP^10*(-Sqrt[s] + 24*s*Sqrt[(-4*mFP^2 + s)^(-1)] + 
+         4*Sqrt[s/(-4*mFP^2 + s)]*Sqrt[-4*mFP^2 + s]) - 
+       2*mFP^8*s*(2*Sqrt[s] + 100*s*Sqrt[(-4*mFP^2 + s)^(-1)] + 
+         Sqrt[-4*mFP^2 + s]*(-3 + 40*Sqrt[s/(-4*mFP^2 + s)]) + 
+         32*Sqrt[(-4*mFP^2 + s)^(-1)]*t) + 
+       mFP^2*s*(4*s^4*Sqrt[(-4*mFP^2 + s)^(-1)] + 
+         s^(7/2)*(11 + 4*Sqrt[(-4*mFP^2 + s)^(-1)]*Sqrt[-4*mFP^2 + s]) + 
+         2*s^(5/2)*(17 - 2*Sqrt[(-4*mFP^2 + s)^(-1)]*Sqrt[-4*mFP^2 + s])*t + 
+         2*s^(3/2)*(23 - 8*Sqrt[(-4*mFP^2 + s)^(-1)]*Sqrt[-4*mFP^2 + s])*
+          t^2 + 12*Sqrt[s]*t^3 + 4*Sqrt[-4*mFP^2 + s]*
+          (1 - 3*Sqrt[s/(-4*mFP^2 + s)])*t^3 + s^3*(11*Sqrt[-4*mFP^2 + s] - 
+           8*Sqrt[(-4*mFP^2 + s)^(-1)]*t) + 6*s^2*t*(5*Sqrt[-4*mFP^2 + s] - 
+           6*Sqrt[(-4*mFP^2 + s)^(-1)]*t) + 4*s*t^2*(3*Sqrt[-4*mFP^2 + s] - 
+           5*Sqrt[(-4*mFP^2 + s)^(-1)]*t)) - 
+       2*mFP^4*s*(20*s^3*Sqrt[(-4*mFP^2 + s)^(-1)] + 
+         16*s^(5/2)*(2 + Sqrt[(-4*mFP^2 + s)^(-1)]*Sqrt[-4*mFP^2 + s]) + 
+         s^(3/2)*(40 + 11*Sqrt[(-4*mFP^2 + s)^(-1)]*Sqrt[-4*mFP^2 + s])*t + 
+         7*Sqrt[s]*t^2 + 3*s*t*(4*Sqrt[-4*mFP^2 + s] - 
+           9*Sqrt[(-4*mFP^2 + s)^(-1)]*t) + 3*s^2*(7*Sqrt[-4*mFP^2 + s] + 
+           3*Sqrt[(-4*mFP^2 + s)^(-1)]*t) - 
+         t^2*(Sqrt[-4*mFP^2 + s]*(-3 + Sqrt[s/(-4*mFP^2 + s)]) + 
+           8*Sqrt[(-4*mFP^2 + s)^(-1)]*t)) + 
+       mFP^6*(140*s^3*Sqrt[(-4*mFP^2 + s)^(-1)] + 
+         s^(5/2)*(87 + 84*Sqrt[(-4*mFP^2 + s)^(-1)]*Sqrt[-4*mFP^2 + s]) + 
+         4*s^(3/2)*(-2 + 11*Sqrt[(-4*mFP^2 + s)^(-1)]*Sqrt[-4*mFP^2 + s])*t + 
+         4*Sqrt[s]*t^2 - 4*Sqrt[s/(-4*mFP^2 + s)]*Sqrt[-4*mFP^2 + s]*t^2 - 
+         4*s*t*(Sqrt[-4*mFP^2 + s] + 6*Sqrt[(-4*mFP^2 + s)^(-1)]*t) + 
+         s^2*(25*Sqrt[-4*mFP^2 + s] + 88*Sqrt[(-4*mFP^2 + s)^(-1)]*t)) + 
+       2*s^(3/2)*t*(s + t)*(s^(5/2)*Sqrt[(-4*mFP^2 + s)^(-1)] + 
+         s^2*(-1 + Sqrt[(-4*mFP^2 + s)^(-1)]*Sqrt[-4*mFP^2 + s]) + 
+         2*s*(-1 + Sqrt[(-4*mFP^2 + s)^(-1)]*Sqrt[-4*mFP^2 + s])*t - 
+         s^(3/2)*(Sqrt[-4*mFP^2 + s] - 2*Sqrt[(-4*mFP^2 + s)^(-1)]*t) - 
+         2*t*(Sqrt[s*(-4*mFP^2 + s)] + t - Sqrt[(-4*mFP^2 + s)^(-1)]*
+            Sqrt[-4*mFP^2 + s]*t))) - (BetaBim1*c - BetaBim3*c^3)*m^4*
+      (1 + q^2)^3*(2*mFP^10*(-4*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+       s^3*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u^2 + 2*mFP^8*Sqrt[s]*
+        (5*s - 2*Sqrt[s*(-4*mFP^2 + s)] + 4*u) + 
+       2*mFP^6*s*(-7*s^(3/2) + 3*s*Sqrt[-4*mFP^2 + s] - Sqrt[s]*u + 
+         Sqrt[-4*mFP^2 + s]*u) + mFP^4*s*(7*s^(5/2) - 
+         5*s^2*Sqrt[-4*mFP^2 + s] + 8*s^(3/2)*u - 4*s*Sqrt[-4*mFP^2 + s]*u - 
+         4*Sqrt[s]*u^2 - 2*Sqrt[-4*mFP^2 + s]*u^2) + 
+       mFP^2*s^2*(-s^(5/2) + s^2*Sqrt[-4*mFP^2 + s] - 2*s^(3/2)*u + 
+         2*s*Sqrt[-4*mFP^2 + s]*u - 3*Sqrt[s]*u^2 + Sqrt[-4*mFP^2 + s]*
+          u^2))))/(4*Sqrt[6]*mFP^2*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*
+    Sqrt[s]*(mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, -2, 2, 2, 2, -1}, 
+  (Sqrt[-mFP^6 + 3*mFP^2*t*u - t*u*(t + u)]*
+    (-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (2*mFP^10*(-8*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+        s^2*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u^3 + 4*mFP^8*Sqrt[s]*
+         (11*s - 4*Sqrt[s*(-4*mFP^2 + s)] + 3*u) + 
+        mFP^6*s*(-34*s^(3/2) + 20*s*Sqrt[-4*mFP^2 + s] - 39*Sqrt[s]*u + 
+          15*Sqrt[-4*mFP^2 + s]*u) + mFP^4*s*(10*s^(5/2) - 
+          8*s^2*Sqrt[-4*mFP^2 + s] + 21*s^(3/2)*u - 15*s*Sqrt[-4*mFP^2 + s]*
+           u + 12*Sqrt[s]*u^2 - 6*Sqrt[-4*mFP^2 + s]*u^2) - 
+        mFP^2*s^(3/2)*(s^3 - s^(5/2)*Sqrt[-4*mFP^2 + s] + 3*s^2*u - 
+          3*s^(3/2)*Sqrt[-4*mFP^2 + s]*u + 3*s*u^2 - 3*Sqrt[s*(-4*mFP^2 + s)]*
+           u^2 + 4*u^3))) + 6*mFP^2*mPl^2*q^2*(-1 + q^2)*s*
+      (2*mFP^8*Sqrt[-4*mFP^2 + s] - 6*mFP^4*Sqrt[-4*mFP^2 + s]*
+        (t^2 - t*u + u^2) - mFP^6*(3*Sqrt[s]*(-t + u) + Sqrt[-4*mFP^2 + s]*
+          (t + u)) - (t + u)*(Sqrt[s]*(-t^3 + u^3) + Sqrt[-4*mFP^2 + s]*
+          (t^3 + u^3)) + mFP^2*(3*Sqrt[s]*(-t^3 + u^3) + 
+         5*Sqrt[-4*mFP^2 + s]*(t^3 + u^3)))))/(8*mFP*mPl^4*q^3*(mFP^2 - s)^2*
+    (4*mFP^2 - s)^2*Sqrt[s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 2, 2, 2, -2}, 
+  -1/4*((1 - q^2)*(2*mFP^12 - 4*mFP^8*Sqrt[s]*Sqrt[-4*mFP^2 + s]*t - 
+      12*mFP^8*t^2 + 2*mFP^6*Sqrt[s]*Sqrt[-4*mFP^2 + s]*t^2 + 4*mFP^6*t^3 + 
+      6*mFP^4*Sqrt[s]*Sqrt[-4*mFP^2 + s]*t^3 + 9*mFP^4*t^4 - 
+      5*mFP^2*Sqrt[s]*Sqrt[-4*mFP^2 + s]*t^4 - 6*mFP^2*t^5 + 
+      Sqrt[s]*Sqrt[-4*mFP^2 + s]*t^5 + t^6 + 4*mFP^8*Sqrt[s]*
+       Sqrt[-4*mFP^2 + s]*u + 12*mFP^8*t*u - 6*mFP^4*Sqrt[s]*
+       Sqrt[-4*mFP^2 + s]*t^2*u - 6*mFP^2*t^4*u + Sqrt[s]*Sqrt[-4*mFP^2 + s]*
+       t^4*u + 2*t^5*u - 12*mFP^8*u^2 - 2*mFP^6*Sqrt[s]*Sqrt[-4*mFP^2 + s]*
+       u^2 + 6*mFP^4*Sqrt[s]*Sqrt[-4*mFP^2 + s]*t*u^2 + t^4*u^2 + 
+      4*mFP^6*u^3 - 6*mFP^4*Sqrt[s]*Sqrt[-4*mFP^2 + s]*u^3 + 9*mFP^4*u^4 + 
+      5*mFP^2*Sqrt[s]*Sqrt[-4*mFP^2 + s]*u^4 - 6*mFP^2*t*u^4 - 
+      Sqrt[s]*Sqrt[-4*mFP^2 + s]*t*u^4 + t^2*u^4 - 6*mFP^2*u^5 - 
+      Sqrt[s]*Sqrt[-4*mFP^2 + s]*u^5 + 2*t*u^5 + u^6))/
+    (mPl^2*q*(mFP^2 - s)*(4*mFP^2 - s)^2*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 2, 1, 2, 1}, 
+  ((24*mFP^6*mPl^2*q^2 - 24*mFP^6*mPl^2*q^4 - 4*BetaBim1*c*m^4*mFP^2*s + 
+     4*BetaBim3*c^3*m^4*mFP^2*s - 12*BetaBim1*c*m^4*mFP^2*q^2*s + 
+     12*BetaBim3*c^3*m^4*mFP^2*q^2*s + 12*mFP^4*mPl^2*q^2*s - 
+     12*BetaBim1*c*m^4*mFP^2*q^4*s + 12*BetaBim3*c^3*m^4*mFP^2*q^4*s - 
+     12*mFP^4*mPl^2*q^4*s - 4*BetaBim1*c*m^4*mFP^2*q^6*s + 
+     4*BetaBim3*c^3*m^4*mFP^2*q^6*s + BetaBim1*c*m^4*s^2 - 
+     BetaBim3*c^3*m^4*s^2 + 3*BetaBim1*c*m^4*q^2*s^2 - 
+     3*BetaBim3*c^3*m^4*q^2*s^2 + 3*BetaBim1*c*m^4*q^4*s^2 - 
+     3*BetaBim3*c^3*m^4*q^4*s^2 + BetaBim1*c*m^4*q^6*s^2 - 
+     BetaBim3*c^3*m^4*q^6*s^2 - BetaBim1*c*m^4*mFP^2*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] + BetaBim3*c^3*m^4*mFP^2*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] - 3*BetaBim1*c*m^4*mFP^2*q^2*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] + 3*BetaBim3*c^3*m^4*mFP^2*q^2*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] - 3*BetaBim1*c*m^4*mFP^2*q^4*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] + 3*BetaBim3*c^3*m^4*mFP^2*q^4*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] - BetaBim1*c*m^4*mFP^2*q^6*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] + BetaBim3*c^3*m^4*mFP^2*q^6*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] + BetaBim1*c*m^4*s^(3/2)*Sqrt[-4*mFP^2 + s] - 
+     BetaBim3*c^3*m^4*s^(3/2)*Sqrt[-4*mFP^2 + s] + 3*BetaBim1*c*m^4*q^2*
+      s^(3/2)*Sqrt[-4*mFP^2 + s] - 3*BetaBim3*c^3*m^4*q^2*s^(3/2)*
+      Sqrt[-4*mFP^2 + s] + 3*BetaBim1*c*m^4*q^4*s^(3/2)*Sqrt[-4*mFP^2 + s] - 
+     3*BetaBim3*c^3*m^4*q^4*s^(3/2)*Sqrt[-4*mFP^2 + s] + 
+     BetaBim1*c*m^4*q^6*s^(3/2)*Sqrt[-4*mFP^2 + s] - 
+     BetaBim3*c^3*m^4*q^6*s^(3/2)*Sqrt[-4*mFP^2 + s])*
+    (mFP^6 - 3*mFP^2*t*u + t^2*u + t*u^2)^2)/(4*mFP^2*mPl^4*q^3*(mFP^2 - s)^3*
+    (4*mFP^2 - s)^2*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 2, 1, 2, 0}, ((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*
+    (12*mFP^4*mPl^2*q^2*(-1 + q^2)*s*(5*mFP^2 + s)*
+      (Sqrt[-4*mFP^2 + s]*(2*mFP^2 - t - u) + Sqrt[s]*(t - u)) + 
+     (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+      (4*mFP^8*(-2*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+       s^3*(Sqrt[s] + Sqrt[-4*mFP^2 + s])*u + 2*mFP^6*Sqrt[s]*
+        (15*s - 6*Sqrt[s*(-4*mFP^2 + s)] + 4*u) + 
+       mFP^2*s^2*(s^(3/2) - s*Sqrt[-4*mFP^2 + s] + Sqrt[s]*u + 
+         Sqrt[-4*mFP^2 + s]*u) - mFP^4*s*(11*s^(3/2) - 
+         9*s*Sqrt[-4*mFP^2 + s] + 22*Sqrt[s]*u + 2*Sqrt[-4*mFP^2 + s]*u))))/
+   (8*Sqrt[6]*mFP^3*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*Sqrt[s]*
+    (mFP^2 - t)*(mFP^2 - u)*Sqrt[-(mFP^6 - 3*mFP^2*t*u + t^2*u + t*u^2)^
+       (-1)])}, {{1, 2, 2, -2, 2, 1, 2, -1}, 
+  ((16*mFP^6*mPl^2*q^2 - 16*mFP^6*mPl^2*q^4 + 4*BetaBim1*c*m^4*mFP^2*s - 
+     4*BetaBim3*c^3*m^4*mFP^2*s + 12*BetaBim1*c*m^4*mFP^2*q^2*s - 
+     12*BetaBim3*c^3*m^4*mFP^2*q^2*s - 32*mFP^4*mPl^2*q^2*s + 
+     12*BetaBim1*c*m^4*mFP^2*q^4*s - 12*BetaBim3*c^3*m^4*mFP^2*q^4*s + 
+     32*mFP^4*mPl^2*q^4*s + 4*BetaBim1*c*m^4*mFP^2*q^6*s - 
+     4*BetaBim3*c^3*m^4*mFP^2*q^6*s - BetaBim1*c*m^4*s^2 + 
+     BetaBim3*c^3*m^4*s^2 - 3*BetaBim1*c*m^4*q^2*s^2 + 
+     3*BetaBim3*c^3*m^4*q^2*s^2 - 2*mFP^2*mPl^2*q^2*s^2 - 
+     3*BetaBim1*c*m^4*q^4*s^2 + 3*BetaBim3*c^3*m^4*q^4*s^2 + 
+     2*mFP^2*mPl^2*q^4*s^2 - BetaBim1*c*m^4*q^6*s^2 + 
+     BetaBim3*c^3*m^4*q^6*s^2)*(mFP^6 - 3*mFP^2*t*u + t^2*u + t*u^2)*
+    (2*mFP^6 - 2*mFP^2*Sqrt[s]*Sqrt[-4*mFP^2 + s]*t - 3*mFP^2*t^2 + 
+     Sqrt[s]*Sqrt[-4*mFP^2 + s]*t^2 + t^3 + 2*mFP^2*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s]*u + t^2*u - 3*mFP^2*u^2 - Sqrt[s]*Sqrt[-4*mFP^2 + s]*
+      u^2 + t*u^2 + u^3))/(16*mFP^2*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*
+    (mFP^2 - t)*(mFP^2 - u))}, {{1, 2, 2, -2, 2, 1, 2, -2}, 
+  (Sqrt[-mFP^6 + 3*mFP^2*t*u - t*u*(t + u)]*
+    (-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (2*mFP^10*(8*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+        s^2*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*t^3 - 4*mFP^8*Sqrt[s]*
+         (11*s + 4*Sqrt[s*(-4*mFP^2 + s)] + 3*t) + 
+        mFP^6*s*(34*s^(3/2) + 20*s*Sqrt[-4*mFP^2 + s] + 39*Sqrt[s]*t + 
+          15*Sqrt[-4*mFP^2 + s]*t) - mFP^4*s*(10*s^(5/2) + 
+          8*s^2*Sqrt[-4*mFP^2 + s] + 21*s^(3/2)*t + 15*s*Sqrt[-4*mFP^2 + s]*
+           t + 12*Sqrt[s]*t^2 + 6*Sqrt[-4*mFP^2 + s]*t^2) + 
+        mFP^2*s^(3/2)*(s^3 + s^(5/2)*Sqrt[-4*mFP^2 + s] + 3*s^2*t + 
+          3*s^(3/2)*Sqrt[-4*mFP^2 + s]*t + 3*s*t^2 + 3*Sqrt[s*(-4*mFP^2 + s)]*
+           t^2 + 4*t^3))) + 6*mFP^2*mPl^2*q^2*(-1 + q^2)*s*
+      (2*mFP^8*Sqrt[-4*mFP^2 + s] - 6*mFP^4*Sqrt[-4*mFP^2 + s]*
+        (t^2 - t*u + u^2) - mFP^6*(3*Sqrt[s]*(-t + u) + Sqrt[-4*mFP^2 + s]*
+          (t + u)) - (t + u)*(Sqrt[s]*(-t^3 + u^3) + Sqrt[-4*mFP^2 + s]*
+          (t^3 + u^3)) + mFP^2*(3*Sqrt[s]*(-t^3 + u^3) + 
+         5*Sqrt[-4*mFP^2 + s]*(t^3 + u^3)))))/(8*mFP*mPl^4*q^3*(mFP^2 - s)^2*
+    (4*mFP^2 - s)^2*Sqrt[s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 2, 0, 2, 0}, 
+  -1/4*((28*mFP^6*mPl^2*q^2 - 28*mFP^6*mPl^2*q^4 - 4*BetaBim1*c*m^4*mFP^2*s + 
+      4*BetaBim3*c^3*m^4*mFP^2*s - 12*BetaBim1*c*m^4*mFP^2*q^2*s + 
+      12*BetaBim3*c^3*m^4*mFP^2*q^2*s + 16*mFP^4*mPl^2*q^2*s - 
+      12*BetaBim1*c*m^4*mFP^2*q^4*s + 12*BetaBim3*c^3*m^4*mFP^2*q^4*s - 
+      16*mFP^4*mPl^2*q^4*s - 4*BetaBim1*c*m^4*mFP^2*q^6*s + 
+      4*BetaBim3*c^3*m^4*mFP^2*q^6*s + BetaBim1*c*m^4*s^2 - 
+      BetaBim3*c^3*m^4*s^2 + 3*BetaBim1*c*m^4*q^2*s^2 - 
+      3*BetaBim3*c^3*m^4*q^2*s^2 + mFP^2*mPl^2*q^2*s^2 + 
+      3*BetaBim1*c*m^4*q^4*s^2 - 3*BetaBim3*c^3*m^4*q^4*s^2 - 
+      mFP^2*mPl^2*q^4*s^2 + BetaBim1*c*m^4*q^6*s^2 - 
+      BetaBim3*c^3*m^4*q^6*s^2)*(mFP^6 - 3*mFP^2*t*u + t^2*u + t*u^2)^2)/
+    (mFP^2*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 2, 0, 2, -1}, 
+  (((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+      (4*mFP^8*(2*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+       s^3*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*t - 2*mFP^6*Sqrt[s]*
+        (15*s + 6*Sqrt[s*(-4*mFP^2 + s)] + 4*t) + 
+       mFP^4*s*(11*s^(3/2) + 9*s*Sqrt[-4*mFP^2 + s] + 22*Sqrt[s]*t - 
+         2*Sqrt[-4*mFP^2 + s]*t) - mFP^2*s^2*(s^(3/2) + 
+         s*Sqrt[-4*mFP^2 + s] + Sqrt[s]*t - Sqrt[-4*mFP^2 + s]*t)) + 
+     12*mFP^4*mPl^2*q^2*(-1 + q^2)*s*(5*mFP^2 + s)*
+      (Sqrt[-4*mFP^2 + s]*(2*mFP^2 - t - u) + Sqrt[s]*(t - u)))*
+    (mFP^6 - 3*mFP^2*t*u + t*u*(t + u)))/(8*Sqrt[6]*mFP^3*mPl^4*q^3*
+    (mFP^2 - s)^3*(4*mFP^2 - s)^2*Sqrt[s]*(mFP^2 - t)*(mFP^2 - u)*
+    Sqrt[-(mFP^6 - 3*mFP^2*t*u + t^2*u + t*u^2)^(-1)])}, 
+ {{1, 2, 2, -2, 2, 0, 2, -2}, 
+  -1/4*((mFP^6 - 3*mFP^2*t*u + t*u*(t + u))*
+     (-((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+        (-8*mFP^12 + 2*mFP^10*(9*s + 4*Sqrt[s*(-4*mFP^2 + s)]) + 
+         s^(7/2)*(Sqrt[s] - Sqrt[-4*mFP^2 + s])*t^2 - 
+         2*mFP^8*(14*s^2 + 5*s^(3/2)*Sqrt[-4*mFP^2 + s] + 4*s*t + 
+           4*Sqrt[s*(-4*mFP^2 + s)]*t) - 
+         mFP^4*(9*s^4 + 7*s^(7/2)*Sqrt[-4*mFP^2 + s] + 12*s^3*t + 
+           8*s^(5/2)*Sqrt[-4*mFP^2 + s]*t + 6*s^2*t^2 - 
+           4*s^(3/2)*Sqrt[-4*mFP^2 + s]*t^2) + 
+         mFP^2*(s^5 + s^(9/2)*Sqrt[-4*mFP^2 + s] + 2*s^4*t + 
+           2*s^(7/2)*Sqrt[-4*mFP^2 + s]*t - 3*s^3*t^2 + 
+           3*s^(5/2)*Sqrt[-4*mFP^2 + s]*t^2) + 2*mFP^6*s*
+          (13*s^2 + 7*s^(3/2)*Sqrt[-4*mFP^2 + s] + 9*s*t + 
+           t*(Sqrt[s*(-4*mFP^2 + s)] + 4*t)))) + 3*mFP^4*mPl^2*q^2*(-1 + q^2)*
+       (-4*mFP^8*(-6*s + Sqrt[s*(-4*mFP^2 + s)]) - 
+        2*mFP^6*s*(49*s - 14*Sqrt[s*(-4*mFP^2 + s)] + 8*u) + 
+        3*mFP^4*s^(3/2)*(37*s^(3/2) - 19*s*Sqrt[-4*mFP^2 + s] + 
+          20*Sqrt[s]*u - 4*Sqrt[-4*mFP^2 + s]*u) + 
+        5*s^(5/2)*(s^(5/2) - s^2*Sqrt[-4*mFP^2 + s] + 2*s^(3/2)*u - 
+          2*s*Sqrt[-4*mFP^2 + s]*u - 2*Sqrt[-4*mFP^2 + s]*u^2) + 
+        2*mFP^2*s^(3/2)*(-21*s^(5/2) + 16*s^2*Sqrt[-4*mFP^2 + s] - 
+          27*s^(3/2)*u + 17*s*Sqrt[-4*mFP^2 + s]*u + 2*Sqrt[-4*mFP^2 + s]*
+           u^2))))/(Sqrt[6]*mFP^2*mPl^4*q^3*(mFP^2 - s)^3*(4*mFP^2 - s)^2*
+     Sqrt[s]*Sqrt[-4*mFP^2 + s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 2, -1, 2, -1}, 
+  ((24*mFP^6*mPl^2*q^2 - 24*mFP^6*mPl^2*q^4 - 4*BetaBim1*c*m^4*mFP^2*s + 
+     4*BetaBim3*c^3*m^4*mFP^2*s - 12*BetaBim1*c*m^4*mFP^2*q^2*s + 
+     12*BetaBim3*c^3*m^4*mFP^2*q^2*s + 12*mFP^4*mPl^2*q^2*s - 
+     12*BetaBim1*c*m^4*mFP^2*q^4*s + 12*BetaBim3*c^3*m^4*mFP^2*q^4*s - 
+     12*mFP^4*mPl^2*q^4*s - 4*BetaBim1*c*m^4*mFP^2*q^6*s + 
+     4*BetaBim3*c^3*m^4*mFP^2*q^6*s + BetaBim1*c*m^4*s^2 - 
+     BetaBim3*c^3*m^4*s^2 + 3*BetaBim1*c*m^4*q^2*s^2 - 
+     3*BetaBim3*c^3*m^4*q^2*s^2 + 3*BetaBim1*c*m^4*q^4*s^2 - 
+     3*BetaBim3*c^3*m^4*q^4*s^2 + BetaBim1*c*m^4*q^6*s^2 - 
+     BetaBim3*c^3*m^4*q^6*s^2 + BetaBim1*c*m^4*mFP^2*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] - BetaBim3*c^3*m^4*mFP^2*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] + 3*BetaBim1*c*m^4*mFP^2*q^2*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] - 3*BetaBim3*c^3*m^4*mFP^2*q^2*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] + 3*BetaBim1*c*m^4*mFP^2*q^4*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] - 3*BetaBim3*c^3*m^4*mFP^2*q^4*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] + BetaBim1*c*m^4*mFP^2*q^6*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] - BetaBim3*c^3*m^4*mFP^2*q^6*Sqrt[s]*
+      Sqrt[-4*mFP^2 + s] - BetaBim1*c*m^4*s^(3/2)*Sqrt[-4*mFP^2 + s] + 
+     BetaBim3*c^3*m^4*s^(3/2)*Sqrt[-4*mFP^2 + s] - 3*BetaBim1*c*m^4*q^2*
+      s^(3/2)*Sqrt[-4*mFP^2 + s] + 3*BetaBim3*c^3*m^4*q^2*s^(3/2)*
+      Sqrt[-4*mFP^2 + s] - 3*BetaBim1*c*m^4*q^4*s^(3/2)*Sqrt[-4*mFP^2 + s] + 
+     3*BetaBim3*c^3*m^4*q^4*s^(3/2)*Sqrt[-4*mFP^2 + s] - 
+     BetaBim1*c*m^4*q^6*s^(3/2)*Sqrt[-4*mFP^2 + s] + 
+     BetaBim3*c^3*m^4*q^6*s^(3/2)*Sqrt[-4*mFP^2 + s])*
+    (mFP^6 - 3*mFP^2*t*u + t^2*u + t*u^2)^2)/(4*mFP^2*mPl^4*q^3*(mFP^2 - s)^3*
+    (4*mFP^2 - s)^2*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 2, -1, 2, -2}, 
+  -1/8*(((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+       (2*mFP^6*Sqrt[-4*mFP^2 + s] + 3*s^2*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*
+         t - 4*mFP^4*Sqrt[s]*(2*s + Sqrt[s*(-4*mFP^2 + s)] + t) + 
+        mFP^2*s*(2*s^(3/2) + 2*s*Sqrt[-4*mFP^2 + s] + 13*Sqrt[s]*t - 
+          3*Sqrt[-4*mFP^2 + s]*t)) + 18*mFP^4*mPl^2*q^2*(-1 + q^2)*s*
+       (Sqrt[-4*mFP^2 + s]*(2*mFP^2 - t - u) + Sqrt[s]*(t - u)))*
+     (-mFP^6 + 3*mFP^2*t*u - t*u*(t + u))^(3/2))/(mFP*mPl^4*q^3*(mFP^2 - s)^3*
+     (4*mFP^2 - s)^2*Sqrt[s]*(mFP^2 - t)*(mFP^2 - u))}, 
+ {{1, 2, 2, -2, 2, -2, 2, -2}, 
+  (3*mFP^4*mPl^2*q^2*(-1 + q^2)*Sqrt[s]*(24*mFP^14 - 24*mFP^12*s + 
+      4*mFP^10*s*(7*Sqrt[s*(-4*mFP^2 + s)] - 36*u) - 24*s^3*u^2*(s + u)^2 + 
+      24*mFP^2*s^2*u^2*(s + u)*(7*s + u) - 72*mFP^4*s^2*u^2*(5*s + 2*u) + 
+      mFP^6*s^(3/2)*u*(-48*s^(3/2) + 7*s*Sqrt[-4*mFP^2 + s] - 
+        7*Sqrt[(-4*mFP^2 + s)^3] + 168*Sqrt[s]*u) + 
+      mFP^8*s*(-7*s^(3/2)*Sqrt[-4*mFP^2 + s] + 7*Sqrt[s*(-4*mFP^2 + s)^3] + 
+        192*s*u - 28*Sqrt[s*(-4*mFP^2 + s)]*u + 48*u^2)) - 
+    (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+     (8*mFP^14*s*(5*Sqrt[s] - 2*Sqrt[-4*mFP^2 + s]) + 
+      8*mFP^16*(-4*Sqrt[s] + Sqrt[-4*mFP^2 + s]) + 
+      8*s^4*(-Sqrt[s] + Sqrt[-4*mFP^2 + s])*u^2*(s + u)^2 + 
+      8*mFP^2*s^3*u^2*(s + u)*(11*s^(3/2) - 8*s*Sqrt[-4*mFP^2 + s] + 
+        5*Sqrt[s]*u - 2*Sqrt[-4*mFP^2 + s]*u) - 
+      4*mFP^12*s*(2*s^(3/2) + 5*s*Sqrt[-4*mFP^2 + s] - 48*Sqrt[s]*u + 
+        12*Sqrt[-4*mFP^2 + s]*u) + mFP^8*s^2*u*(128*s^(3/2) - 
+        87*s*Sqrt[-4*mFP^2 + s] + 7*Sqrt[(-4*mFP^2 + s)^3] - 208*Sqrt[s]*u + 
+        40*Sqrt[-4*mFP^2 + s]*u) + 8*mFP^6*s^2*u*(-2*s^(5/2) + 
+        2*s^2*Sqrt[-4*mFP^2 + s] + 67*s^(3/2)*u - 22*s*Sqrt[-4*mFP^2 + s]*u + 
+        24*Sqrt[s]*u^2 - 6*Sqrt[-4*mFP^2 + s]*u^2) + 
+      8*mFP^4*s^2*u^2*(-43*s^(5/2) + 22*s^2*Sqrt[-4*mFP^2 + s] - 
+        38*s^(3/2)*u + 14*s*Sqrt[-4*mFP^2 + s]*u - 4*Sqrt[s]*u^2 + 
+        Sqrt[-4*mFP^2 + s]*u^2) + mFP^10*s*(7*s^2*Sqrt[-4*mFP^2 + s] - 
+        7*s*Sqrt[(-4*mFP^2 + s)^3] - 304*s^(3/2)*u + 140*s*Sqrt[-4*mFP^2 + s]*
+         u - 64*Sqrt[s]*u^2 + 16*Sqrt[-4*mFP^2 + s]*u^2)))/
    (16*mPl^4*q^3*Sqrt[s]*(-4*mFP^2 + s)^2*(-mFP^2 + s)^4*(mFP^2 - t)*
     (mFP^2 - u))}, {{2, 2, 2, 2, 2, 2, 2, 2}, 
   (36864*mFP^24*mPl^4*q^6*(s + u) - (BetaBim1*c - BetaBim3*c^3)^2*m^8*
@@ -1422,14 +2553,14 @@
      (227*s^2 + 38*s*u - 84*u^2) + (BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*
      (1 + q^2)^6*s^5*(2*s^4 + 43*s^3*u + 41*s^2*u^2 + 12*s*u^3 + 6*u^4) + 
     1536*mFP^18*(4*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s + 
-      mPl^4*q^6*(-406*s^3 - 292*s^2*u + 15*s*u^2 + 64*u^3)) + 
-    32*mFP^16*(-16*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*
-       (28*s + 25*u) + 3*mPl^4*q^6*(3017*s^4 + 3972*s^3*u + 1596*s^2*u^2 - 
-        96*s*u^3 - 128*u^4)) + 2*m^4*mFP^4*s*
-     (-((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s^3*
-        (22*s^4 + 199*s^3*u + 201*s^2*u^2 + 120*s*u^3 + 48*u^4)) - 
+      mPl^4*q^6*(-406*s^3 - 292*s^2*u + 15*s*u^2 + 64*u^3)) - 
+    32*mFP^16*(16*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*
+       (28*s + 25*u) - 3*mPl^4*q^6*(3017*s^4 + 3972*s^3*u + 1596*s^2*u^2 - 
+        96*s*u^3 - 128*u^4)) - 2*m^4*mFP^4*s*
+     ((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s^3*
+       (22*s^4 + 199*s^3*u + 201*s^2*u^2 + 120*s*u^3 + 48*u^4) + 
       12*BetaBim3*c^3*mPl^2*q^2*t^2*u^2*(t + u)^3*(-6*q^4*s + t + u + 
-        4*q^2*(t + u) + 4*q^6*(t + u) + q^8*(t + u)) + 
+        4*q^2*(t + u) + 4*q^6*(t + u) + q^8*(t + u)) - 
       6*(BetaBim1*c - BetaBim3*c^3)*mPl^2*q^2*t^2*u^2*(t + u)^3*
        (6*q^4*s - 5*(t + u) - 12*q^2*(t + u) + 4*q^6*(t + u) + 
         3*q^8*(t + u))) + 8*mFP^14*s*(16*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
@@ -1457,33 +2588,32 @@
       3*mPl^4*q^4*((t + u)*(9*t^4 - 122*t^3*u - 182*t^2*u^2 - 122*t*u^3 + 
           9*u^4) + q^4*(t + u)*(9*t^4 - 122*t^3*u - 182*t^2*u^2 - 122*t*u^3 + 
           9*u^4) - 2*q^2*s*(475*s^4 + 1714*s^3*u + 4574*s^2*u^2 + 
-          2336*s*u^3 + 128*u^4))) + 
-    mFP^6*s*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^2*
-       (410*s^4 + 2091*s^3*u + 2377*s^2*u^2 + 1676*s*u^3 + 454*u^4) - 
-      12*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(t + u)^3*
-       ((-1 + q^2)*(1 + q^2)^3*t^4 + t^2*(6*q^4*s + 3*t + 4*q^2*t - 
-          12*q^6*t - 5*q^8*t)*u + t*(-31*t - 72*q^2*t + 32*q^6*t + 21*q^8*t + 
-          6*q^4*(s + t))*u^2 + (3 + 4*q^2 - 12*q^6 - 5*q^8)*t*u^3 + 
-        (-1 + q^2)*(1 + q^2)^3*u^4) + 24*mPl^2*q^2*u*
-       (-4*mPl^2*q^2*u*(2*q^2*s^4*(s + u)^2 + t^2*(t + u)^4 + 
-          q^4*t^2*(t + u)^4) + BetaBim3*c^3*m^4*t*(t + u)^3*
-         (t^2 + 5*t*u + u^2 - 6*q^4*(s*t + (s + t)*u) + 
-          4*q^2*(t^2 + 5*t*u + u^2) + 4*q^6*(t^2 + 5*t*u + u^2) + 
-          q^8*(t^2 + 5*t*u + u^2)))) + 
-    4*mFP^10*s*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
-       (827*s^4 + 1928*s^3*u + 2331*s^2*u^2 + 928*s*u^3 + 78*u^4) - 
-      3*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(t + u)*
-       (10*(-1 + q^2)*(1 + q^2)^3*t^4 + (-11 - 28*q^2 + 6*q^4 + 4*q^6 + 
-          5*q^8)*t^3*u + 2*(25 + 44*q^2 + 6*q^4 - 68*q^6 - 31*q^8)*t^2*u^2 + 
+          2336*s*u^3 + 128*u^4))) + 4*mFP^10*s*
+     (2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*(827*s^4 + 1928*s^3*u + 
+        2331*s^2*u^2 + 928*s*u^3 + 78*u^4) - 3*(BetaBim1*c - BetaBim3*c^3)*
+       m^4*mPl^2*q^2*(t + u)*(10*(-1 + q^2)*(1 + q^2)^3*t^4 + 
+        (-11 - 28*q^2 + 6*q^4 + 4*q^6 + 5*q^8)*t^3*u + 
+        2*(25 + 44*q^2 + 6*q^4 - 68*q^6 - 31*q^8)*t^2*u^2 + 
         (-11 - 28*q^2 + 6*q^4 + 4*q^6 + 5*q^8)*t*u^3 + 
         10*(-1 + q^2)*(1 + q^2)^3*u^4) + 3*mPl^2*q^2*
        (6*BetaBim3*c^3*m^4*(1 + 4*q^2 - 2*q^4 + 4*q^6 + q^8)*t*u*(t + u)^3 + 
         mPl^2*q^2*((t + u)^2*(2*t^4 - 87*t^3*u - 198*t^2*u^2 - 87*t*u^3 + 
             2*u^4) + q^4*(t + u)^2*(2*t^4 - 87*t^3*u - 198*t^2*u^2 - 
             87*t*u^3 + 2*u^4) - 2*q^2*s^2*(36*s^4 + 217*s^3*u + 
-            1233*s^2*u^2 + 1192*s*u^3 + 260*u^4)))))/
-   (96*mFP^6*mPl^6*q^6*(mFP^2 - s)*s*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
- {{2, 2, 2, 2, 2, 1, 2, 0}, 
+            1233*s^2*u^2 + 1192*s*u^3 + 260*u^4)))) + 
+    mFP^6*s*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^2*
+       (410*s^4 + 2091*s^3*u + 2377*s^2*u^2 + 1676*s*u^3 + 454*u^4) - 
+      12*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(t + u)^3*
+       ((-1 + q^2)*(1 + q^2)^3*t^4 + (3 + 4*q^2 - 12*q^6 - 5*q^8)*t^3*u + 
+        (-1 + q^2)*(1 + q^2)^3*u^4 + t*u^2*(6*q^4*s + 3*u + 4*q^2*u - 
+          12*q^6*u - 5*q^8*u) + t^2*u*(-31*u - 72*q^2*u + 32*q^6*u + 
+          21*q^8*u + 6*q^4*(s + u))) + 24*mPl^2*q^2*u*
+       (-4*mPl^2*q^2*u*(2*q^2*s^4*(s + u)^2 + t^2*(t + u)^4 + 
+          q^4*t^2*(t + u)^4) + BetaBim3*c^3*m^4*t*(t + u)^3*
+         (t^2 + 5*t*u + u^2 + 4*q^2*(t^2 + 5*t*u + u^2) + 
+          4*q^6*(t^2 + 5*t*u + u^2) + q^8*(t^2 + 5*t*u + u^2) - 
+          6*q^4*(t*u + s*(t + u))))))/(96*mFP^6*mPl^6*q^6*(mFP^2 - s)*s*
+    (mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, 2, 2, 1, 2, 0}, 
   ((t - u)*Sqrt[t*u]*(9216*mFP^18*mPl^4*q^6 - (BetaBim1*c - BetaBim3*c^3)^2*
       m^8*(1 + q^2)^6*s^5*u*(s + u) - 384*mFP^16*mPl^4*q^4*
       ((18 + 13*q^2 + 18*q^4)*s + 32*q^2*u) + 32*mFP^14*mPl^2*q^2*
@@ -2045,6 +3175,17 @@
        mPl^2*q^2*(t*u*(141*s + 4*u) + q^4*t*u*(141*s + 4*u) + 
          2*q^2*(8*t^3 - 48*t^2*u + 23*t*u^2 - 9*u^3)))))/
    (96*mFP^4*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, 1, 2, 2, 2, -2}, 
+  -1/48*(u*Sqrt[s*t*u]*(-12*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*(1 + q^2)^3*
+       ((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3 - 11*mPl^2*q^2*(-1 + q^2)*
+         s)*t*u + (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*(1 + q^2)^3*t*
+       (-18*mPl^2*q^2*(-1 + q^2)*s^2 + (BetaBim1*c - BetaBim3*c^3)*m^4*
+         (1 + q^2)^3*(9*s - 4*u))*u + (BetaBim1*c - BetaBim3*c^3)^2*m^8*
+       (1 + q^2)^6*s*t*u*(-s + u) - 48*mFP^10*mPl^4*q^6*(t + u) - 
+      24*mFP^8*mPl^4*q^4*(11*t*u + 11*q^4*t*u - 2*q^2*(t^2 - 9*t*u + u^2)) + 
+      12*mFP^6*mPl^2*q^2*t*u*(-16*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+         (1 + q^2)^3 + mPl^2*q^2*(11*(1 + q^4)*s + 18*q^2*(t + u)))))/
+    (mFP^3*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
  {{2, 2, 2, 1, 2, 1, 2, 1}, 
   ((t - u)*(-9216*mFP^18*mPl^4*q^6*(3*s - 4*u) + 768*mFP^16*mPl^4*q^6*
       (87*s^2 + 35*s*u - 76*u^2) - 192*mFP^14*mPl^4*q^4*
@@ -2178,13 +3319,13 @@
         6*q^4*t*(t + u)^4 + 2*s^4*(-1005*q^2*t + 545*q^6*t + 333*u + 
           762*q^8*u) + s^3*(-2*q^2*(1469 + 387*q^4)*t^2 + 
           (789 + 1067*q^8)*u^2) + 2*s^2*(-2*q^2*(205 + 139*q^4)*t^3 + 
-          (119 + 53*q^8)*u^3)) - 4*mPl^2*q^2*
-       (mPl^2*q^2*s^3*(6*(1 + 4*q^2 + q^4)*s^3 + 3*(9 + 22*q^2 + 9*q^4)*s^2*
-           u + 2*(1 + q^2)^2*s*u^2 - 22*(1 + q^2)^2*u^3) + 
-        BetaBim3*c^3*m^4*(-183*(1 + q^8)*s^5 + 12*q^4*s*t*(t + u)^3 + 
-          6*q^4*t*(t + u)^4 + 5*s^4*(92*q^2*(1 + q^4)*t - 219*(1 + q^8)*u) + 
-          928*s^3*(2*q^2*(1 + q^4)*t^2 - (1 + q^8)*u^2) + 
-          172*s^2*(4*q^2*(1 + q^4)*t^3 - (1 + q^8)*u^3)))) + 
+          (119 + 53*q^8)*u^3)) + 4*mPl^2*q^2*
+       (mPl^2*q^2*s^3*(-6*(1 + 4*q^2 + q^4)*s^3 - 3*(9 + 22*q^2 + 9*q^4)*s^2*
+           u - 2*(1 + q^2)^2*s*u^2 + 22*(1 + q^2)^2*u^3) + 
+        BetaBim3*c^3*m^4*(183*(1 + q^8)*s^5 - 12*q^4*s*t*(t + u)^3 - 
+          6*q^4*t*(t + u)^4 + 5*s^4*(-92*q^2*(1 + q^4)*t + 219*(1 + q^8)*u) + 
+          928*s^3*(-2*q^2*(1 + q^4)*t^2 + (1 + q^8)*u^2) + 
+          172*s^2*(-4*q^2*(1 + q^4)*t^3 + (1 + q^8)*u^3)))) + 
     4*mFP^10*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
        (390*s^3 + 619*s^2*t + 12*s*t^2 + 2*t^3)*u + 
       mPl^4*q^4*s^2*(24*q^2*s^4 + 6*(37 - 10*q^2 + 37*q^4)*s^3*u + 
@@ -2253,7 +3394,21 @@
           ((-33 + 80*q^2 + 504*q^6 + 179*q^8)*s^2 + 
            32*(-1 + 6*q^2 + 26*q^6 + 9*q^8)*s*u + 16*(1 + 4*q^2 + 4*q^6 + 
              q^8)*u^2)))))/(96*mFP^5*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*
-    (mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, 1, 2, 0, 2, 0}, 
+    (mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, 1, 2, 1, 2, -2}, 
+  -1/48*(t*u*(48*mFP^12*mPl^4*q^6*(t + u) - 3*(BetaBim1*c - BetaBim3*c^3)^2*
+       m^8*mFP^2*(1 + q^2)^6*t^2*u*(t + u) + (BetaBim1*c - BetaBim3*c^3)^2*
+       m^8*(1 + q^2)^6*t*u^2*(t + u)^2 + (BetaBim1*c - BetaBim3*c^3)*m^4*
+       mFP^4*(1 + q^2)^3*u*((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*
+         (11*t - 6*u)*(t + u) - 12*mPl^2*q^2*(-1 + q^2)*s^2*(s + 2*u)) + 
+      4*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^6*(1 + q^2)^3*u*
+       ((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(-5*t + 3*u) + 
+        3*mPl^2*q^2*(-1 + q^2)*s*(11*s + 12*u)) + 12*mFP^8*mPl^2*q^2*u*
+       (-30*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*(1 + q^2)^3*s + 
+        mPl^2*q^2*(t + u)*((17 - 30*q^2 + 17*q^4)*t - 6*(-1 + q^2)^2*u)) + 
+      12*mFP^10*mPl^2*q^2*(8*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+         (1 + q^2)^3*u + mPl^2*q^2*(-4*q^2*t^2 + (-55 + 102*q^2 - 55*q^4)*t*
+           u + (33 - 70*q^2 + 33*q^4)*u^2))))/(mFP^4*mPl^6*q^6*(mFP^2 - t)*
+     (mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, 1, 2, 0, 2, 0}, 
   ((t - u)*Sqrt[t*u]*(-18432*mFP^20*mPl^4*q^6 + (BetaBim1*c - BetaBim3*c^3)^2*
       m^8*(1 + q^2)^6*s^6*u*(s + u) + 384*mFP^18*mPl^4*q^4*
       ((44 - 31*q^2 + 44*q^4)*s + 64*q^2*u) - 32*mFP^16*mPl^2*q^2*
@@ -2399,6 +3554,56 @@
             (3*t + 2*u) + 6*s^2*((46 + 184*q^2 + 5*q^4 + 46*q^6*(4 + q^2))*
               t^3 + 15*q^4*t^2*u + 15*q^4*t*u^2 + 5*q^4*u^3))))))/
    (32*Sqrt[6]*mFP^6*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*(mFP^2 - u)*
+    (t + u)^4)}, {{2, 2, 2, 1, 2, 0, 2, -2}, 
+  (u*Sqrt[s*t*u]*(4*mFP^6*mPl^4*q^4*(48*mFP^10*(6 + 7*q^2 + 6*q^4) - 
+       4*(1 + q^2)^2*s^3*u*(s + u) + mFP^2*(1 + q^2)^2*s^2*(4*s + 3*u)*
+        (s + 13*u) - 4*mFP^8*((268 - 127*q^2 + 268*q^4)*s + 
+         (25 + 254*q^2 + 25*q^4)*u) + mFP^6*(6*(91 - 30*q^2 + 91*q^4)*s^2 + 
+         (913 + 254*q^2 + 913*q^4)*s*u - 8*(1 - 40*q^2 + q^4)*u^2) - 
+       3*mFP^4*s*((30 + 8*q^2 + 30*q^4)*s^2 + 2*(63 + 52*q^2 + 63*q^4)*s*u + 
+         (63 + 22*q^2 + 63*q^4)*u^2)) - (BetaBim1*c - BetaBim3*c^3)^2*m^8*
+      (1 + q^2)^6*(448*mFP^12 + s^3*(2*s - u)*u*(s + u) - 
+       16*mFP^10*(47*s + 28*u) + mFP^8*(532*s^2 + 660*s*u + 44*u^2) + 
+       mFP^4*s*(31*s^3 + 159*s^2*u + 17*s*u^2 - 29*u^3) - 
+       mFP^6*(185*s^3 + 453*s^2*u + 19*s*u^2 - 20*u^3) - 
+       mFP^2*s^2*(2*s^3 + 28*s^2*u + 7*s*u^2 - 10*u^3)) + 
+     2*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*mPl^2*q^2*
+      (256*mFP^12*(2 + 7*q^2 + 5*q^6) + 3*q^8*s^4*t*(s + t) + s^4*u*(s + u) + 
+       6*q^2*s^4*u*(s + u) + 10*q^6*s^4*u*(s + u) + 12*q^4*s*t*u*(t + u)^3 - 
+       16*mFP^10*((18 + 136*q^2 + 264*q^6 + 57*q^8)*s + 8*q^8*t + 
+         16*(3 + 10*q^2 + 6*q^6)*u) + 4*mFP^8*
+        ((40 + 372*q^2 + 796*q^6 + 210*q^8)*s^2 + 347*q^8*s*t + 12*q^8*t^2 + 
+         (123 + 758*q^2 + 1290*q^6)*s*u + 4*(13 + 42*q^2 + 22*q^6)*u^2) - 
+       mFP^2*((1 + 6*q^2 + 10*q^6 + 3*q^8)*s^5 + 12*q^4*t*u*(t + u)^3 + 
+         12*q^4*s*(t + u)^4 + 2*s^4*(25*q^8*t + (9 + 52*q^2 + 84*q^6)*u) + 
+         2*s^3*(19*q^8*t^2 + (7 + 40*q^2 + 64*q^6)*u^2)) - 
+       mFP^6*((74 + 544*q^2 + 1040*q^6 + 297*q^8)*s^3 + 12*q^4*(t + u)^3 + 
+         s^2*(1059*q^8*t + (307 + 2022*q^2 + 3610*q^6)*u) + 
+         4*s*(89*q^8*t^2 + (23 + 158*q^2 + 290*q^6)*u^2)) + 
+       mFP^4*((15 + 94*q^2 + 162*q^6 + 48*q^8)*s^4 + 12*q^4*s*(t + u)^3 + 
+         12*q^4*(t + u)^4 + 2*s^3*(166*q^8*t + (57 + 338*q^2 + 558*q^6)*u) + 
+         s^2*(181*q^8*t^2 + (59 + 358*q^2 + 602*q^6)*u^2))) + 
+     2*BetaBim3*c^3*m^4*mFP^2*mPl^2*q^2*
+      (512*mFP^12*(1 + 6*q^2 + 6*q^6 + q^8) + 24*q^4*s*t*u*(t + u)^3 + 
+       s^5*(3*(1 + q^8)*t + u + q^2*(16 + 16*q^4 + q^6)*u) - 
+       16*mFP^10*(25*(3 + 16*q^2 + 16*q^6 + 3*q^8)*s + 8*(1 + q^8)*t + 
+         16*(3 + 16*q^2 + 16*q^6 + 3*q^8)*u) + 
+       s^4*(3*(1 + q^8)*t^2 + (1 + 16*q^2 + 16*q^6 + q^8)*u^2) + 
+       4*mFP^8*(2*(125 + 584*q^2 + 584*q^6 + 125*q^8)*s^2 + 
+         347*(1 + q^8)*s*t + 12*(1 + q^8)*t^2 + (123 + 2048*q^2 + 2048*q^6 + 
+           123*q^8)*s*u + 4*(13 + 64*q^2 + 64*q^6 + 13*q^8)*u^2) - 
+       2*mFP^2*(2*(1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 12*q^4*t*u*(t + u)^3 + 
+         12*q^4*s*(t + u)^4 + s^4*(25*(1 + q^8)*t + 
+           (9 + 136*q^2 + 136*q^6 + 9*q^8)*u) + 
+         s^3*(19*(1 + q^8)*t^2 + (7 + 104*q^2 + 104*q^6 + 7*q^8)*u^2)) - 
+       mFP^6*((371 + 1584*q^2 + 1584*q^6 + 371*q^8)*s^3 + 24*q^4*(t + u)^3 + 
+         s^2*(1059*(1 + q^8)*t + (307 + 5632*q^2 + 5632*q^6 + 307*q^8)*u) + 
+         4*s*(89*(1 + q^8)*t^2 + (23 + 448*q^2 + 448*q^6 + 23*q^8)*u^2)) + 
+       mFP^4*((63 + 256*q^2 + 256*q^6 + 63*q^8)*s^4 + 24*q^4*s*(t + u)^3 + 
+         24*q^4*(t + u)^4 + 2*s^3*(166*(1 + q^8)*t + 
+           (57 + 896*q^2 + 896*q^6 + 57*q^8)*u) + 
+         s^2*(181*(1 + q^8)*t^2 + (59 + 960*q^2 + 960*q^6 + 59*q^8)*u^2)))))/
+   (16*Sqrt[6]*mFP^5*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*(mFP^2 - u)*
     (t + u)^4)}, {{2, 2, 2, 1, 2, -1, 2, -1}, 
   -1/96*((t - u)*Sqrt[t*u]*(-18432*mFP^20*mPl^4*q^6 - 
       (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^6*u*(s + u) + 
@@ -2455,6 +3660,70 @@
              s^3*u + 30*(1 + 4*q^2 + 4*q^6 + q^8)*s^2*u^2 + 
             3*q^4*s*(t + u)^3 + 3*q^4*(t + u)^4)))))/
     (mFP^7*mPl^6*q^6*(mFP^2 - s)*Sqrt[s]*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, 1, 2, -1, 2, -2}, 
+  (u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+      (2*mFP^2*(4*mFP^2 - s)^3*(60*mFP^8 - 105*mFP^6*s + 69*mFP^4*s^2 - 
+         16*mFP^2*s^3 + s^4) - (-4*mFP^2 + s)^2*(744*mFP^10 - 1422*mFP^8*s + 
+         1083*mFP^6*s^2 - 344*mFP^4*s^3 + 46*mFP^2*s^4 - 2*s^5)*u + 
+       3*(4*mFP^2 - s)*(416*mFP^10 - 838*mFP^8*s + 695*mFP^6*s^2 - 
+         246*mFP^4*s^3 + 38*mFP^2*s^4 - 2*s^5)*u^2 + 
+       (-456*mFP^10 + 1030*mFP^8*s - 1025*mFP^6*s^2 + 408*mFP^4*s^3 - 
+         69*mFP^2*s^4 + 4*s^5)*u^3 + mFP^2*(-56*mFP^6 + 82*mFP^4*s - 
+         29*mFP^2*s^2 + 3*s^3)*u^4) - 12*(BetaBim1*c - BetaBim3*c^3)*m^4*
+      mFP^4*mPl^2*q^2*(256*mFP^14*(-1 + 2*q^6 + q^8) - 
+       64*mFP^12*((-1 + 2*q^6 + q^8)*s + (-7 - 4*q^6 + q^8)*t) - 
+       16*mFP^10*(3*(-1 + 2*q^6 + q^8)*s^2 + (-17 + 184*q^6 + 67*q^8)*s*t + 
+         (13 + 70*q^6 + 19*q^8)*t^2) + 4*mFP^8*(5*(-1 + 2*q^6 + q^8)*s^3 + 
+         (-91 + 620*q^6 + 237*q^8)*s^2*t + (-117 + 1002*q^6 + 373*q^8)*s*
+          t^2 + 8*(1 + 3*q^2 + 10*q^6 + 3*q^8)*t^3 + 18*q^2*t*u^2 - 
+         6*q^2*u^3) + s*t^2*((-1 + 8*q^6 + 3*q^8)*s^4 + (-1 + 8*q^6 + 3*q^8)*
+          s^3*t + 6*q^4*u*(t + u)^3) - mFP^2*t*((-1 + 8*q^6 + 3*q^8)*s^5 + 
+         (-15 + 132*q^6 + 49*q^8)*s^4*t + (-11 + 100*q^6 + 37*q^8)*s^3*t^2 + 
+         2*q^2*(2 + 3*q^2)*t*u*(t + u)^3 + 6*q^4*s*(t + u)^4) + 
+       mFP^4*t*((-17 + 130*q^6 + 49*q^8)*s^4 + (-101 + 874*q^6 + 325*q^8)*s^3*
+          t + 6*(-9 + 78*q^6 + 29*q^8)*s^2*t^2 + 6*q^4*s*(t + u)^3 + 
+         2*q^2*(t + u)^2*((2 + 3*q^2)*t^2 + (19 + 6*q^2)*t*u + 
+           (-1 + 3*q^2)*u^2)) - mFP^6*(2*(-1 + 2*q^6 + q^8)*s^4 + 
+         (-119 + 832*q^6 + 317*q^8)*s^3*t + 2*(-179 + 1414*q^6 + 531*q^8)*s^2*
+          t^2 + 8*(-15 + 114*q^6 + 43*q^8)*s*t^3 + 2*q^2*(t + u)*
+          ((16 + 3*q^2)*t^3 + 2*(28 + 3*q^2)*t^2*u + (-2 + 3*q^2)*t*u^2 - 
+           2*u^3))) - 12*(mFP^8*mPl^4*q^4*(7680*mFP^12*q^2 - 
+         96*mFP^10*q^2*(80*s + 139*u) + 8*mFP^8*q^2*(500*s^2 + 1579*s*u + 
+           802*u^2) + 2*mFP^6*(-648*q^2*s^3 - 60*(1 + q^4)*t^3 + 
+           6*(-563*q^2*s^2 + 20*(1 + q^4)*t^2)*u - 
+           (2422*q^2*s + 75*(1 + q^4)*t)*u^2 + (9 - 472*q^2 + 9*q^4)*u^3) + 
+         u*(-(t*(8*t - 3*u)*(t + u)^3) - q^4*t*(8*t - 3*u)*(t + u)^3 + 
+           2*q^2*s^3*(s + u)*(8*s + 11*u)) + 
+         mFP^2*((t + u)^2*(8*t^3 + 29*t^2*u - 5*t*u^2 - 3*u^3) + 
+           q^4*(t + u)^2*(8*t^3 + 29*t^2*u - 5*t*u^2 - 3*u^3) - 
+           2*q^2*s^2*(8*s^3 + 155*s^2*u + 265*s*u^2 + 109*u^3)) + 
+         mFP^4*(-((t + u)*(2*t^3 + 44*t^2*u - 5*t*u^2 - 9*u^3)) - 
+           q^4*(t + u)*(2*t^3 + 44*t^2*u - 5*t*u^2 - 9*u^3) + 
+           2*q^2*s*(114*s^3 + 1046*s^2*u + 1161*s*u^2 + 246*u^3))) + 
+       2*BetaBim3*c^3*m^4*mFP^4*mPl^2*q^2*(256*mFP^14*(q^2 + q^6) + 
+         64*mFP^12*(-(q^2*(1 + q^4)*s) + (3 + 2*q^2 + 2*q^6 + 3*q^8)*t) - 
+         16*mFP^10*(3*q^2*(1 + q^4)*s^2 + (25 + 92*q^2 + 92*q^6 + 25*q^8)*s*
+            t + (16 + 35*q^2 + 35*q^6 + 16*q^8)*t^2) + 
+         s*t^2*((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + (1 + 4*q^2 + 4*q^6 + q^8)*s^3*
+            t + 6*q^4*u*(t + u)^3) - mFP^2*t*((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 
+           (17 + 66*q^2 + 66*q^6 + 17*q^8)*s^4*t + 
+           (13 + 50*q^2 + 50*q^6 + 13*q^8)*s^3*t^2 + 2*q^2*(1 + 3*q^2 + q^4)*
+            t*u*(t + u)^3 + 6*q^4*s*(t + u)^4) + 
+         mFP^4*t*((16 + 65*q^2 + 65*q^6 + 16*q^8)*s^4 + 
+           (112 + 437*q^2 + 437*q^6 + 112*q^8)*s^3*t + 
+           6*(10 + 39*q^2 + 39*q^6 + 10*q^8)*s^2*t^2 + 6*q^4*s*(t + u)^3 + 
+           q^2*(t + u)^2*(2*(1 + 3*q^2 + q^4)*t^2 + (19 + 12*q^2 + 19*q^4)*t*
+              u - (1 - 6*q^2 + q^4)*u^2)) + 4*mFP^8*
+          (t*(73*s^2 + 128*s*t + 16*t^2) + q^8*t*(73*s^2 + 128*s*t + 
+             16*t^2) + q^2*(5*s^3 + 310*s^2*t + 501*s*t^2 + 52*t^3 + 
+             9*t*u^2 - 3*u^3) + q^6*(5*s^3 + 310*s^2*t + 501*s*t^2 + 52*t^3 + 
+             9*t*u^2 - 3*u^3)) - mFP^6*(s*t*(99*s^2 + 352*s*t + 112*t^2) + 
+           q^8*s*t*(99*s^2 + 352*s*t + 112*t^2) + 6*q^4*t*(t + u)^3 + 
+           2*q^2*(s^4 + 208*s^3*t + 707*s^2*t^2 + 228*s*t^3 + 
+             (t + u)*(8*t^3 + 28*t^2*u - t*u^2 - u^3)) + 
+           2*q^6*(s^4 + 208*s^3*t + 707*s^2*t^2 + 228*s*t^3 + 
+             (t + u)*(8*t^3 + 28*t^2*u - t*u^2 - u^3)))))))/
+   (96*mFP^6*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
  {{2, 2, 2, 0, 2, 2, 2, 0}, 
   -1/48*(u*(-55296*mFP^22*mPl^4*q^6 - (BetaBim1*c - BetaBim3*c^3)^2*m^8*
        (1 + q^2)^6*s^5*t^3*u + 2304*mFP^20*mPl^4*q^6*(50*s + 7*u) + 
@@ -2500,17 +3769,49 @@
          s^2*t*(13*s^2 + 104*s*u + 31*u^2) + mPl^4*q^4*s^3*(s + u)*
          (t*(5*s + 23*u) + q^4*t*(5*s + 23*u) + 2*q^2*(s^2 - 36*s*u - 
             23*u^2)))))/(mFP^6*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*t*
-     (mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, 0, 2, 1, 2, 1}, 
-  (-36864*mFP^22*mPl^4*q^6 + 3072*mFP^20*mPl^4*q^6*(31*s - 2*u) + 
-    (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^5*t*u^2*(s + u) + 
-    256*mFP^18*mPl^4*q^4*(33*t*u + 33*q^4*t*u + 
-      q^2*(-369*s^2 + 166*s*u - 50*u^2)) + 64*mFP^16*mPl^2*q^2*
-     (28*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*(1 + q^2)^3*t*u - 
-      mPl^2*q^2*(-735*q^2*s^3 + 2*s*(217*q^2*s + 173*(1 + q^4)*t)*u + 
-        4*(76*q^2*s + t + q^4*t)*u^2 - 112*q^2*u^3)) + 
-    16*mFP^14*(4*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*u + 
-      4*m^4*mPl^2*q^2*t*u*((BetaBim1*c - BetaBim3*c^3)*(79 + 146*q^2 - 
-          194*q^6 - 91*q^8)*s - 12*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*s + 
+     (mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, 0, 2, 2, 2, -1}, 
+  (Sqrt[s]*u^2*(-((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^2*t*u^2*
+       (s + u)) - 48*mFP^12*mPl^4*q^4*(27*t*u + 27*q^4*t*u + 
+       q^2*(2*t - u)*(t + u)) + (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*
+      (1 + q^2)^3*s*t*u*(2*mPl^2*q^2*(-1 + q^2)*s^2*(s - u) - 
+       (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(s^2 - 7*s*u - 5*u^2)) + 
+     (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*(1 + q^2)^3*t*u*
+      (-2*mPl^2*q^2*(-1 + q^2)*s^2*(6*s - 13*u) + (BetaBim1*c - BetaBim3*c^3)*
+        m^4*(1 + q^2)^3*(7*s^2 - 15*s*u - 4*u^2)) + 
+     12*mFP^10*mPl^2*q^2*(-16*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+        (1 + q^2)^3*t*u + mPl^2*q^2*(8*q^2*t^3 + 
+         t*(103*(1 + q^4)*s - 58*q^2*t)*u + 2*(4 + 7*q^2 + 4*q^4)*t*u^2 - 
+         8*q^2*u^3)) - 2*mFP^6*t*u*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+        (1 + q^2)^6*(5*s + u) + (BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*
+        (-1 + q^2)*(1 + q^2)^3*s*(15*s + 52*u) - 
+       6*mPl^4*q^4*((1 + q^4)*s^3 - (1 + q^4)*s^2*u + 2*q^2*t*(t + u)^2)) + 
+     4*mFP^8*u*(8*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t + 
+       2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*t*
+        (29*s + 4*u) - 3*mPl^4*q^4*(23*(1 + q^4)*s^2*t + 9*(1 + q^4)*s*t*u - 
+         2*q^2*(t + u)*(9*t^2 + 2*u^2)))))/(16*Sqrt[6]*mFP^5*mPl^6*q^6*
+    (-mFP^2 + t)*Sqrt[t*u]*(-mFP^2 + u)*(t + u)^4)}, 
+ {{2, 2, 2, 0, 2, 2, 2, -2}, 
+  -1/8*((2*mFP^2 - s)*u^2*(-8*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*mPl^2*q^2*
+       (-1 + q^2)*(1 + q^2)^3*s*t*u + (BetaBim1*c - BetaBim3*c^3)^2*m^8*
+       (1 + q^2)^6*s*t^2*u - (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*
+       (1 + q^2)^3*t*(-2*mPl^2*q^2*(-1 + q^2)*s^2 + 
+        (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(s + 4*t))*u + 
+      24*mFP^10*mPl^4*q^6*(t + u) + 12*mFP^8*mPl^4*q^4*
+       (3*t*u + 3*q^4*t*u - 2*q^2*(t^2 - 9*t*u + u^2)) - 
+      6*mFP^6*mPl^2*q^2*t*u*(4*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+         (1 + q^2)^3 + mPl^2*q^2*(7*(1 + q^4)*s + 10*q^2*(t + u)))))/
+    (Sqrt[6]*mFP^4*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, 0, 2, 1, 2, 1}, (-36864*mFP^22*mPl^4*q^6 + 
+    3072*mFP^20*mPl^4*q^6*(31*s - 2*u) + (BetaBim1*c - BetaBim3*c^3)^2*m^8*
+     (1 + q^2)^6*s^5*t*u^2*(s + u) + 256*mFP^18*mPl^4*q^4*
+     (33*t*u + 33*q^4*t*u + q^2*(-369*s^2 + 166*s*u - 50*u^2)) + 
+    64*mFP^16*mPl^2*q^2*(28*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+       (1 + q^2)^3*t*u - mPl^2*q^2*(-735*q^2*s^3 + 
+        2*s*(217*q^2*s + 173*(1 + q^4)*t)*u + 4*(76*q^2*s + t + q^4*t)*u^2 - 
+        112*q^2*u^3)) + 16*mFP^14*(4*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+       (1 + q^2)^6*t*u + 4*m^4*mPl^2*q^2*t*u*
+       ((BetaBim1*c - BetaBim3*c^3)*(79 + 146*q^2 - 194*q^6 - 91*q^8)*s - 
+        12*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*s + 
         12*(BetaBim1*c - BetaBim3*c^3)*(-1 + q^2)*(1 + q^2)^3*u) + 
       mPl^4*q^4*(-786*q^2*s^4 + s^2*(650*q^2*s + 913*(1 + q^4)*t)*u + 
         2*s*(157*q^2*s + 178*(1 + q^4)*t)*u^2 + 4*(100*q^2*s + t + q^4*t)*
@@ -2648,9 +3949,62 @@
              17*(1 + 6*q^2 + 6*q^6 + q^8)*u) + s^3*(-17*q^2*(1 + q^4)*t^2 + 
              (26 + 121*q^2 + 121*q^6 + 26*q^8)*u^2))))))/
    (96*mFP^7*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*t*(mFP^2 - u)*(t + u)^4)}, 
- {{2, 2, 2, 0, 2, 0, 2, 0}, (27648*mFP^22*mPl^4*q^6 - 
-    768*mFP^20*mPl^4*q^6*(93*s + 2*u) - 64*mFP^18*mPl^4*q^4*
-     (138*t*u + 138*q^4*t*u + q^2*(-1107*s^2 + 748*s*u - 446*u^2)) + 
+ {{2, 2, 2, 0, 2, 1, 2, -1}, 
+  (u*(-18432*mFP^20*mPl^4*q^6 - (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+      s^5*u^2*(s + u) - 128*mFP^16*mPl^4*q^4*(153*q^2*s^2 + 
+       2*(118 - 37*q^2 + 118*q^4)*s*u + 2*(19 + 2*q^2 + 19*q^4)*u^2) + 
+     3072*mFP^18*mPl^4*q^4*(4*u + 4*q^4*u + q^2*(11*s + u)) + 
+     4*mFP^10*u*(4*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*
+        (1 + q^2)^3*s*(91*s^2 + 165*s*t + 62*t^2) + 
+       4*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+        (31*s^2 + 28*s*u + 2*u^2) + mPl^4*q^4*s^2*
+        ((379 - 202*q^2 + 379*q^4)*s^2 + 2*(409 + 62*q^2 + 409*q^4)*s*u + 
+         68*(5 - 2*q^2 + 5*q^4)*u^2)) - 4*mFP^8*s*u*
+      ((BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s*
+        (105*s^2 + 310*s*t + 116*t^2) + (BetaBim1*c - BetaBim3*c^3)^2*m^8*
+        (1 + q^2)^6*(193*s^2 + 319*s*u + 54*u^2) + 2*mPl^4*q^4*s^2*
+        (12*(1 + q^2 + q^4)*s^2 + 65*(1 + q^2)^2*s*u + 4*(8 + 19*q^2 + 8*q^4)*
+          u^2)) + (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*s^3*u*
+      (4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s^2*t*(s + t) + 
+       (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^6*(5*s^3 + 31*s^2*u + 
+         27*s*u^2 + 4*u^3)) - 2*mFP^4*(1 + q^2)^2*s^2*u*
+      (2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^4)*s^2*
+        (s^2 + 15*s*t + 12*t^2) + 2*mPl^4*q^4*s^3*u*(s + u) + 
+       (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^4*(34*s^3 + 128*s^2*u + 
+         81*s*u^2 + 10*u^3)) + mFP^6*(1 + q^2)^2*s*u*
+      (4*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^4)*s^2*
+        (16*s^2 + 93*s*t + 56*t^2) + 4*mPl^4*q^4*s^3*(s^2 + 19*s*u + 
+         15*u^2) + (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^4*
+        (347*s^3 + 882*s^2*u + 356*s*u^2 + 16*u^3)) - 
+     32*mFP^12*(2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*
+        (1 + q^2)^3*(43*s^2 + 54*s*t + 6*t^2)*u - 
+       2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*u*(9*s + u) + 
+       mPl^4*q^4*s*(12*q^2*s^3 + (314 - 299*q^2 + 314*q^4)*s^2*u + 
+         (347 - 242*q^2 + 347*q^4)*s*u^2 + 36*(1 + q^4)*u^3)) + 
+     64*mFP^14*(-8*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*u + 
+       12*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*
+        (3*s + t)*u + mPl^4*q^4*(5*u*(3*s + u)*(29*s + 2*u) + 
+         5*q^4*u*(3*s + u)*(29*s + 2*u) + q^2*(72*s^3 - 372*s^2*u - 
+           46*s*u^2 - 4*u^3)))))/(32*Sqrt[6]*mFP^6*mPl^6*q^6*(mFP^2 - s)*
+    (mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, 0, 2, 1, 2, -2}, 
+  -1/16*(u*Sqrt[s*t*u]*(48*mFP^10*mPl^4*q^6*(t + u) - 
+      (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*(2*t - u)*u*(t + u)*
+       (2*t + u) + (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*(1 + q^2)^3*u*
+       ((BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(10*t - 3*u)*(t + u) - 
+        2*mPl^2*q^2*(-1 + q^2)*s^2*(2*s + 3*u)) + 
+      2*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*(1 + q^2)^3*u*
+       (2*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3*(-3*t + u) + 
+        mPl^2*q^2*(-1 + q^2)*s*(27*s + 20*u)) + 4*mFP^6*mPl^2*q^2*u*
+       (-2*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*(1 + q^2)^3*
+         (21*s - 4*u) + 3*mPl^2*q^2*(t + u)*((13 - 22*q^2 + 13*q^4)*t - 
+          2*(-1 + q^2)^2*u)) + 4*mFP^8*mPl^2*q^2*
+       (16*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*(1 + q^2)^3*u - 
+        3*mPl^2*q^2*(4*q^2*t^2 + (33 - 58*q^2 + 33*q^4)*t*u + 
+          (-11 + 26*q^2 - 11*q^4)*u^2))))/(Sqrt[6]*mFP^3*mPl^6*q^6*
+     (mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, 0, 2, 0, 2, 0}, 
+  (27648*mFP^22*mPl^4*q^6 - 768*mFP^20*mPl^4*q^6*(93*s + 2*u) - 
+    64*mFP^18*mPl^4*q^4*(138*t*u + 138*q^4*t*u + 
+      q^2*(-1107*s^2 + 748*s*u - 446*u^2)) + 
     16*mFP^16*(24*(BetaBim1*c + BetaBim3*c^3)*m^4*mPl^2*q^2*
        (1 + 4*q^2 + 4*q^6 + q^8)*t*u + mPl^4*q^4*(-2205*q^2*s^3 + 
         2*s*(653*q^2*s + 752*(1 + q^4)*t)*u + 2*(849*q^2*s + 74*(1 + q^4)*t)*
@@ -2731,7 +4085,224 @@
           2*(-141 - 368*q^2 + 24*q^6 + 55*q^8)*s^3*u^2 - 
           6*q^4*s^2*(t + u)^3 + 12*q^4*t*u*(t + u)^3 + 12*q^4*s*(t + u)^4))))/
    (24*Sqrt[6]*mFP^6*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*(mFP^2 - u)*
-    (t + u)^4)}, {{2, 2, 2, -1, 2, 1, 2, 1}, 
+    (t + u)^4)}, {{2, 2, 2, 0, 2, 0, 2, -1}, 
+  (Sqrt[s*t*u]*(-4608*mFP^20*mPl^4*q^6 + (BetaBim1*c - BetaBim3*c^3)^2*m^8*
+      (1 + q^2)^6*s^4*(s - u)*u^2*(s + u) - 384*mFP^18*mPl^4*q^4*
+      (20*u + 20*q^4*u - q^2*(22*s + 29*u)) + 
+     96*mFP^16*(-8*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*
+        (1 + q^2)^3*u + mPl^4*q^4*(-51*q^2*s^2 + (224 - 345*q^2 + 224*q^4)*s*
+          u + (29 + 70*q^2 + 29*q^4)*u^2)) + 
+     mFP^8*u*(4*mPl^4*q^4*(1 + q^2)^2*s^3*(s^2 + 31*s*u + 27*u^2) + 
+       (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*(1127*s^3 + 1111*s^2*u - 
+         34*s*u^2 - 24*u^3) + 8*BetaBim3*c^3*m^4*mPl^2*q^2*s*
+        (99*(1 + 4*q^2 + 4*q^6 + q^8)*s^3 + 352*(1 + 4*q^2 + 4*q^6 + q^8)*s^2*
+          u + 112*(1 + 4*q^2 + 4*q^6 + q^8)*s*u^2 + 6*q^4*(t + u)^3) + 
+       2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*s*
+        (3*(115 + 362*q^2 + 166*q^6 + 17*q^8)*s^3 + 
+         (1179 + 3766*q^2 + 1866*q^6 + 229*q^8)*s^2*u + 
+         8*(51 + 158*q^2 + 66*q^6 + 5*q^8)*s*u^2 + 12*q^4*(t + u)^3)) - 
+     m^4*mFP^2*s^2*u*((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s*
+        (s^3 + 13*s^2*u - 6*s*u^2 - 12*u^3) + 8*BetaBim3*c^3*mPl^2*q^2*u*
+        ((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + (1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 
+         6*q^4*t*(t + u)^3) + 2*(BetaBim1*c - BetaBim3*c^3)*mPl^2*q^2*u*
+        ((3 + 10*q^2 + 6*q^6 + q^8)*s^4 + (3 + 10*q^2 + 6*q^6 + q^8)*s^3*u + 
+         12*q^4*t*(t + u)^3)) + m^4*mFP^4*s*u*
+      ((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s*(27*s^3 + 94*s^2*u - 
+         34*s*u^2 - 45*u^3) + 8*BetaBim3*c^3*mPl^2*q^2*
+        ((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 17*(1 + 4*q^2 + 4*q^6 + q^8)*s^4*u + 
+         13*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*u^2 + 6*q^4*t*u*(t + u)^3 + 
+         6*q^4*s*(t + u)^4) + 2*(BetaBim1*c - BetaBim3*c^3)*mPl^2*q^2*
+        ((3 + 10*q^2 + 6*q^6 + q^8)*s^5 + 2*(25 + 84*q^2 + 52*q^6 + 9*q^8)*
+          s^4*u + 2*(19 + 64*q^2 + 40*q^6 + 7*q^8)*s^3*u^2 + 
+         12*q^4*t*u*(t + u)^3 + 12*q^4*s*(t + u)^4)) + 
+     8*mFP^12*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*u*
+        (173*s + 21*u) + mPl^4*q^4*s*(-12*q^2*s^3 + 18*(11 - 3*q^2 + 11*q^4)*
+          s^2*u + (713 + 526*q^2 + 713*q^4)*s*u^2 + (377 - 38*q^2 + 377*q^4)*
+          u^3) + 2*m^4*mPl^2*q^2*u*(8*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*
+          s*(25*s + 16*u) + (BetaBim1*c - BetaBim3*c^3)*
+          ((391 + 982*q^2 - 182*q^6 - 191*q^8)*s^2 + 
+           (307 + 742*q^2 - 230*q^6 - 179*q^8)*s*u + 36*(-1 + q^2)*
+            (1 + q^2)^3*u^2))) - 4*mFP^10*u*
+      ((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*(641*s^2 + 328*s*u - 
+         18*u^2) + (BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*s*
+        ((669 + 1922*q^2 + 414*q^6 - 85*q^8)*s^2 + 
+         2*(599 + 1710*q^2 + 338*q^6 - 87*q^8)*s*u - 
+         128*(-2 - 5*q^2 + q^6 + q^8)*u^2) + mPl^2*q^2*s*
+        (8*BetaBim3*c^3*m^4*(1 + 4*q^2 + 4*q^6 + q^8)*(73*s^2 + 128*s*u + 
+           16*u^2) + 3*mPl^2*q^2*s*((7 + 18*q^2 + 7*q^4)*s^2 + 
+           6*(13 + 34*q^2 + 13*q^4)*s*u + 4*(11 + 34*q^2 + 11*q^4)*u^2))) - 
+     8*mFP^14*(120*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*u + 
+       24*m^4*mPl^2*q^2*u*((BetaBim1*c - BetaBim3*c^3)*(37 + 82*q^2 - 
+           50*q^6 - 29*q^8)*s + 8*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*s + 
+         7*(BetaBim1*c - BetaBim3*c^3)*(-1 + q^2)*(1 + q^2)^3*u) + 
+       mPl^4*q^4*(s*u*(1268*s + 1931*u) + q^4*s*u*(1268*s + 1931*u) - 
+         2*q^2*(72*s^3 + 766*s^2*u + 427*s*u^2 - 216*u^3))) - 
+     mFP^6*s*u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+        (253*s^3 + 433*s^2*u - 62*s*u^2 - 58*u^3) + 
+       2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*
+        (2*(25 + 82*q^2 + 46*q^6 + 7*q^8)*s^4 + 2*(169 + 562*q^2 + 334*q^6 + 
+           55*q^8)*s^3*u + 3*(61 + 202*q^2 + 118*q^6 + 19*q^8)*s^2*u^2 + 
+         12*q^4*s*(t + u)^3 + 12*q^4*(t + u)^4) + 
+       4*mPl^2*q^2*(mPl^2*q^2*(1 + q^2)^2*s^3*u*(s + u) + 
+         4*BetaBim3*c^3*m^4*(8*(1 + 4*q^2 + 4*q^6 + q^8)*s^4 + 
+           56*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 30*(1 + 4*q^2 + 4*q^6 + q^8)*
+            s^2*u^2 + 3*q^4*s*(t + u)^3 + 3*q^4*(t + u)^4)))))/
+   (96*mFP^7*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, 0, 2, 0, 2, -2}, 
+  (u*(2304*mFP^20*mPl^4*q^6 - (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+      s^4*(s - u)*u^2*(s + u) - 192*mFP^18*mPl^4*q^4*
+      (22*q^2*s + 3*(5 - 2*q^2 + 5*q^4)*u) + 
+     16*mFP^16*(72*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*
+        (1 + q^2)^3*u + mPl^4*q^4*(153*q^2*s^2 + 2*(229 - 166*q^2 + 229*q^4)*
+          s*u + 2*(49 - 10*q^2 + 49*q^4)*u^2)) - 
+     4*mFP^14*(-208*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*u + 
+       16*m^4*mPl^2*q^2*u*(-12*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*s + 
+         (BetaBim1*c - BetaBim3*c^3)*(-47 - 106*q^2 + 58*q^6 + 35*q^8)*s + 
+         17*(BetaBim1*c - BetaBim3*c^3)*(-1 + q^2)*(1 + q^2)^3*u) + 
+       mPl^4*q^4*(144*q^2*s^3 + 9*(205 - 226*q^2 + 205*q^4)*s^2*u + 
+         2*(439 - 94*q^2 + 439*q^4)*s*u^2 + 4*(17 - 2*q^2 + 17*q^4)*u^3)) - 
+     2*mFP^8*u*(-(mPl^4*q^4*(1 + q^2)^2*s^3*(3*s^2 + 43*s*u + 31*u^2)) + 
+       (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*(431*s^3 + 648*s^2*u + 
+         95*s*u^2 - 4*u^3) + 2*BetaBim3*c^3*m^4*mPl^2*q^2*s*
+        (99*(1 + 4*q^2 + 4*q^6 + q^8)*s^3 + 352*(1 + 4*q^2 + 4*q^6 + q^8)*s^2*
+          u + 112*(1 + 4*q^2 + 4*q^6 + q^8)*s*u^2 + 6*q^4*(t + u)^3) + 
+       (BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*s*
+        (11*(11 + 40*q^2 + 32*q^6 + 7*q^8)*s^3 + 
+         4*(131 + 438*q^2 + 266*q^6 + 45*q^8)*s^2*u + 
+         16*(13 + 40*q^2 + 16*q^6 + q^8)*s*u^2 + 6*q^4*(t + u)^3)) + 
+     m^4*mFP^2*s^2*u*((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s*
+        (s^3 + 15*s^2*u - 3*s*u^2 - 11*u^3) + 4*BetaBim3*c^3*mPl^2*q^2*u*
+        ((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + (1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 
+         6*q^4*t*(t + u)^3) + 2*(BetaBim1*c - BetaBim3*c^3)*mPl^2*q^2*u*
+        ((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + (1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 
+         6*q^4*t*(t + u)^3)) + 2*mFP^6*s*u*(-3*mPl^4*q^4*(1 + q^2)^2*s^3*u*
+        (s + u) + (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+        (100*s^3 + 251*s^2*u + 22*s*u^2 - 17*u^3) + 4*BetaBim3*c^3*m^4*mPl^2*
+        q^2*(8*(1 + 4*q^2 + 4*q^6 + q^8)*s^4 + 56*(1 + 4*q^2 + 4*q^6 + q^8)*
+          s^3*u + 30*(1 + 4*q^2 + 4*q^6 + q^8)*s^2*u^2 + 3*q^4*s*(t + u)^3 + 
+         3*q^4*(t + u)^4) + 2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*
+        ((9 + 34*q^2 + 30*q^6 + 7*q^8)*s^4 + (71 + 254*q^2 + 194*q^6 + 
+           41*q^8)*s^3*u + (41 + 142*q^2 + 98*q^6 + 19*q^8)*s^2*u^2 + 
+         3*q^4*s*(t + u)^3 + 3*q^4*(t + u)^4)) - 
+     m^4*mFP^4*s*u*((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s*
+        (23*s^3 + 112*s^2*u - 9*s*u^2 - 36*u^3) + 4*BetaBim3*c^3*mPl^2*q^2*
+        ((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 17*(1 + 4*q^2 + 4*q^6 + q^8)*s^4*u + 
+         13*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*u^2 + 6*q^4*t*u*(t + u)^3 + 
+         6*q^4*s*(t + u)^4) + 2*(BetaBim1*c - BetaBim3*c^3)*mPl^2*q^2*
+        ((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + (19 + 72*q^2 + 64*q^6 + 15*q^8)*s^4*
+          u + (15 + 56*q^2 + 48*q^6 + 11*q^8)*s^3*u^2 + 6*q^4*t*u*(t + u)^3 + 
+         6*q^4*s*(t + u)^4)) + 4*mFP^12*(-8*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+        (1 + q^2)^6*u*(68*s + 21*u) + 3*mPl^4*q^4*s*
+        (4*q^2*s^3 + 6*(36 - 41*q^2 + 36*q^4)*s^2*u + 
+         3*(107 - 74*q^2 + 107*q^4)*s*u^2 + 12*(3 + 2*q^2 + 3*q^4)*u^3) + 
+       2*m^4*mPl^2*q^2*u*(-8*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*s*
+          (25*s + 16*u) + (BetaBim1*c - BetaBim3*c^3)*
+          ((-261 - 722*q^2 - 78*q^6 + 61*q^8)*s^2 + 
+           2*(-203 - 470*q^2 + 214*q^6 + 139*q^8)*s*u + 28*(-1 + q^2)*
+            (1 + q^2)^3*u^2))) + 2*mFP^10*u*
+      (2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*(489*s^2 + 418*s*u + 
+         26*u^2) + 4*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*s*
+        ((109 + 364*q^2 + 220*q^6 + 37*q^8)*s^2 + 
+         (289 + 834*q^2 + 190*q^6 - 33*q^8)*s*u + 
+         2*(45 + 106*q^2 - 42*q^6 - 29*q^8)*u^2) + 
+       mPl^2*q^2*s*(8*BetaBim3*c^3*m^4*(1 + 4*q^2 + 4*q^6 + q^8)*
+          (73*s^2 + 128*s*u + 16*u^2) - mPl^2*q^2*s*
+          ((157 - 130*q^2 + 157*q^4)*s^2 + 4*(127 - 16*q^2 + 127*q^4)*s*u + 
+           54*(5 - 2*q^2 + 5*q^4)*u^2)))))/(48*mFP^6*mPl^6*q^6*(mFP^2 - s)*
+    (mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, 0, 2, -1, 2, -1}, 
+  (t*u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+      (64*mFP^14 - 2*s^5*u*(s + u) - 16*mFP^12*(47*s + 4*u) + 
+       4*mFP^10*(287*s^2 + 216*s*u + 4*u^2) + 2*mFP^2*s^4*
+        (s^2 + 16*s*u + 12*u^2) - 2*mFP^4*s^3*(17*s^2 + 107*s*u + 59*u^2) - 
+       mFP^8*s*(725*s^2 + 1236*s*u + 212*u^2) + 
+       mFP^6*s^2*(225*s^2 + 728*s*u + 256*u^2)) - 
+     2*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*mPl^2*q^2*
+      (640*mFP^14*(-1 + q^2)*(1 + q^2)^3 - 32*mFP^12*
+        ((5 + 34*q^2 + 62*q^6 + 19*q^8)*s + 28*(-1 + q^2)*(1 + q^2)^3*u) + 
+       8*mFP^10*((67 + 334*q^2 + 466*q^6 + 133*q^8)*s^2 + 
+         8*(3 + 22*q^2 + 42*q^6 + 13*q^8)*s*u + 28*(-1 + q^2)*(1 + q^2)^3*
+          u^2) - 2*mFP^8*s*((203 + 990*q^2 + 1346*q^6 + 381*q^8)*s^2 + 
+         4*(79 + 414*q^2 + 610*q^6 + 177*q^8)*s*u + 
+         4*(13 + 58*q^2 + 70*q^6 + 19*q^8)*u^2) + 
+       mFP^6*s*((157 + 710*q^2 + 874*q^6 + 239*q^8)*s^3 + 
+         4*(129 + 610*q^2 + 798*q^6 + 223*q^8)*s^2*u + 
+         4*(33 + 178*q^2 + 270*q^6 + 79*q^8)*s*u^2 + 12*q^4*(t + u)^3) - 
+       2*s^2*u*((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + (1 + 4*q^2 + 4*q^6 + q^8)*s^3*
+          u + 6*q^4*t*(t + u)^3) - mFP^4*s*((29 + 122*q^2 + 134*q^6 + 35*q^8)*
+          s^4 + 64*(3 + 13*q^2 + 15*q^6 + 4*q^8)*s^3*u + 
+         48*(2 + 9*q^2 + 11*q^6 + 3*q^8)*s^2*u^2 + 12*q^4*s*(t + u)^3 + 
+         12*q^4*(t + u)^4) + 2*mFP^2*s*((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 
+         2*(8 + 33*q^2 + 35*q^6 + 9*q^8)*s^4*u + 
+         2*(6 + 25*q^2 + 27*q^6 + 7*q^8)*s^3*u^2 + 6*q^4*t*u*(t + u)^3 + 
+         6*q^4*s*(t + u)^4)) + 8*mFP^2*mPl^2*q^2*
+      (96*mFP^16*mPl^2*q^2*(3 + 2*q^2 + 3*q^4) - 16*mFP^14*mPl^2*q^2*
+        ((61 - 46*q^2 + 61*q^4)*s + 2*(5 + 22*q^2 + 5*q^4)*u) + 
+       BetaBim3*c^3*m^4*s^2*u*((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + 
+         (1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 6*q^4*t*(t + u)^3) - 
+       BetaBim3*c^3*m^4*mFP^2*s*((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 
+         17*(1 + 4*q^2 + 4*q^6 + q^8)*s^4*u + 13*(1 + 4*q^2 + 4*q^6 + q^8)*
+          s^3*u^2 + 6*q^4*t*u*(t + u)^3 + 6*q^4*s*(t + u)^4) + 
+       mFP^8*s*(4*BetaBim3*c^3*m^4*(1 + 4*q^2 + 4*q^6 + q^8)*
+          (73*s^2 + 128*s*u + 16*u^2) - mPl^2*q^2*s*
+          ((11 + 10*q^2 + 11*q^4)*s^2 + 2*(13 - 10*q^2 + 13*q^4)*s*u + 
+           6*(1 - 10*q^2 + q^4)*u^2)) - 4*mFP^10*s*
+        (4*BetaBim3*c^3*m^4*(1 + 4*q^2 + 4*q^6 + q^8)*(25*s + 16*u) + 
+         mPl^2*q^2*(3*(1 - 3*q^2 + q^4)*s^2 + 4*(11 + 10*q^2 + 11*q^4)*s*u + 
+           10*(5 - 2*q^2 + 5*q^4)*u^2)) + 
+       2*mFP^12*(96*BetaBim3*c^3*m^4*(1 + 4*q^2 + 4*q^6 + q^8)*s + 
+         mPl^2*q^2*((193 - 154*q^2 + 193*q^4)*s^2 + 12*(35 - 6*q^2 + 35*q^4)*
+            s*u + 4*(5 + 22*q^2 + 5*q^4)*u^2)) - 
+       mFP^6*s*(-(mPl^2*q^2*(1 + q^2)^2*s^2*(s^2 + 9*s*u + 5*u^2)) + 
+         BetaBim3*c^3*m^4*(99*(1 + 4*q^2 + 4*q^6 + q^8)*s^3 + 
+           352*(1 + 4*q^2 + 4*q^6 + q^8)*s^2*u + 112*(1 + 4*q^2 + 4*q^6 + 
+             q^8)*s*u^2 + 6*q^4*(t + u)^3)) + 
+       mFP^4*s*(-(mPl^2*q^2*(1 + q^2)^2*s^3*u*(s + u)) + 
+         2*BetaBim3*c^3*m^4*(8*(1 + 4*q^2 + 4*q^6 + q^8)*s^4 + 
+           56*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 30*(1 + 4*q^2 + 4*q^6 + q^8)*
+            s^2*u^2 + 3*q^4*s*(t + u)^3 + 3*q^4*(t + u)^4)))))/
+   (16*Sqrt[6]*mFP^6*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*(mFP^2 - u)*
+    (t + u)^4)}, {{2, 2, 2, -1, 2, 2, 2, -1}, 
+  -1/96*(u^2*(-18432*mFP^18*mPl^4*q^6 - (BetaBim1*c - BetaBim3*c^3)^2*m^8*
+       mFP^2*(1 + q^2)^6*s^2*(s - 12*t)*t^2*u - 
+      2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^3*t^3*u + 
+      3*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*(1 + q^2)^3*s*t*
+       (4*mPl^2*q^2*(-1 + q^2)*s^3 + (BetaBim1*c - BetaBim3*c^3)*m^4*
+         (1 + q^2)^3*(s^2 + 8*s*t - 6*t^2))*u + 384*mFP^16*mPl^4*q^6*
+       (64*s + 31*u) + 96*mFP^14*mPl^4*q^4*(21*t*u + 21*q^4*t*u + 
+        q^2*(-124*s^2 + 31*s*u - 46*u^2)) + 
+      4*mFP^8*u*(22*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*(s + t) + 
+        12*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s*
+         t*(5*s - 6*u) - 3*mPl^4*q^4*s^2*(s*(62*q^2*s + 33*(1 + q^4)*t) + 
+          2*(53*q^2*s + 8*(1 + q^4)*t)*u + 48*q^2*u^2)) - 
+      2*mFP^6*u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*
+         (14*s^2 + 43*s*t - 4*t^2) + 12*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*
+         q^2*(-1 + q^2)*(1 + q^2)^3*s^2*t*(5*s - u) - 
+        6*mPl^4*q^4*s^3*(t*(s - u) + q^4*t*(s - u) + 2*q^2*(s + u)^2)) + 
+      24*mFP^12*mPl^2*q^2*(-40*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+         (1 + q^2)^3*t*u - mPl^2*q^2*(3*t*u*(55*s + 4*u) + 
+          3*q^4*t*u*(55*s + 4*u) + 2*q^2*(-52*s^3 + 259*s^2*u + 85*s*u^2 - 
+            12*u^3))) + 24*mFP^10*(-4*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+         (1 + q^2)^6*t*u + 2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*
+         (-1 + q^2)*(1 + q^2)^3*t*u*(9*s + 8*u) + mPl^4*q^4*s*
+         (t*u*(94*s + 21*u) + q^4*t*u*(94*s + 21*u) + 
+          q^2*(-8*s^3 + 222*s^2*u + 234*s*u^2 + 30*u^3)))))/
+    (mFP^6*mPl^6*q^6*(mFP^2 - t)*t*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -1, 2, 2, 2, -2}, 
+  -1/48*(Sqrt[s/(t*u)]*u^3*(1728*mFP^14*mPl^4*q^6 + 
+      2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^2*t^2*u - 
+      (BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*(1 + q^2)^6*s*t*(2*s + 13*t)*
+       u + (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*(1 + q^2)^3*t*
+       (6*mPl^2*q^2*(-1 + q^2)*s^2 + (BetaBim1*c - BetaBim3*c^3)*m^4*
+         (1 + q^2)^3*(9*s + 20*t))*u - 144*mFP^12*mPl^4*q^6*(11*s + 4*u) - 
+      24*mFP^10*mPl^4*q^4*(9*t*u + 9*q^4*t*u - 
+        2*q^2*(10*s^2 - 7*s*u + 3*u^2)) - 12*mFP^6*u*
+       ((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t + 
+        5*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s*
+         t + mPl^4*q^4*s^2*(5*t + 5*q^4*t + 6*q^2*(s + u))) + 
+      12*mFP^8*mPl^2*q^2*(8*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+         (1 + q^2)^3*t*u + mPl^2*q^2*s*(19*t*u + 19*q^4*t*u + 
+          q^2*(-4*s^2 + 34*s*u + 10*u^2)))))/(mFP^5*mPl^6*q^6*(mFP^2 - t)*
+     (mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, -1, 2, 1, 2, 1}, 
   -1/24*((t - u)*Sqrt[s*t*u]*(-4*(BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*
        (1 + q^2)^6*s*t*u + (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^2*
        t*u + 2*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*(1 + q^2)^3*
@@ -2741,6 +4312,186 @@
       18*mFP^6*mPl^2*q^2*t*u*(4*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
          (1 + q^2)^3 + mPl^2*q^2*(3*(1 + q^4)*s + 2*q^2*(t + u)))))/
     (mFP^3*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -1, 2, 1, 2, 0}, 
+  (u*(-((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^3*t*u^2*(s + u)) - 
+     (BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*(1 + q^2)^6*s^2*t*u*
+      (7*s^2 + 2*s*u - 6*u^2) - 192*mFP^14*mPl^4*q^4*
+      (21*t*u + 21*q^4*t*u + q^2*(3*t - 2*u)*(t + u)) + 
+     (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*s*t*u*
+      (8*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s^3 + (BetaBim1*c - BetaBim3*c^3)*
+        m^4*(1 + q^2)^6*(71*s^2 + 40*s*u - 12*u^2)) - 
+     2*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^6*t*u*
+      (4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s^2*(10*s - u) + 
+       (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^6*(131*s^2 + 50*s*u - 
+         8*u^2)) + 48*mFP^12*mPl^4*q^4*(t*u*(89*s + 4*u) + 
+       q^4*t*u*(89*s + 4*u) + 2*q^2*(6*t^3 - 49*t^2*u + 27*t*u^2 - 6*u^3)) + 
+     8*mFP^8*t*u*((BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*
+        (1 + q^2)^3*s*(17*s - 24*u) + 2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+        (1 + q^2)^6*(25*s + u) - 3*mPl^4*q^4*((1 + q^4)*s^3 + 
+         6*(1 + q^4)*s^2*u + 2*q^2*(t - u)*(t + u)^2)) - 
+     16*mFP^10*u*(10*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t - 
+       2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*t*
+        (7*s - 4*u) + 3*mPl^4*q^4*(15*(1 + q^4)*s^2*t + 11*(1 + q^4)*s*t*u - 
+         2*q^2*(t + u)*(17*t^2 - 6*t*u + 2*u^2)))))/
+   (32*Sqrt[6]*mFP^6*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -1, 2, 1, 2, -1}, 
+  (Sqrt[s/(t*u)]*u^2*(-((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^3*t*
+       u^2*(s + u)) - (BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*(1 + q^2)^6*s^2*
+      t*u*(3*s^2 - 7*s*u - 7*u^2) + 4*(BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^4*
+      (1 + q^2)^6*s*t*u*(6*s^2 - 8*s*u - 5*u^2) - 96*mFP^14*mPl^4*q^4*
+      (42*t*u + 42*q^4*t*u + q^2*(3*t - u)*(t + u)) - 
+     4*mFP^8*t*u*(12*mPl^4*q^4*(1 + q^4)*s^2*u + 
+       9*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s*
+        (9*s + 4*u) + 2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+        (3*s + 22*u)) + (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^6*(1 + q^2)^3*t*u*
+      (12*mPl^2*q^2*(-1 + q^2)*s^2*(2*s + u) - (BetaBim1*c - BetaBim3*c^3)*
+        m^4*(1 + q^2)^3*(51*s^2 - 108*s*u - 32*u^2)) + 
+     48*mFP^12*mPl^2*q^2*(-20*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+        (1 + q^2)^3*t*u + mPl^2*q^2*(6*q^2*t^3 + 
+         t*(75*(1 + q^4)*s - 58*q^2*t)*u + 4*(3 + 5*q^2 + 3*q^4)*t*u^2 - 
+         4*q^2*u^3)) + 24*mFP^10*u*(6*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+        (1 + q^2)^6*t + 48*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*
+        (-1 + q^2)*(1 + q^2)^3*s*t - mPl^4*q^4*(27*(1 + q^4)*s^2*t + 
+         20*(1 + q^4)*s*t*u - 2*q^2*(t + u)*(23*t^2 - 3*t*u + 2*u^2)))))/
+   (96*mFP^7*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -1, 2, 1, 2, -2}, 
+  -1/96*(u^2*(-3456*mFP^16*mPl^4*q^6 - 2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+       (1 + q^2)^6*s^3*u^2*(s + u) + 3*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+       mFP^4*(1 + q^2)^6*s*u*(21*s^2 - 15*s*u - 14*u^2) - 
+      3*(BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*(1 + q^2)^6*s^2*u*
+       (2*s^2 - 5*s*u - 5*u^2) + 288*mFP^14*mPl^4*q^4*
+       (5*u + 5*q^4*u + q^2*(13*s + 6*u)) - 
+      4*mFP^8*u*(-2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+         (49*s - 15*u) + 6*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*
+         (-1 + q^2)*(1 + q^2)^3*s*(11*s + 12*u) + 3*mPl^4*q^4*s^2*
+         ((22 - 32*q^2 + 22*q^4)*s + (23 - 34*q^2 + 23*q^4)*u)) + 
+      2*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^6*u*
+       (6*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s^2*(s + 2*u) - 
+        (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^6*(121*s^2 - 41*s*u - 
+          28*u^2)) - 24*mFP^12*(56*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*
+         (-1 + q^2)*(1 + q^2)^3*u + 3*mPl^4*q^4*(18*q^2*s^2 + 
+          (43 - 22*q^2 + 43*q^4)*s*u + 4*(1 + q^2)^2*u^2)) + 
+      12*mFP^10*(-16*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*u + 
+        4*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*u*
+         (25*s + 8*u) + mPl^4*q^4*s*(12*q^2*s^2 + 5*(29 - 34*q^2 + 29*q^4)*s*
+           u + 18*(3 - 2*q^2 + 3*q^4)*u^2))))/(mFP^6*mPl^6*q^6*(mFP^2 - t)*
+     (mFP^2 - u)*(t + u)^4)}, {{2, 2, 2, -1, 2, 0, 2, 0}, 
+  -1/48*((t - u)*Sqrt[s*t*u]*(-11*(BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^4*
+       (1 + q^2)^6*s*t*u + 10*(BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*
+       (1 + q^2)^6*s^2*t*u - 2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+       s^3*t*u + 144*mFP^12*mPl^4*q^6*(t + u) - 24*mFP^10*mPl^4*q^4*
+       (7*t*u + 7*q^4*t*u + 6*q^2*(t^2 - 9*t*u + u^2)) - 
+      12*mFP^8*mPl^2*q^2*t*u*(8*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+         (1 + q^2)^3 + mPl^2*q^2*(11*(1 + q^4)*s + 18*q^2*(t + u))) - 
+      6*mFP^6*t*u*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6 + 
+        2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*
+         s + mPl^4*q^4*((1 + q^4)*s^2 - 2*q^2*(t + u)^2))))/
+    (mFP^5*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -1, 2, 0, 2, -1}, 
+  (u*(-2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^2*t*u*
+      (2*s^2 + 4*s*u + u^2) - 96*mFP^12*mPl^4*q^4*(15*t*u + 15*q^4*t*u + 
+       q^2*(2*t - u)*(t + u)) - (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*t*u*
+      (2*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s^2*(11*s + 6*u) + 
+       (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^6*(133*s^2 + 102*s*u + 
+         8*u^2)) + (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*s*t*u*
+      (2*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s^2*(s + u) + 
+       (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^6*(39*s^2 + 51*s*u + 
+         10*u^2)) + 24*mFP^10*mPl^4*q^4*(t*u*(69*s + 4*u) + 
+       q^4*t*u*(69*s + 4*u) + 2*q^2*(4*t^3 - 50*t^2*u + 31*t*u^2 - 3*u^3)) + 
+     4*mFP^6*t*u*((BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*
+        (1 + q^2)^3*s*(5*s - 16*u) + 2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+        (1 + q^2)^6*(22*s + 5*u) - 3*mPl^4*q^4*(2*(1 + q^4)*s^3 + 
+         5*(1 + q^4)*s^2*u + 2*q^2*(2*t - u)*(t + u)^2)) - 
+     4*mFP^8*u*(12*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t - 
+       4*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*t*
+        (9*s - 4*u) + 3*mPl^4*q^4*(19*(1 + q^4)*s^2*t + 26*(1 + q^4)*s*t*u - 
+         2*q^2*(t + u)*(37*t^2 - 15*t*u + 2*u^2)))))/
+   (16*Sqrt[6]*mFP^4*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -1, 2, -1, 2, -1}, 
+  -1/24*((t - u)*Sqrt[s*t*u]*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+       s^2*t*u - 3*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*(1 + q^2)^3*s*
+       (3*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3 + 
+        mPl^2*q^2*(-1 + q^2)*s)*t*u + 6*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*
+       (1 + q^2)^3*(2*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3 + 
+        3*mPl^2*q^2*(-1 + q^2)*s)*t*u - 24*mFP^10*mPl^4*q^6*(t + u) + 
+      24*mFP^8*mPl^4*q^4*(4*t*u + 4*q^4*t*u + q^2*(t^2 - 20*t*u + u^2)) + 
+      6*mFP^6*mPl^2*q^2*t*u*(4*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+         (1 + q^2)^3 + mPl^2*q^2*(7*(1 + q^4)*s + 10*q^2*(t + u)))))/
+    (mFP^3*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -2, 2, 2, 2, -2}, 
+  (u^3*(144*mFP^14*mPl^4*q^6 - (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*
+      s^2*t^2*u + (BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*(1 + q^2)^6*s*t*
+      (s + 7*t)*u - 12*mFP^12*mPl^4*q^6*(31*s + 4*u) + 
+     6*mFP^10*mPl^4*q^4*(-3*t*u - 3*q^4*t*u + 2*q^2*(21*s^2 + 7*s*u + u^2)) - 
+     6*mFP^4*u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*(s + 2*t) - 
+       mPl^4*q^4*s^3*(t + q^2*(s + q^2*t + u))) + 
+     2*mFP^6*(5*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*u + 
+       3*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s*t*
+        u - 3*mPl^4*q^4*s^2*(5*t*u + 5*q^4*t*u + 
+         q^2*(-s^2 + 6*s*u + 2*u^2))) + 3*mFP^8*mPl^2*q^2*
+      (-4*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*(1 + q^2)^3*t*u + 
+       mPl^2*q^2*s*(15*t*u + 15*q^4*t*u - 2*q^2*(11*s^2 - 5*s*u + 3*u^2)))))/
+   (12*mFP^4*mPl^6*q^6*(mFP^2 - t)*t*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -2, 2, 1, 2, 1}, 
+  (t*u*(-2304*mFP^14*mPl^4*q^6 + 192*mFP^12*mPl^4*q^6*(7*s - 4*u) - 
+     (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^3*t*u + 
+     (BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*(1 + q^2)^3*s^2*
+      (5*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3 + 
+       12*mPl^2*q^2*(-1 + q^2)*s)*t*u - 6*(BetaBim1*c - BetaBim3*c^3)*m^4*
+      mFP^4*(1 + q^2)^3*s*(3*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3 + 
+       14*mPl^2*q^2*(-1 + q^2)*s)*t*u - 96*mFP^8*mPl^2*q^2*
+      (-((BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*(1 + q^2)^3*t) + 
+       mPl^2*q^2*s*(-6*q^2*s + t + q^4*t))*u + 96*mFP^10*mPl^4*q^4*
+      (5*t*u + 5*q^4*t*u + 2*q^2*(-s^2 + s*u + u^2)) + 
+     24*mFP^6*u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t + 
+       3*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s*
+        t - 3*mPl^4*q^4*s^2*(t + q^4*t + 2*q^2*(s + u)))))/
+   (48*mFP^4*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -2, 2, 1, 2, 0}, 
+  -1/16*(u*Sqrt[s*t*u]*(-((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^2*t*
+        u*(2*s + u)) + 96*mFP^12*mPl^4*q^6*(t + u) - 
+      4*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*t*u*
+       (mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s^2 + 2*(BetaBim1*c - BetaBim3*c^3)*
+         m^4*(1 + q^2)^6*(6*s + u)) + 2*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^2*
+       s*t*u*(mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s^2 + 
+        (BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^6*(8*s + 3*u)) + 
+      48*mFP^10*mPl^4*q^4*(7*t*u + 7*q^4*t*u - 2*q^2*(t^2 - 9*t*u + u^2)) + 
+      8*mFP^8*mPl^2*q^2*t*u*(20*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+         (1 + q^2)^3 - 3*mPl^2*q^2*(5*(1 + q^4)*s + 22*q^2*(t + u))) + 
+      8*mFP^6*t*u*(6*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6 - 
+        10*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*
+         s - 3*mPl^4*q^4*((1 + q^4)*s^2 - 2*q^2*(t + u)^2))))/
+    (Sqrt[6]*mFP^5*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -2, 2, 1, 2, -1}, 
+  ((2*mFP^2 - s)*u^2*(6*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*(1 + q^2)^3*s*
+      (3*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3 + 
+       2*mPl^2*q^2*(-1 + q^2)*s)*t*u + 2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+      (1 + q^2)^6*s^2*t^2*u - (BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*
+      (1 + q^2)^6*s*t*(5*s + 8*t)*u + 192*mFP^12*mPl^4*q^6*(t + u) + 
+     96*mFP^10*mPl^4*q^4*(3*t*u + 3*q^4*t*u - 2*q^2*(t^2 - 9*t*u + u^2)) - 
+     96*mFP^8*mPl^2*q^2*t*u*((BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+        (1 + q^2)^3 + 3*mPl^2*q^2*((1 + q^4)*s + 2*q^2*(t + u))) - 
+     12*mFP^6*t*u*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6 + 
+       6*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s + 
+       mPl^4*q^4*((1 + q^4)*s^2 - 2*q^2*(t + u)^2))))/
+   (96*mFP^6*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 2, 2, -2, 2, 0, 2, 0}, 
+  -1/48*(t*u*(-3456*mFP^16*mPl^4*q^6 + 96*mFP^14*mPl^4*q^6*(21*s - 4*u) + 
+      6*(BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*(1 + q^2)^6*s^3*t*u - 
+      (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^4*t*u - 
+      2*(BetaBim1*c - BetaBim3*c^3)*m^4*mFP^4*(1 + q^2)^3*s^2*
+       (5*(BetaBim1*c - BetaBim3*c^3)*m^4*(1 + q^2)^3 - 
+        6*mPl^2*q^2*(-1 + q^2)*s)*t*u + 48*mFP^12*mPl^4*q^4*
+       (13*t*u + 13*q^4*t*u + 2*q^2*(-3*s^2 - s*u + u^2)) - 
+      6*mFP^6*s*u*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t + 
+        16*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s*
+         t + mPl^4*q^4*s^2*(t + q^4*t + 2*q^2*(s + u))) + 
+      24*mFP^10*mPl^2*q^2*u*(4*(BetaBim1*c - BetaBim3*c^3)*m^4*(-1 + q^2)*
+         (1 + q^2)^3*t + mPl^2*q^2*s*(-5*t - 5*q^4*t + 2*q^2*(15*s + u))) + 
+      4*mFP^8*u*(8*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t + 
+        24*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*s*
+         t - 3*mPl^4*q^4*s^2*(7*t + 7*q^4*t + 2*q^2*(5*s + 7*u)))))/
+    (mFP^6*mPl^6*q^6*(mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, 
  {{2, 1, 2, 1, 2, 1, 2, 1}, (589824*mFP^28*mPl^4*q^6*(s + u) - 
     (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^9*t*u^2*(s + u) + 
     (BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*(1 + q^2)^6*s^8*t*u*
@@ -2902,7 +4653,7 @@
          (t*u*(505*s^2 + 862*s*u + 258*u^2) + q^4*t*u*(505*s^2 + 862*s*u + 
             258*u^2) - 2*q^2*(114*s^4 + 857*s^3*u + 2281*s^2*u^2 + 
             1340*s*u^3 + 66*u^4))) + 2*mFP^8*s*
-       (-8*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*t*(16*s - u)*u + 
+       (8*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*t*u*(-16*s + u) + 
         mPl^4*q^4*s^2*(t*u*(137*s^2 + 526*s*u + 302*u^2) + 
           q^4*t*u*(137*s^2 + 526*s*u + 302*u^2) - 
           2*q^2*(12*s^4 + 149*s^3*u + 851*s^2*u^2 + 1052*s*u^3 + 302*u^4)) + 
@@ -3392,7 +5143,88 @@
            (13*t + 8*u) + 2*s^2*((137 + 548*q^2 + 15*q^4 + 137*q^6*(4 + q^2))*
              t^3 + 45*q^4*t^2*u + 45*q^4*t*u^2 + 15*q^4*u^3)))))/
    (192*mFP^8*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*t*(mFP^2 - u)*(t + u)^4)}, 
- {{2, 1, 2, 0, 2, 0, 2, 0}, 
+ {{2, 1, 2, 0, 2, 1, 2, -1}, 
+  (Sqrt[s]*u*(-55296*mFP^20*mPl^4*q^6 + 23040*mFP^18*mPl^4*q^6*(5*s + 6*u) - 
+     384*mFP^16*mPl^4*q^4*(24*t*u + 24*q^4*t*u + 
+       q^2*(219*s^2 + 820*s*u + 112*u^2)) + 
+     m^4*s^2*t*u*((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s*(s + 2*u)*
+        (4*s^2 + 7*s*u + u^2) + 2*(BetaBim1*c - BetaBim3*c^3)*mPl^2*q^2*
+        (4*q^6*s^3*t*(s + t) + s^3*u*(s + u) + 4*q^2*s^3*u*(s + u) + 
+         q^8*s^3*u*(s + u) + 6*q^4*t*u*(t + u)^3) + 4*BetaBim3*c^3*mPl^2*q^2*
+        (s^3*u*(s + u) + q^8*s^3*u*(s + u) + 6*q^4*t*u*(t + u)^3 + 
+         2*q^2*s^3*(t*(s + t) + s*u + u^2) + 2*q^6*s^3*(t*(s + t) + s*u + 
+           u^2))) + 32*mFP^14*(4*m^4*mPl^2*q^2*
+        ((BetaBim1*c - BetaBim3*c^3)*(45 + 96*q^2 + 16*q^6 - 39*q^8) + 
+         2*BetaBim3*c^3*(3 + 56*q^2 + 56*q^6 + 3*q^8))*t*u + 
+       mPl^4*q^4*(6*t*u*(119*s + 18*u) + 6*q^4*t*u*(119*s + 18*u) + 
+         q^2*(891*s^3 + 5738*s^2*u + 4436*s*u^2 - 168*u^3))) - 
+     32*mFP^12*(22*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*u + 
+       mPl^4*q^4*(t*u*(293*s^2 + 473*s*u + 12*u^2) + 
+         q^4*t*u*(293*s^2 + 473*s*u + 12*u^2) + 2*q^2*(72*s^4 + 657*s^3*u + 
+           590*s^2*u^2 + 341*s*u^3 - 36*u^4)) + m^4*mPl^2*q^2*t*u*
+        (2*BetaBim3*c^3*((13 + 392*q^2 + 392*q^6 + 13*q^8)*s + 16*u + 
+           16*q^8*u + 76*q^2*(t + u) + 76*q^6*(t + u)) + 
+         (BetaBim1*c - BetaBim3*c^3)*((431 + 888*q^2 - 104*q^6 - 405*q^8)*s + 
+           4*(38*q^6*t + 15*u + 38*q^2*u - 7*q^8*u)))) + 
+     4*mFP^10*(4*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*u*
+        (73*s + 18*u) + mPl^4*q^4*s*(72*q^2*s^4 + 
+         s^2*(1118*q^2*s + 197*(1 + q^4)*t)*u + 
+         2*s*(-649*q^2*s + 522*(1 + q^4)*t)*u^2 + 
+         8*(-249*q^2*s + 104*(1 + q^4)*t)*u^3 + 256*q^2*u^4) + 
+       2*m^4*mPl^2*q^2*t*u*((BetaBim1*c - BetaBim3*c^3)*
+          ((1123 + 2192*q^2 - 528*q^6 - 1177*q^8)*s^2 + 64*q^6*t^2 + 
+           16*(1 + 4*q^2 + q^8)*u^2 + 8*s*(6*q^6*t + 95*u + 206*q^2*u - 
+             79*q^8*u)) + 2*BetaBim3*c^3*((-27 + 832*q^2 + 832*q^6 - 27*q^8)*
+            s^2 + 32*q^2*(1 + q^4)*t^2 + 16*(1 + 2*q^2 + 2*q^6 + q^8)*u^2 + 
+           8*s*(3*q^2*(1 + q^4)*t + (8 + 103*q^2 + 103*q^6 + 8*q^8)*u)))) + 
+     2*mFP^8*u*(-2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*
+        (41*s^2 + 60*s*u + 8*u^2) + 2*mPl^4*q^4*s^2*
+        (s^2*(-154*q^2*s + 45*(1 + q^4)*t) + 2*s*(57*q^2*s - 25*(1 + q^4)*t)*
+          u - 4*(-239*q^2*s + 26*(1 + q^4)*t)*u^2 + 496*q^2*u^3) + 
+       m^4*mPl^2*q^2*t*(2*BetaBim3*c^3*((193 - 648*q^2 - 648*q^6 + 193*q^8)*
+            s^3 + 304*q^2*(1 + q^4)*s*t^2 - 16*(3 + 31*q^2 + 31*q^6 + 3*q^8)*
+            s*u^2 - 6*q^4*(t + u)^3 + 4*s^2*(111*q^2*(1 + q^4)*t + 
+             (40 - 273*q^2 - 273*q^6 + 40*q^8)*u)) + 
+         (BetaBim1*c - BetaBim3*c^3)*((-1277 - 2168*q^2 + 872*q^6 + 1663*q^8)*
+            s^3 - 6*q^4*(t + u)^3 + 4*s^2*(222*q^6*t + 
+             (-313 - 546*q^2 + 393*q^8)*u) + 32*s*(19*q^6*t^2 + 
+             (-14 - 31*q^2 + 11*q^8)*u^2)))) - 
+     mFP^6*u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*t*
+        (429*s^2 + 518*s*u + 40*u^2) + 4*mPl^4*q^4*s^3*
+        (t*(11*s^2 + 29*s*u - 9*u^2) + q^4*t*(11*s^2 + 29*s*u - 9*u^2) - 
+         2*q^2*(15*s^3 + 88*s^2*u + 52*s*u^2 - 9*u^3)) + 
+       2*m^4*mPl^2*q^2*t*(2*BetaBim3*c^3*((83 + 10*q^2 + 10*q^6 + 83*q^8)*
+            s^4 - 6*q^4*(t + u)^4 + 2*s^3*(221*q^2*(1 + q^4)*t + 
+             5*(24 + 13*q^2 + 13*q^6 + 24*q^8)*u) + 
+           4*s^2*(49*q^2*(1 + q^4)*t^2 + (13 + 3*q^2 + 3*q^6 + 13*q^8)*
+              u^2)) + (BetaBim1*c - BetaBim3*c^3)*
+          ((-155 - 144*q^2 + 164*q^6 + 321*q^8)*s^4 - 6*q^4*(t + u)^4 + 
+           2*s^3*(442*q^6*t + 5*(-11 + 26*q^2 + 59*q^8)*u) + 
+           8*s^2*(49*q^6*t^2 + (-5 + 3*q^2 + 18*q^8)*u^2)))) + 
+     2*mFP^4*u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*t*
+        (125*s^3 + 248*s^2*u + 96*s*u^2 + 4*u^3) + 2*mPl^4*q^4*s^4*
+        (t*(s^2 + 12*s*u + 8*u^2) + q^4*t*(s^2 + 12*s*u + 8*u^2) - 
+         2*q^2*(s + u)*(s^2 + 16*s*u + 8*u^2)) + m^4*mPl^2*q^2*t*
+        (2*BetaBim3*c^3*(5*(3 + 4*q^2 + 4*q^6 + 3*q^8)*s^5 + 
+           6*q^4*s^2*(t + u)^3 - 6*q^4*t*u*(t + u)^3 + 
+           s^4*(174*q^2*(1 + q^4)*t + (95 + 142*q^2 + 142*q^6 + 95*q^8)*u) + 
+           s^3*(110*q^2*(1 + q^4)*t^2 + (47 + 78*q^2 + 78*q^6 + 47*q^8)*
+              u^2)) + (BetaBim1*c - BetaBim3*c^3)*
+          ((-1 + 28*q^2 + 12*q^6 + 31*q^8)*s^5 + 6*q^4*s^2*(t + u)^3 - 
+           6*q^4*t*u*(t + u)^3 + s^4*(348*q^6*t + (47 + 284*q^2 + 143*q^8)*
+              u) + s^3*(220*q^6*t^2 + (31 + 156*q^2 + 63*q^8)*u^2)))) - 
+     mFP^2*s^2*u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*
+        (53*s^3 + 149*s^2*u + 99*s*u^2 + 10*u^3) + 
+       2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*t*((1 + 4*q^2 + q^8)*s^4 + 
+         6*q^4*(t + u)^4 + 2*s^3*(30*q^6*t + (7 + 30*q^2 + 9*q^8)*u) + 
+         12*s^2*(4*q^6*t^2 + (1 + 4*q^2 + q^8)*u^2)) + 
+       4*mPl^2*q^2*(mPl^2*q^2*s^3*u*(s + u)*(t + q^4*t - 2*q^2*(s + u)) + 
+         BetaBim3*c^3*m^4*t*((1 + 2*q^2 + 2*q^6 + q^8)*s^4 + 
+           6*q^4*(t + u)^4 + 12*s^2*(2*q^2*(1 + q^4)*t^2 + 
+             (1 + 2*q^2 + 2*q^6 + q^8)*u^2) + 2*s^3*(8*u + 8*q^8*u + 
+             15*q^2*(t + u) + 15*q^6*(t + u)))))))/
+   (32*Sqrt[6]*mFP^5*mPl^6*q^6*(mFP^2 - s)*(-mFP^2 + t)*Sqrt[t*u]*
+    (-mFP^2 + u)*(t + u)^4)}, {{2, 1, 2, 0, 2, 0, 2, 0}, 
   -1/48*((t - u)*Sqrt[t*u]*(-27648*mFP^22*mPl^4*q^6*(3*s - 4*u) - 
       (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^6*t*u^2*(s + u) + 
       2304*mFP^20*mPl^4*q^6*(87*s^2 + 66*s*u - 76*u^2) - 
@@ -3471,17 +5303,265 @@
             12*q^4*s^2*(t + u)^3 + 18*q^4*t*u*(t + u)^3 + 
             6*q^4*s*(t + u)^4)))))/(Sqrt[6]*mFP^7*mPl^6*q^6*(mFP^2 - s)*
      Sqrt[s]*(mFP^2 - t)*t*(mFP^2 - u)*u*(t + u)^4)}, 
- {{2, 0, 2, 0, 2, 0, 2, 0}, (442368*mFP^28*mPl^4*q^6*(s + u) + 
-    3*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^7*t*u^3*(s + u)^2 - 
-    36864*mFP^26*mPl^4*q^6*(55*s^2 - 67*s*u + 43*u^2) - 
-    3072*mFP^24*mPl^4*q^4*(117*s*t*u + 117*q^4*s*t*u + 
-      2*q^2*(-597*s^3 + 488*s^2*u + 743*s*u^2 - 312*u^3)) - 
-    64*mFP^20*(-336*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*t*u + 
-      96*m^4*mPl^2*q^2*s*t*u*((BetaBim1*c - BetaBim3*c^3)*
-         (47 + 102*q^2 - 70*q^6 - 39*q^8)*s + 4*BetaBim3*c^3*
-         (1 + 4*q^2 + 4*q^6 + q^8)*(2*s - u) + 4*(BetaBim1*c - BetaBim3*c^3)*
-         (2 + 3*q^2 - 7*q^6 - 3*q^8)*u) + mPl^4*q^4*(-31527*q^2*s^5 + 
-        19*s^3*(-2777*q^2*s + 430*(1 + q^4)*t)*u + 
+ {{2, 1, 2, 0, 2, 0, 2, -1}, (110592*mFP^24*mPl^4*q^6 - 
+    (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^5*u^2*(s + u)*
+     (2*s^2 + 2*s*u - u^2) - 3072*mFP^22*mPl^4*q^4*
+     (43*u + 43*q^4*u + 31*q^2*(3*s + 2*u)) + 
+    256*mFP^20*(-24*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*
+       (1 + q^2)^3*u + mPl^4*q^4*(1107*q^2*s^2 + 7*(277 + 2*q^2 + 277*q^4)*s*
+         u + 2*(119 + 823*q^2 + 119*q^4)*u^2)) - 
+    64*mFP^18*(-24*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*u + 
+      4*m^4*mPl^2*q^2*(46*(BetaBim1*c - BetaBim3*c^3)*(-1 + q^2)*(1 + q^2)^3*
+         s + 6*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*t + 
+        (BetaBim1*c - BetaBim3*c^3)*(-7 - 8*q^2 + 32*q^6 + 13*q^8)*t)*u + 
+      mPl^4*q^4*(2205*q^2*s^3 + 9*(627 + 62*q^2 + 627*q^4)*s^2*u + 
+        58*(121 + 41*q^2 + 121*q^4)*s*u^2 + 2*(47 + 1714*q^2 + 47*q^4)*
+         u^3)) + 16*mFP^16*(4*m^4*mPl^2*q^2*
+       (2*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*t*(49*s + 16*t) + 
+        (BetaBim1*c - BetaBim3*c^3)*(402*(-1 + q^2)*(1 + q^2)^3*s^2 + 
+          (-625 - 1152*q^2 + 1544*q^6 + 723*q^8)*s*t + 
+          4*(-7 - 6*q^2 + 38*q^6 + 15*q^8)*t^2))*u - 
+      8*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*u*(76*s + 33*u) + 
+      3*mPl^4*q^4*(786*q^2*s^4 + (2035 + 878*q^2 + 2035*q^4)*s^3*u + 
+        2*(2485 + 1496*q^2 + 2485*q^4)*s^2*u^2 + 
+        2*(1711 + 578*q^2 + 1711*q^4)*s*u^3 - 24*(1 - 30*q^2 + q^4)*u^4)) - 
+    8*mFP^14*(2*m^4*mPl^2*q^2*(2*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*t*
+         (321*s^2 + 256*s*t + 16*t^2) + (BetaBim1*c - BetaBim3*c^3)*
+         (1174*(-1 + q^2)*(1 + q^2)^3*s^3 + 3*(-707 - 1200*q^2 + 2056*q^6 + 
+            921*q^8)*s^2*t + 4*(-359 - 590*q^2 + 1102*q^6 + 487*q^8)*s*t^2 + 
+          16*(-3 - 4*q^2 + 12*q^6 + 5*q^8)*t^3))*u - 
+      4*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*u*
+       (706*s^2 + 425*s*u + 116*u^2) + mPl^4*q^4*s*(648*q^2*s^4 + 
+        4*(175 + 92*q^2 + 175*q^4)*s^3*u + 9*(323 + 542*q^2 + 323*q^4)*s^2*
+         u^2 + 2*(2923 + 3794*q^2 + 2923*q^4)*s*u^3 + 
+        12*(217 + 26*q^2 + 217*q^4)*u^4)) + m^4*mFP^2*s^3*u*
+     ((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s*
+       (2*s^4 + 36*s^3*u + 52*s^2*u^2 + 2*s*u^3 - 13*u^4) - 
+      8*BetaBim3*c^3*mPl^2*q^2*t^2*((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + 
+        (1 + 4*q^2 + 4*q^6 + q^8)*s^3*t + 6*q^4*u*(t + u)^3) - 
+      4*(BetaBim1*c - BetaBim3*c^3)*mPl^2*q^2*t^2*
+       ((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + (1 + 4*q^2 + 4*q^6 + q^8)*s^3*t + 
+        6*q^4*u*(t + u)^3)) + m^4*mFP^4*s^2*u*
+     (-((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s*
+        (56*s^4 + 335*s^3*u + 389*s^2*u^2 + 43*s*u^3 - 56*u^4)) + 
+      8*BetaBim3*c^3*mPl^2*q^2*t*((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 
+        19*(1 + 4*q^2 + 4*q^6 + q^8)*s^4*t + 15*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*
+         t^2 + 18*q^4*t*u*(t + u)^3 + 6*q^4*s*(t + u)^4) + 
+      4*(BetaBim1*c - BetaBim3*c^3)*mPl^2*q^2*t*((-1 + 8*q^6 + 3*q^8)*s^5 + 
+        (15 + 68*q^2 + 84*q^6 + 23*q^8)*s^4*t + 
+        (13 + 56*q^2 + 64*q^6 + 17*q^8)*s^3*t^2 + 18*q^4*t*u*(t + u)^3 + 
+        6*q^4*s*(t + u)^4)) + 2*mFP^10*u*(12*mPl^4*q^4*(1 + q^2)^2*s^3*
+       (21*s^3 + 194*s^2*u + 235*s*u^2 + 59*u^3) + 
+      (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*(6035*s^4 + 8931*s^3*u + 
+        5584*s^2*u^2 + 756*s*u^3 - 16*u^4) - 8*BetaBim3*c^3*m^4*mPl^2*q^2*t*
+       (253*(1 + 4*q^2 + 4*q^6 + q^8)*s^4 + 664*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*
+         t + 174*(1 + 4*q^2 + 4*q^6 + q^8)*s^2*t^2 + 9*q^4*s*(t + u)^3 + 
+        3*q^4*(t + u)^4) - 2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*
+       (381*(-1 + q^2)*(1 + q^2)^3*s^5 + (-815 - 618*q^2 + 4666*q^6 + 
+          1827*q^8)*s^4*t + 2*(37 + 1402*q^2 + 3910*q^6 + 1291*q^8)*s^3*t^2 + 
+        4*(7 + 188*q^2 + 508*q^6 + 167*q^8)*s^2*t^3 + 18*q^4*s*t*(t + u)^3 + 
+        6*q^4*t*(t + u)^4)) + mFP^8*u*(-4*mPl^4*q^4*(1 + q^2)^2*s^4*
+       (8*s^3 + 163*s^2*u + 293*s*u^2 + 129*u^3) - 
+      (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*
+       (3640*s^4 + 7779*s^3*u + 6428*s^2*u^2 + 1284*s*u^3 - 88*u^4) + 
+      8*BetaBim3*c^3*m^4*mPl^2*q^2*t*(132*(1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 
+        593*(1 + 4*q^2 + 4*q^6 + q^8)*s^4*t + 245*(1 + 4*q^2 + 4*q^6 + q^8)*
+         s^3*t^2 + 18*q^4*s^2*(t + u)^3 + 6*q^4*t*u*(t + u)^3 + 
+        18*q^4*s*(t + u)^4) + 4*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*
+       (43*(-1 + q^2)*(1 + q^2)^3*s^6 + 24*(-6 - q^2 + 45*q^6 + 17*q^8)*s^5*
+         t + 2*(133 + 859*q^2 + 1513*q^6 + 460*q^8)*s^4*t^2 + 
+        (169 + 828*q^2 + 1132*q^6 + 321*q^8)*s^3*t^3 + 
+        18*q^4*s^2*t*(t + u)^3 + 6*q^4*t^2*u*(t + u)^3 + 
+        18*q^4*s*t*(t + u)^4)) + mFP^6*s*u*
+     (4*mPl^4*q^4*(1 + q^2)^2*s^4*u*(s + u)*(8*s + 11*u) + 
+      (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*(624*s^4 + 2022*s^3*u + 
+        2021*s^2*u^2 + 406*s*u^3 - 100*u^4) - 24*BetaBim3*c^3*m^4*mPl^2*q^2*t*
+       (6*(1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 49*(1 + 4*q^2 + 4*q^6 + q^8)*s^4*
+         t + 29*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*t^2 + 2*q^4*s^2*(t + u)^3 + 
+        6*q^4*t*u*(t + u)^3 + 6*q^4*s*(t + u)^4) - 
+      4*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*
+       (2*(-1 + q^2)*(1 + q^2)^3*s^6 + (-17 + 2*q^2 + 142*q^6 + 53*q^8)*s^5*
+         t + 2*(47 + 241*q^2 + 347*q^6 + 100*q^8)*s^4*t^2 + 
+        (73 + 320*q^2 + 376*q^6 + 101*q^8)*s^3*t^3 + 6*q^4*s^2*t*(t + u)^3 + 
+        18*q^4*t^2*u*(t + u)^3 + 18*q^4*s*t*(t + u)^4)) - 
+    4*mFP^12*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*u*
+       (2844*s^3 + 2805*s^2*u + 1172*s*u^2 + 92*u^3) + 
+      mPl^4*q^4*s^2*(-72*q^2*s^4 + 18*(33 + 58*q^2 + 33*q^4)*s^3*u + 
+        (3139 + 4742*q^2 + 3139*q^4)*s^2*u^2 + 12*(149 + 46*q^2 + 149*q^4)*s*
+         u^3 - 4*(19 + 470*q^2 + 19*q^4)*u^4) - m^4*mPl^2*q^2*u*
+       (6*BetaBim3*c^3*t*(361*(1 + 4*q^2 + 4*q^6 + q^8)*s^3 + 
+          544*(1 + 4*q^2 + 4*q^6 + q^8)*s^2*t + 80*(1 + 4*q^2 + 4*q^6 + q^8)*
+           s*t^2 + 2*q^4*(t + u)^3) + (BetaBim1*c - BetaBim3*c^3)*
+         (1788*(-1 + q^2)*(1 + q^2)^3*s^4 + 3*(-1097 - 1472*q^2 + 4360*q^6 + 
+            1819*q^8)*s^3*t + 8*(-271 - 134*q^2 + 1766*q^6 + 679*q^8)*s^2*
+           t^2 + 16*(-71 - 112*q^2 + 232*q^6 + 101*q^8)*s*t^3 + 
+          6*q^4*t*(t + u)^3))))/(192*mFP^8*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*
+    (mFP^2 - u)*(t + u)^4)}, {{2, 1, 2, -1, 2, 1, 2, -1}, 
+  -1/192*(u*(-331776*mFP^24*mPl^4*q^6 + (BetaBim1*c - BetaBim3*c^3)^2*m^8*
+       (1 + q^2)^6*s^5*t*u^3*(s + u) + 46080*mFP^22*mPl^4*q^6*(15*s + 4*u) + 
+      3*(BetaBim1*c - BetaBim3*c^3)^2*m^8*mFP^2*(1 + q^2)^6*s^4*t*u^2*
+       (3*s^2 - s*u - 3*u^2) + 768*mFP^20*mPl^4*q^4*(66*t*u + 66*q^4*t*u - 
+        q^2*(657*s^2 + 188*s*u + 68*u^2)) - 192*mFP^18*
+       (48*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*(-1 + q^2)*(1 + q^2)^3*t*
+         u + mPl^4*q^4*(-891*q^2*s^3 + 4*s*(231*q^2*s + 157*(1 + q^4)*t)*u + 
+          16*(4*q^2*s + 7*(1 + q^4)*t)*u^2 - 32*q^2*u^3)) + 
+      96*mFP^16*(-8*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*u + 
+        12*m^4*mPl^2*q^2*t*u*(2*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*s + 
+          (BetaBim1*c - BetaBim3*c^3)*(-15 - 28*q^2 + 36*q^6 + 17*q^8)*s + 
+          8*(BetaBim1*c - BetaBim3*c^3)*(-1 + q^2)*(1 + q^2)^3*u) + 
+        mPl^4*q^4*(-288*q^2*s^4 + s^2*(1430*q^2*s + 1093*(1 + q^4)*t)*u + 
+          14*s*(101*q^2*s + 36*(1 + q^4)*t)*u^2 + 
+          16*(-(q^2*s) + 2*(1 + q^4)*t)*u^3)) + 2*m^4*mFP^4*s^2*t*u*
+       ((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s*(15*s^3 - 27*s^2*u + 
+          8*s*u^2 + 20*u^3) + 6*BetaBim3*c^3*mPl^2*q^2*u*
+         ((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + (1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 
+          6*q^4*t*(t + u)^3) + 3*(BetaBim1*c - BetaBim3*c^3)*mPl^2*q^2*u*
+         ((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + (1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 
+          6*q^4*t*(t + u)^3)) - 3*mFP^6*s*u*((BetaBim1*c - BetaBim3*c^3)^2*
+         m^8*(1 + q^2)^6*s*t*(144*s^3 + 7*s^2*u + 32*s*u^2 + 32*u^3) + 
+        8*mPl^4*q^4*s^4*u*(s + u)*(t + q^4*t - 2*q^2*(s + u)) + 
+        4*BetaBim3*c^3*m^4*mPl^2*q^2*t*((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 
+          17*(1 + 4*q^2 + 4*q^6 + q^8)*s^4*u + 13*(1 + 4*q^2 + 4*q^6 + q^8)*
+           s^3*u^2 + 6*q^4*t*u*(t + u)^3 + 6*q^4*s*(t + u)^4) + 
+        2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*t*
+         ((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + (9 + 52*q^2 + 84*q^6 + 25*q^8)*s^4*
+           u + (9 + 44*q^2 + 60*q^6 + 17*q^8)*s^3*u^2 + 6*q^4*t*u*(t + u)^3 + 
+          6*q^4*s*(t + u)^4)) - 96*mFP^14*(2*(BetaBim1*c - BetaBim3*c^3)^2*
+         m^8*(1 + q^2)^6*t*(11*s - 12*u)*u + mPl^4*q^4*s*
+         (-18*q^2*s^4 + 8*s^2*(27*q^2*s + 47*(1 + q^4)*t)*u + 
+          s*(55*q^2*s + 452*(1 + q^4)*t)*u^2 + 32*(5*q^2*s + 2*(1 + q^4)*t)*
+           u^3 - 16*q^2*u^4) + m^4*mPl^2*q^2*t*u*
+         (2*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*s*(25*s + 16*u) + 
+          (BetaBim1*c - BetaBim3*c^3)*((-93 - 136*q^2 + 336*q^6 + 143*q^8)*
+             s^2 + 8*(-23 - 42*q^2 + 58*q^6 + 27*q^8)*s*u + 
+            16*(-1 + q^2)*(1 + q^2)^3*u^2))) + 
+      8*mFP^12*u*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*
+         (453*s^2 - 192*s*u - 40*u^2) + 3*mPl^4*q^4*s^2*
+         (s^2*(-138*q^2*s + 221*(1 + q^4)*t) + 
+          2*s*(-665*q^2*s + 264*(1 + q^4)*t)*u + 
+          28*(-34*q^2*s + 9*(1 + q^4)*t)*u^2 - 24*q^2*u^3) + 
+        3*m^4*mPl^2*q^2*s*t*(2*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*
+           (73*s^2 + 128*s*u + 16*u^2) + (BetaBim1*c - BetaBim3*c^3)*
+           ((-107 - 68*q^2 + 652*q^6 + 253*q^8)*s^2 + 
+            8*(-45 - 58*q^2 + 186*q^6 + 77*q^8)*s*u + 
+            16*(-7 - 12*q^2 + 20*q^6 + 9*q^8)*u^2))) - 
+      6*mFP^10*s*u*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*
+         (521*s^2 - 16*s*u - 64*u^2) + 4*mPl^4*q^4*s^2*
+         (t*(16*s^2 + 99*s*u + 56*u^2) + q^4*t*(16*s^2 + 99*s*u + 56*u^2) - 
+          2*q^2*(20*s^3 + 203*s^2*u + 247*s*u^2 + 74*u^3)) + 
+        m^4*mPl^2*q^2*t*(2*BetaBim3*c^3*(99*(1 + 4*q^2 + 4*q^6 + q^8)*s^3 + 
+            352*(1 + 4*q^2 + 4*q^6 + q^8)*s^2*u + 112*(1 + 4*q^2 + 4*q^6 + 
+              q^8)*s*u^2 + 6*q^4*(t + u)^3) + (BetaBim1*c - BetaBim3*c^3)*
+           (3*(-23 + 20*q^2 + 244*q^6 + 89*q^8)*s^3 + 
+            8*(-49 - 10*q^2 + 362*q^6 + 137*q^8)*s^2*u + 
+            32*(-3 + q^2 + 27*q^6 + 10*q^8)*s*u^2 + 6*q^4*(t + u)^3))) + 
+      2*mFP^8*s*u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*
+         (1197*s^3 + 240*s^2*u + 4*s*u^2 + 32*u^3) + 12*mPl^4*q^4*s^3*
+         (t*(s^2 + 17*s*u + 14*u^2) + q^4*t*(s^2 + 17*s*u + 14*u^2) - 
+          2*q^2*(s + u)*(s^2 + 21*s*u + 14*u^2)) + 6*m^4*mPl^2*q^2*t*
+         (2*BetaBim3*c^3*(8*(1 + 4*q^2 + 4*q^6 + q^8)*s^4 + 
+            56*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 30*(1 + 4*q^2 + 4*q^6 + q^8)*
+             s^2*u^2 + 3*q^4*s*(t + u)^3 + 3*q^4*(t + u)^4) + 
+          (BetaBim1*c - BetaBim3*c^3)*(-2*s^2*u*(7*s + u) + 
+            3*q^4*(t + u)^3*(s + t + u) + 4*q^2*s^2*(4*s^2 + 21*s*u + 
+              14*u^2) + 2*q^8*s^2*(8*s^2 + 63*s*u + 31*u^2) + 
+            4*q^6*s^2*(12*s^2 + 91*s*u + 46*u^2))))))/
+    (mFP^8*mPl^6*q^6*(mFP^2 - s)*(mFP^2 - t)*t*(mFP^2 - u)*(t + u)^4)}, 
+ {{2, 1, 2, -1, 2, 0, 2, 0}, (-221184*mFP^24*mPl^4*q^6 + 
+    (BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^6*t*u^2*(s + u) + 
+    6144*mFP^22*mPl^4*q^6*(93*s + 16*u) + 512*mFP^20*mPl^4*q^4*
+     (96*t*u + 96*q^4*t*u - q^2*(1107*s^2 + 220*s*u + 256*u^2)) - 
+    m^4*mFP^2*s^3*t*u*((BetaBim1*c - BetaBim3*c^3)^2*m^4*(1 + q^2)^6*s^2*
+       (5*s^2 + 35*s*u + 31*u^2) + 8*BetaBim3*c^3*mPl^2*q^2*u*
+       ((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + (1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 
+        6*q^4*t*(t + u)^3) + 4*(BetaBim1*c - BetaBim3*c^3)*mPl^2*q^2*u*
+       ((1 + 4*q^2 + 4*q^6 + q^8)*s^4 + (1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 
+        6*q^4*t*(t + u)^3)) + 2*mFP^4*s^2*u*
+     ((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^2*t*
+       (35*s^2 + 147*s*u + 85*u^2) + 2*mPl^4*q^4*s^4*u*(s + u)*
+       (t + q^4*t - 2*q^2*(s + u)) + 4*BetaBim3*c^3*m^4*mPl^2*q^2*t*
+       ((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 15*(1 + 4*q^2 + 4*q^6 + q^8)*s^4*u + 
+        11*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*u^2 - 6*q^4*t*u*(t + u)^3 + 
+        6*q^4*s*(t + u)^4) + 2*(BetaBim1*c - BetaBim3*c^3)*m^4*mPl^2*q^2*t*
+       ((1 + 4*q^2 + 4*q^6 + q^8)*s^5 + 6*(2 + 9*q^2 + 11*q^6 + 3*q^8)*s^4*
+         u + 2*(4 + 19*q^2 + 25*q^6 + 7*q^8)*s^3*u^2 - 6*q^4*t*u*(t + u)^3 + 
+        6*q^4*s*(t + u)^4)) + 64*mFP^16*(12*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+       (1 + q^2)^6*t*u + mPl^4*q^4*(-1179*q^2*s^4 + 
+        2*s^2*(-1447*q^2*s + 499*(1 + q^4)*t)*u + 
+        6*s*(-525*q^2*s + 166*(1 + q^4)*t)*u^2 + 
+        4*(36*q^2*s + 19*(1 + q^4)*t)*u^3 - 104*q^2*u^4) + 
+      2*m^4*mPl^2*q^2*t*u*(13*(BetaBim1*c - BetaBim3*c^3)*
+         (1 + 4*q^2 + 4*q^6 + q^8)*s + 8*(BetaBim1*c - BetaBim3*c^3)*
+         (-7 - 10*q^2 + 26*q^6 + 11*q^8)*u + 2*BetaBim3*c^3*
+         (1 + 4*q^2 + 4*q^6 + q^8)*(13*s + 16*u))) - 
+    128*mFP^18*(12*(BetaBim1*c + BetaBim3*c^3)*m^4*mPl^2*q^2*
+       (1 + 4*q^2 + 4*q^6 + q^8)*t*u + mPl^4*q^4*(2*t*u*(469*s + 76*u) + 
+        2*q^4*t*u*(469*s + 76*u) - q^2*(2205*s^3 + 2136*s^2*u + 236*s*u^2 + 
+          416*u^3))) - 16*mFP^14*(4*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+       (1 + q^2)^6*t*u*(19*s + 12*u) + 2*m^4*mPl^2*q^2*t*u*
+       (2*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*(-3*s^2 + 64*s*u + 16*u^2) + 
+        (BetaBim1*c - BetaBim3*c^3)*((-423 - 852*q^2 + 828*q^6 + 417*q^8)*
+           s^2 + 64*(-5 - 8*q^2 + 16*q^6 + 7*q^8)*s*u + 
+          8*(-7 - 10*q^2 + 26*q^6 + 11*q^8)*u^2)) + 
+      mPl^4*q^4*s*(t*u*(857*s^2 + 976*s*u + 920*u^2) + 
+        q^4*t*u*(857*s^2 + 976*s*u + 920*u^2) - 
+        8*q^2*(81*s^4 + 370*s^3*u + 757*s^2*u^2 + 560*s*u^3 - 22*u^4))) + 
+    8*mFP^12*(2*(BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*t*u*
+       (27*s^2 + 104*s*u + 12*u^2) + 2*mPl^4*q^4*s^2*
+       (-36*q^2*s^4 + s^2*(-308*q^2*s + 89*(1 + q^4)*t)*u + 
+        2*s*(-217*q^2*s + 5*(1 + q^4)*t)*u^2 + 14*(-68*q^2*s + t + q^4*t)*
+         u^3 - 604*q^2*u^4) + m^4*mPl^2*q^2*t*u*
+       (2*BetaBim3*c^3*(7*(1 + 4*q^2 + 4*q^6 + q^8)*s^3 - 
+          32*(1 + 4*q^2 + 4*q^6 + q^8)*s^2*u + 48*(1 + 4*q^2 + 4*q^6 + q^8)*s*
+           u^2 + 6*q^4*(t + u)^3) + (BetaBim1*c - BetaBim3*c^3)*
+         ((-1625 - 3236*q^2 + 3292*q^6 + 1639*q^8)*s^3 + 
+          8*(-259 - 526*q^2 + 494*q^6 + 251*q^8)*s^2*u + 
+          24*(-11 - 18*q^2 + 34*q^6 + 15*q^8)*s*u^2 + 6*q^4*(t + u)^3))) + 
+    2*mFP^8*u*((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s^2*t*
+       (411*s^2 + 784*s*u + 128*u^2) + 4*mPl^4*q^4*s^4*
+       (4*s^2*(-3*q^2*s + t + q^4*t) - s*(42*q^2*s + t + q^4*t)*u + 
+        (4*q^2*s - 11*(1 + q^4)*t)*u^2 + 22*q^2*u^3) + 
+      12*m^4*mPl^2*q^2*t*((BetaBim1*c - BetaBim3*c^3)*
+         ((-25 - 27*q^2 + 119*q^6 + 48*q^8)*s^5 + 
+          (-59 - 64*q^2 + 280*q^6 + 113*q^8)*s^4*u + 
+          (-47 - 88*q^2 + 112*q^6 + 53*q^8)*s^3*u^2 - q^4*s^2*(t + u)^3 + 
+          2*q^4*t*u*(t + u)^3) + BetaBim3*c^3*(23*(1 + 4*q^2 + 4*q^6 + q^8)*
+           s^5 + 54*(1 + 4*q^2 + 4*q^6 + q^8)*s^4*u + 
+          6*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*u^2 - 2*q^4*s^2*(t + u)^3 + 
+          4*q^4*t*u*(t + u)^3))) - mFP^6*s^2*u*
+     ((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*t*
+       (363*s^2 + 1008*s*u + 328*u^2) + 4*mPl^4*q^4*s^3*
+       (t*(s^2 + 9*s*u + 5*u^2) + q^4*t*(s^2 + 9*s*u + 5*u^2) - 
+        2*q^2*(s + u)*(s^2 + 13*s*u + 5*u^2)) + 4*m^4*mPl^2*q^2*t*
+       ((BetaBim1*c - BetaBim3*c^3)*((-1 + 26*q^2 + 86*q^6 + 29*q^8)*s^4 + 
+          2*(7 + 94*q^2 + 226*q^6 + 73*q^8)*s^3*u + 
+          18*(-1 + 2*q^2 + 14*q^6 + 5*q^8)*s^2*u^2 + 6*q^4*s*(t + u)^3 - 
+          6*q^4*(t + u)^4) + 4*BetaBim3*c^3*(7*(1 + 4*q^2 + 4*q^6 + q^8)*
+           s^4 + 40*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*u + 
+          18*(1 + 4*q^2 + 4*q^6 + q^8)*s^2*u^2 + 3*q^4*s*(t + u)^3 - 
+          3*q^4*(t + u)^4))) - 4*mFP^10*u*
+     ((BetaBim1*c - BetaBim3*c^3)^2*m^8*(1 + q^2)^6*s*t*
+       (181*s^2 + 348*s*u + 92*u^2) + mPl^4*q^4*s^3*
+       (t*(35*s^2 - 92*s*u - 4*u^2) + q^4*t*(35*s^2 - 92*s*u - 4*u^2) + 
+        2*q^2*(-55*s^3 + 137*s^2*u + 304*s*u^2 + 64*u^3)) + 
+      4*m^4*mPl^2*q^2*t*((BetaBim1*c - BetaBim3*c^3)*
+         (9*(-31 - 55*q^2 + 83*q^6 + 38*q^8)*s^4 + 
+          4*(-127 - 250*q^2 + 266*q^6 + 131*q^8)*s^3*u + 
+          2*(-113 - 236*q^2 + 196*q^6 + 103*q^8)*s^2*u^2 + 3*q^4*(t + u)^4) + 
+        BetaBim3*c^3*(63*(1 + 4*q^2 + 4*q^6 + q^8)*s^4 + 
+          16*(1 + 4*q^2 + 4*q^6 + q^8)*s^3*u - 20*(1 + 4*q^2 + 4*q^6 + q^8)*
+           s^2*u^2 + 6*q^4*(t + u)^4))))/(192*mFP^8*mPl^6*q^6*(mFP^2 - s)*
+    (mFP^2 - t)*(mFP^2 - u)*(t + u)^4)}, {{2, 0, 2, 0, 2, 0, 2, 0}, 
+  (442368*mFP^28*mPl^4*q^6*(s + u) + 3*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+     (1 + q^2)^6*s^7*t*u^3*(s + u)^2 - 36864*mFP^26*mPl^4*q^6*
+     (55*s^2 - 67*s*u + 43*u^2) - 3072*mFP^24*mPl^4*q^4*
+     (117*s*t*u + 117*q^4*s*t*u + 2*q^2*(-597*s^3 + 488*s^2*u + 743*s*u^2 - 
+        312*u^3)) - 64*mFP^20*(-336*(BetaBim1*c - BetaBim3*c^3)^2*m^8*
+       (1 + q^2)^6*s*t*u + 96*m^4*mPl^2*q^2*s*t*u*
+       ((BetaBim1*c - BetaBim3*c^3)*(47 + 102*q^2 - 70*q^6 - 39*q^8)*s + 
+        4*BetaBim3*c^3*(1 + 4*q^2 + 4*q^6 + q^8)*(2*s - u) + 
+        4*(BetaBim1*c - BetaBim3*c^3)*(2 + 3*q^2 - 7*q^6 - 3*q^8)*u) + 
+      mPl^4*q^4*(-31527*q^2*s^5 + 19*s^3*(-2777*q^2*s + 430*(1 + q^4)*t)*u + 
         8*s^2*(-1231*q^2*s + 7*(1 + q^4)*t)*u^2 + 
         16*s*(2928*q^2*s + 361*(1 + q^4)*t)*u^3 + 30228*q^2*s*u^4 - 
         3456*q^2*u^5)) - m^4*mFP^2*s^2*t*u^2*

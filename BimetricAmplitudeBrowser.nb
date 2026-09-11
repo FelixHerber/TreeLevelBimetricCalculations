@@ -1,0 +1,446 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16001,        438]
+NotebookOptionsPosition[     12274,        374]
+NotebookOutlinePosition[     12711,        391]
+CellTagsIndexPosition[     12668,        388]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Bimetric Amplitude Browser", "Title",ExpressionUUID->"93837a82-6f27-4066-9c87-8c40929a024c"],
+
+Cell["\<\
+Lookup and typesetting tools for the precomputed tree-level bimetric helicity \
+amplitudes.\
+\>", "Subtitle",ExpressionUUID->"6cddbab5-f5d1-4db2-a44c-724af799a688"],
+
+Cell[TextData[{
+ "Place this notebook and ",
+ StyleBox["BimetricAmplitudeBrowser.wl",
+  FontFamily->"Source Code Pro"],
+ " in the same directory as ",
+ StyleBox["allBimetricAmplitudes.wl",
+  FontFamily->"Source Code Pro"],
+ ". The first two legs of A are incoming and the last two are outgoing. A \
+automatically reconstructs amplitudes from the stored representatives using \
+parity, time reversal, and initial/final particle exchange. It returns the \
+raw Wolfram Language expression, while AForm gives a typeset equation."
+}], "Text",ExpressionUUID->"543f8a19-5c8b-4f1a-a9fc-947ef454dcdb"],
+
+Cell[CellGroupData[{
+
+Cell["Setup", "Section",ExpressionUUID->"018fdebd-9f91-4f7c-a39b-16f5bac2dff4"],
+
+Cell["\<\
+Evaluate this cell once. The loader first looks for the exact file name \
+allBimetricAmplitudes.wl and otherwise accepts a unique file matching \
+allBimetricAmplitudes*.wl.\
+\>", "Text",ExpressionUUID->"6251098d-6b37-437f-87de-d7a86b38e77a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Get", "[", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], 
+      ",", "\"\<BimetricAmplitudeBrowser.wl\>\""}], "}"}], "]"}], "]"}], 
+  ";"}], "\n", 
+ RowBox[{"LoadBimetricAmplitudes", "[", "]"}]}], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"01af83ca-70af-4981-909b-72aa1370229c"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"File\"\>", "\[Rule]", "\<\"allBimetricAmplitudes.wl\"\>"}], ",", 
+   RowBox[{"\<\"Directory\"\>", 
+    "\[Rule]", \
+"\<\"C:\\\\Users\\\\felix\\\\OneDrive\\\\Skrivbord\\\\Git\\\\\
+TreeLevelBimetricCalculations\\\\\"\>"}], ",", 
+   RowBox[{"\<\"AmplitudesLoaded\"\>", "\[Rule]", "199"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.9981315426601543`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"aaa5948d-638f-5a4a-9c22-9d3ccd090f62"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Automatic symmetry completion", "Section",ExpressionUUID->"cfa7ebae-739f-41a8-9a4d-26f0b1970e3f"],
+
+Cell["\<\
+If the requested amplitude is not stored directly, A searches its 16-element \
+symmetry orbit, retrieves the unique stored representative, applies the \
+required t and u interchange, and includes the time-reversal phase. For \
+example, this non-representative GGGG ordering is reconstructed by exchanging \
+the incoming particles:\
+\>", "Text",ExpressionUUID->"e7a6523d-e720-4e61-af70-57c8f6124ddb"],
+
+Cell[BoxData[
+ RowBox[{"A", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"G", ",", 
+     RowBox[{"-", "2"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"G", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"G", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"G", ",", 
+     RowBox[{"-", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",ExpressionUUID->"96dac920-7e2c-4db8-9b12-f4f1f2507bf0"],
+
+Cell[TextData[{
+ StyleBox["AInfo",
+  FontFamily->"Source Code Pro"],
+ " reports the representative, transformations, Mandelstam map, and phase \
+used in the reconstruction."
+}], "Text",ExpressionUUID->"fd011c35-e14f-48df-aeec-9c2708991bf0"],
+
+Cell[BoxData[
+ RowBox[{"AInfo", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"G", ",", 
+     RowBox[{"-", "2"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"G", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"G", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"G", ",", 
+     RowBox[{"-", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",ExpressionUUID->"7dab409d-e913-41d4-a97a-1e56da786578"],
+
+Cell["\<\
+Amplitudes containing precisely one massive field are returned as zero \
+directly, since they are not part of the 199 potentially nonvanishing \
+symmetry orbits.\
+\>", "Text",ExpressionUUID->"a6fcc982-76a0-4932-9a84-a45cb27ed461"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Amplitude lookup", "Section",ExpressionUUID->"a7f5c0ec-2e60-4db3-8a42-4742284a68d0"],
+
+Cell[TextData[{
+ "The direct leg notation mirrors the ordering in the data file. For example, \
+the following requests ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["\[ScriptCapitalA]", 
+     RowBox[{"2", ",", 
+      RowBox[{"2", ";", "0"}], ",", "0"}]], 
+    RowBox[{"GG", "\[Rule]", "MM"}]], TraditionalForm]],ExpressionUUID->
+  "286623e2-7a82-4a92-8c5e-0e618e4e91db"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.9981316212083893`*^9, 
+  3.998131623896515*^9}},ExpressionUUID->"2c7f5b99-fb9d-4231-885d-\
+fa412c720a35"],
+
+Cell[BoxData[
+ RowBox[{"A", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"G", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"G", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"M", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"M", ",", "0"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.997946331450095*^9, 3.997946332351366*^9}, {
+  3.997946363356983*^9, 3.9979463635845203`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"2e2d6ae3-5b81-4b70-a2cb-e8eaad4e9cfd"],
+
+Cell["\<\
+The equivalent process-style notation separates the incoming and outgoing \
+states:\
+\>", "Text",ExpressionUUID->"82c3f571-fed6-4e0d-9890-f2453c4128f8"],
+
+Cell[BoxData[
+ RowBox[{"A", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"G", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"G", ",", "2"}], "}"}]}], "}"}], "\[Rule]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"M", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"M", ",", "0"}], "}"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.997946374487502*^9, 3.997946377641204*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"9856889a-aee3-459a-afa2-454e64014e11"],
+
+Cell["\<\
+A shorter notation specifies the particle process and helicity process \
+separately:\
+\>", "Text",ExpressionUUID->"2d904801-50ff-41c7-8ecc-6e33c6bd0c6d"],
+
+Cell[BoxData[
+ RowBox[{"A", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"G", ",", "G"}], "}"}], "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"M", ",", "M"}], "}"}]}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"2", ",", "2"}], "}"}], "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.997946383584775*^9, 3.997946401506015*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"a050eae5-f63e-4641-8b86-33afeb17d2c5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Typeset output", "Section",ExpressionUUID->"5fc1e49f-7c51-4747-8433-5da9175523cc"],
+
+Cell[TextData[{
+ StyleBox["Pretty[expr]",
+  FontFamily->"Source Code Pro"],
+ " displays an expression in traditional mathematical notation, including ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox["m", "FP", "2"], TraditionalForm]],ExpressionUUID->
+  "eb1d0c99-ba46-41c9-9d81-76f2206ee142"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["m", "Pl"], TraditionalForm]],ExpressionUUID->
+  "e73e9c17-57ed-463f-a552-09afa7afb512"],
+ ", without changing the raw symbols used in calculations."
+}], "Text",ExpressionUUID->"fb0a1c04-62a8-4cb8-a57c-62f3ae782b0c"],
+
+Cell[BoxData[
+ RowBox[{"Pretty", "[", 
+  RowBox[{"A", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"G", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"G", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"M", ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"M", ",", "0"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellLabel->"In[9]:=",ExpressionUUID->"297ea20f-1eb1-4b18-b30a-f278d87869a0"],
+
+Cell[TextData[{
+ StyleBox["AForm",
+  FontFamily->"Source Code Pro"],
+ " additionally prints the process and helicity label. It accepts the same \
+three input styles as A."
+}], "Text",ExpressionUUID->"e558b0d1-8607-4279-97cb-ed3e62ec6c3e"],
+
+Cell[BoxData[
+ RowBox[{"AForm", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"G", ",", "G"}], "}"}], "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"M", ",", "M"}], "}"}]}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"2", ",", "2"}], "}"}], "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0"}], "}"}]}]}], "]"}]], "Input",
+ CellLabel->"In[10]:=",ExpressionUUID->"469bf261-cda0-4bcd-975b-e64f22788a09"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Velocity and scattering-angle variables", "Section",ExpressionUUID->"d9f560c3-6ab1-4ba8-963a-800657c7dc0a"],
+
+Cell[TextData[{
+ "For private inspection, ",
+ StyleBox["AVTheta",
+  FontFamily->"Source Code Pro"],
+ " first looks up the amplitude and then expresses it in terms of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"v", "=", 
+    SqrtBox[
+     RowBox[{"1", "-", 
+      FractionBox[
+       RowBox[{"4", 
+        SubsuperscriptBox["m", "FP", "2"]}], "s"]}]]}], TraditionalForm]],
+  ExpressionUUID->"1776b5b0-54de-496c-9732-0eef1c3006e8"],
+ " and the CM scattering angle ",
+ Cell[BoxData[
+  FormBox["\[Theta]", TraditionalForm]],ExpressionUUID->
+  "68dca647-2348-43da-8ccb-cb0dcc361586"],
+ ". The ordered external particles are used to generate the appropriate t and \
+u substitutions."
+}], "Text",ExpressionUUID->"b6075f21-faec-48ea-86f9-6e39c3a552c6"],
+
+Cell[BoxData[
+ RowBox[{"AVTheta", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"G", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"G", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"M", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"M", ",", "0"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[11]:=",ExpressionUUID->"741550df-9b60-41f3-9d75-38eaded0f614"],
+
+Cell[TextData[{
+ StyleBox["ToVTheta",
+  FontFamily->"Source Code Pro"],
+ " can instead be applied to an expression that has already been obtained or \
+modified:"
+}], "Text",ExpressionUUID->"75255470-c15b-4722-8c15-910c092606b4"],
+
+Cell[BoxData[
+ RowBox[{"ToVTheta", "[", 
+  RowBox[{
+   RowBox[{"A", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"G", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"G", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"M", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"M", ",", "0"}], "}"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"G", ",", "G"}], "}"}], "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"M", ",", "M"}], "}"}]}]}], "]"}]], "Input",
+ CellLabel->"In[12]:=",ExpressionUUID->"6926faeb-71a5-46f7-a732-55f3795976cc"],
+
+Cell[TextData[{
+ "For very long amplitudes, use ",
+ StyleBox["SimplifyResult -> False",
+  FontFamily->"Source Code Pro"],
+ " to perform only the substitution and avoid a potentially expensive \
+FullSimplify. The definition of v is naturally adapted to channels with the \
+two-massive-particle threshold; in the GM to GM sector, real v restricts the \
+inspection to s greater than 4 mFP squared."
+}], "Text",ExpressionUUID->"1c25a9b1-8517-4941-bf33-e4459aefbd10"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Stored representatives", "Section",ExpressionUUID->"ec2ffac9-947a-4ba4-bde0-692b6ad2f9d0"],
+
+Cell["\<\
+The file contains symmetry-inequivalent representatives rather than every \
+symmetry-related ordering. A performs the symmetry completion automatically; \
+the following diagnostic command returns only the helicity quadruples stored \
+explicitly for a chosen particle ordering:\
+\>", "Text",ExpressionUUID->"944c7e9f-953f-465d-b3cc-72934f349968"],
+
+Cell[BoxData[
+ RowBox[{"AvailableHelicities", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"G", ",", "G"}], "}"}], "\[Rule]", 
+   RowBox[{"{", 
+    RowBox[{"M", ",", "M"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[13]:=",ExpressionUUID->"6da6335b-0ab8-41db-b156-78548f98b825"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{949, 461},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"1094b8d5-8fc4-4c87-a096-824b4ed1f2a2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 98, 0, 96, "Title",ExpressionUUID->"93837a82-6f27-4066-9c87-8c40929a024c"],
+Cell[681, 24, 174, 3, 83, "Subtitle",ExpressionUUID->"6cddbab5-f5d1-4db2-a44c-724af799a688"],
+Cell[858, 29, 592, 11, 99, "Text",ExpressionUUID->"543f8a19-5c8b-4f1a-a9fc-947ef454dcdb"],
+Cell[CellGroupData[{
+Cell[1475, 44, 79, 0, 66, "Section",ExpressionUUID->"018fdebd-9f91-4f7c-a39b-16f5bac2dff4"],
+Cell[1557, 46, 251, 4, 55, "Text",ExpressionUUID->"6251098d-6b37-437f-87de-d7a86b38e77a"],
+Cell[CellGroupData[{
+Cell[1833, 54, 386, 10, 47, "Input",ExpressionUUID->"01af83ca-70af-4981-909b-72aa1370229c"],
+Cell[2222, 66, 521, 11, 51, "Output",ExpressionUUID->"aaa5948d-638f-5a4a-9c22-9d3ccd090f62"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2792, 83, 103, 0, 66, "Section",ExpressionUUID->"cfa7ebae-739f-41a8-9a4d-26f0b1970e3f"],
+Cell[2898, 85, 409, 6, 77, "Text",ExpressionUUID->"e7a6523d-e720-4e61-af70-57c8f6124ddb"],
+Cell[3310, 93, 413, 13, 28, "Input",ExpressionUUID->"96dac920-7e2c-4db8-9b12-f4f1f2507bf0"],
+Cell[3726, 108, 240, 5, 33, "Text",ExpressionUUID->"fd011c35-e14f-48df-aeec-9c2708991bf0"],
+Cell[3969, 115, 417, 13, 28, "Input",ExpressionUUID->"7dab409d-e913-41d4-a97a-1e56da786578"],
+Cell[4389, 130, 240, 4, 55, "Text",ExpressionUUID->"a6fcc982-76a0-4932-9a84-a45cb27ed461"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4666, 139, 90, 0, 66, "Section",ExpressionUUID->"a7f5c0ec-2e60-4db3-8a42-4742284a68d0"],
+Cell[4759, 141, 535, 15, 34, "Text",ExpressionUUID->"2c7f5b99-fb9d-4231-885d-fa412c720a35"],
+Cell[5297, 158, 488, 13, 28, "Input",ExpressionUUID->"2e2d6ae3-5b81-4b70-a2cb-e8eaad4e9cfd"],
+Cell[5788, 173, 162, 3, 33, "Text",ExpressionUUID->"82c3f571-fed6-4e0d-9890-f2453c4128f8"],
+Cell[5953, 178, 537, 16, 28, "Input",ExpressionUUID->"9856889a-aee3-459a-afa2-454e64014e11"],
+Cell[6493, 196, 163, 3, 33, "Text",ExpressionUUID->"2d904801-50ff-41c7-8ecc-6e33c6bd0c6d"],
+Cell[6659, 201, 485, 14, 28, "Input",ExpressionUUID->"a050eae5-f63e-4641-8b86-33afeb17d2c5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7181, 220, 88, 0, 66, "Section",ExpressionUUID->"5fc1e49f-7c51-4747-8433-5da9175523cc"],
+Cell[7272, 222, 563, 14, 55, "Text",ExpressionUUID->"fb0a1c04-62a8-4cb8-a57c-62f3ae782b0c"],
+Cell[7838, 238, 413, 12, 28, "Input",ExpressionUUID->"297ea20f-1eb1-4b18-b30a-f278d87869a0"],
+Cell[8254, 252, 238, 5, 33, "Text",ExpressionUUID->"e558b0d1-8607-4279-97cb-ed3e62ec6c3e"],
+Cell[8495, 259, 424, 13, 28, "Input",ExpressionUUID->"469bf261-cda0-4bcd-975b-e64f22788a09"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8956, 277, 113, 0, 66, "Section",ExpressionUUID->"d9f560c3-6ab1-4ba8-963a-800657c7dc0a"],
+Cell[9072, 279, 741, 20, 70, "Text",ExpressionUUID->"b6075f21-faec-48ea-86f9-6e39c3a552c6"],
+Cell[9816, 301, 378, 11, 28, "Input",ExpressionUUID->"741550df-9b60-41f3-9d75-38eaded0f614"],
+Cell[10197, 314, 228, 5, 33, "Text",ExpressionUUID->"75255470-c15b-4722-8c15-910c092606b4"],
+Cell[10428, 321, 581, 18, 28, "Input",ExpressionUUID->"6926faeb-71a5-46f7-a732-55f3795976cc"],
+Cell[11012, 341, 462, 8, 77, "Text",ExpressionUUID->"1c25a9b1-8517-4941-bf33-e4459aefbd10"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11511, 354, 96, 0, 66, "Section",ExpressionUUID->"ec2ffac9-947a-4ba4-bde0-692b6ad2f9d0"],
+Cell[11610, 356, 355, 5, 77, "Text",ExpressionUUID->"944c7e9f-953f-465d-b3cc-72934f349968"],
+Cell[11968, 363, 278, 7, 28, "Input",ExpressionUUID->"6da6335b-0ab8-41db-b156-78548f98b825"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
